@@ -1,0 +1,688 @@
+@charset "UTF-8"
+
+@import ../base/vars
+
+.events-nav li
+  min-width: 50px
+  @media (min-width: $tablet-content-width)
+    min-width: 110px
+
+#form-media
+  //text-align: center
+  //@media (min-width: $tablet-content-width)
+    display: block
+    text-align: left
+
+  form
+    display: none
+
+  select
+    font-family: 'Gotham Pro', sans-serif
+    width: 110px
+    border: 1px solid $border-grey-color
+    padding: 7px 15px 5px 10px
+    font-size: 9px
+    text-transform: uppercase
+    margin-right: 10px
+    @media (min-width: $tablet-content-width)
+      width: 150px
+      font-size: 10px
+      margin-right: 20px
+      padding: 9px 15px 7px 20px
+
+    option
+      color: $main-font-color
+      font-size: 10px
+      @media (min-width: $tablet-content-width)
+        font-size: 11px
+
+    option[value=""][selected][disabled]
+      color: $grey-color
+      font-size: 10px
+      @media (min-width: $tablet-content-width)
+        font-size: 11px
+
+  .narrow-btn
+    display: inline-block
+    min-width: 90px
+    margin: 0 auto
+    //margin-top: 15px
+    //margin-bottom: 40px
+    @media (min-width: $tablet-content-width)
+      //display: inline-block
+      min-width: 130px
+      margin-top: 0
+      margin-left: 15px
+      margin-bottom: 0
+
+.main
+  margin-top: 30px
+  margin-bottom: 60px
+  @media (min-width: $tablet-content-width)
+    margin-top: 40px
+    margin-bottom: 90px
+
+.blog__group
+  margin-top: 35px
+  padding: 0 10px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  margin-bottom: 30px
+  @media (min-width: $tablet-content-width)
+    padding: 0 5px
+    justify-content: space-between
+  a
+    text-decoration: none
+    margin-bottom: 60px
+    @media (min-width: $tablet-content-width)
+      margin-bottom: 80px
+
+.media-box
+  @include box-shadow
+  position: relative
+  width: 300px
+  height: 355px
+  background-color: $slight-grey-color
+  overflow: hidden
+  transition: all 0.2s linear
+  &:hover
+    transform: scale(1.02)
+    &.media-logo
+      transform: scale(1.00)
+  @media (min-width: $tablet-content-width)
+    width: 360px
+    height: 415px
+
+.media-img
+  width: 300px
+  max-height: 200px
+  background-color: $border-grey-color
+  @media (min-width: $tablet-content-width)
+    width: 360px
+    max-height: 240px
+
+.media__head
+  display: flex
+  align-items: center
+  justify-content: space-between
+  //background-color: $light-grey-color
+  background-color: rgba(223, 223, 223, 0.9)
+  height: 40px
+  font-size: 13px
+  padding: 0 20px
+  position: absolute
+  width: 100%
+  top: 160px
+  @media (min-width: $tablet-content-width)
+    top: 200px
+    font-size: 14px
+    padding: 0 30px
+
+.media-type
+  color: $grey-color
+  text-transform: uppercase
+  font-weight: 500
+
+.media-date
+  font-weight: 500
+  color: $dark-grey-color
+
+.media-name
+  height: 105px
+  font-size: 13px
+  padding: 0 20px
+  padding-top: 13px
+  line-height: 140%
+  overflow: hidden
+  @media (min-width: $tablet-content-width)
+    height: 120px
+    font-size: 14px
+    padding: 0 30px
+    padding-top: 15px
+    line-height: 150%
+
+.media-logo
+  display: flex
+  justify-content: flex-end
+  height: 47px
+  padding-top: 10px
+  padding-right: 20px
+  padding-bottom: 16px
+  @media (min-width: $tablet-content-width)
+    height: 55px
+    padding-right: 26px
+    padding-bottom: 20px
+    transition: all 0.2s linear
+
+  span
+    margin-left: 30px
+    &::before
+      width: 23px
+      height: 23px
+    @media (min-width: $tablet-content-width)
+      width: 25px
+      height: 25px
+
+.media-logo,
+.event-logo
+  span
+    margin-left: 30px
+    &::before
+      width: 22px
+      height: 22px
+      padding: 1px
+      @media (min-width: $tablet-content-width)
+        width: 24px
+        height: 24px
+        padding: 1px
+
+  .logo-kompas
+    opacity: 0.75
+  .logo-c3dlabs,
+  .logo-renga,
+  .logo-ascon,
+  .logo-pilot
+    opacity: 0.8
+
+// PAGE ARTICLE + EVENT ************************************************************
+.article__group
+  position: relative
+  display: flex
+  .group
+    min-width: 320px
+    max-width: 870px
+    padding: 0 10px
+    padding-bottom: 100px
+    @media (min-width: $desktop-content-width)
+      padding: 0 5px
+
+.action-box
+  @media (min-width: $desktop-content-width)
+    top: 10px
+  .btn-blue
+    @media (min-width: $desktop-content-width)
+      margin-left: auto
+      a
+        font-size: 11px
+
+.article__title
+  text-transform: uppercase
+  color: $orange-color
+  font-size: 14px
+  display: flex
+  align-items: center
+  @media (min-width: $tablet-content-width)
+    font-size: 15px
+  @media (min-width: $desktop-content-width)
+    font-size: 16px
+
+  .bold-middle
+    font-size: 12px
+    @media (min-width: $tablet-content-width)
+      font-size: 13px
+
+  .shahs
+    font-size: 12px
+    letter-spacing: 0.5px
+    &::before
+      content: "/"
+      padding-left: 8px
+      padding-right: 8px
+      font-weight: 400
+    @media (min-width: $tablet-content-width)
+      font-size: 13px
+
+.article__name
+  font-size: 22px
+  font-weight: 800
+  letter-spacing: 1.5px
+  margin-top: 10px
+  margin-bottom: 15px
+  @media (min-width: $tablet-content-width)
+    font-size: 24px
+    margin-bottom: 30px
+  @media (min-width: $desktop-content-width)
+    font-size: 26px
+
+.event-terms
+  width: 300px
+  margin-top: 30px
+  margin-bottom: 35px
+  border: 1px solid $border-grey-color
+  @media (min-width: $tablet-content-width)
+    width: 340px
+    margin-bottom: 40px
+  div
+    display: flex
+    border-bottom: 1px solid $border-grey-color
+    &:last-child
+      border-bottom: unset
+
+.terms__title
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100px
+  height: 40px
+  border-right: 1px solid $border-grey-color
+  background-color: $slight-grey-color
+  font-size: 12px
+  letter-spacing: 1px
+  @media (min-width: $tablet-content-width)
+    width: 120px
+    height: 45px
+    font-size: 13px
+
+.terms_date
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 40px
+  font-size: 13px
+  font-weight: 500
+  @media (min-width: $tablet-content-width)
+    height: 45px
+    font-size: 14px
+
+.article__content
+  h3
+    font-size: 16px
+    font-weight: bold
+    margin-top: 20px
+    margin-bottom: 10px
+    @media (min-width: $tablet-content-width)
+      font-size: 17px
+      margin-bottom: 15px
+    @media (min-width: $desktop-content-width)
+      margin-top: 30px
+      font-size: 17px
+  h4
+    font-weight: bold
+  p,
+  li
+    font-size: 13px
+    line-height: 150%
+    margin: 10px 0
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+    @media (min-width: $desktop-content-width)
+      font-size: 15px
+  ul
+    margin-left: 20px
+  li
+    list-style-type: disc
+  img
+    width: 100%
+    max-width: max-content
+    margin: 10px 0
+    //@media (min-width: $tablet-content-width)
+      max-width: min-content
+    //@media (min-width: $desktop-content-width)
+      width: unset
+  a
+    text-decoration: underline
+    color: $orange-color
+    &:hover
+      font-weight: 500
+
+.content-source
+  margin-top: 15px
+  font-size: 13px
+  span
+    font-weight: 500
+  a
+    text-decoration: underline
+    color: $orange-color
+    transition: all 0.2s ease-in-out
+    &:hover
+      font-weight: 500
+
+.content-creator
+  display: flex
+  align-items: center
+  margin-top: 40px
+  margin-bottom: 50px
+  margin-left: -5px
+
+.content-creator_img
+  border-radius: 50%
+  background-color: $slight-grey-color
+  width: 50px
+  height: 50px
+  margin-right: 12px
+  img
+    width: 100%
+    border-radius: 50%
+
+.content-creator_name
+  font-size: 13px
+  font-weight: 500
+  @media (min-width: $tablet-content-width)
+    font-size: 14px
+
+
+// EVENTS PAGE ****************************************************
+
+.heading-orange
+  margin-top: 30px
+  padding: 0 5px
+  @media (min-width: $tablet-content-width)
+    margin-top: 25px
+  @media (min-width: $desktop-content-width)
+    padding: 0
+
+.events__group
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  padding: 0 10px
+  margin-top: 30px
+  margin-bottom: 30px
+  @media (min-width: $tablet-content-width)
+    padding: 0 5px
+    justify-content: space-between
+    margin-bottom: 40px
+
+  a
+    text-decoration: none
+    margin-bottom: 60px
+    @media (min-width: $tablet-content-width)
+      margin-bottom: 80px
+
+.event-box
+  @include box-shadow
+  width: 310px
+  min-height: 320px
+  background-color: #ffffff
+  overflow: hidden
+  transition: all 0.2s linear
+  @media (min-width: $tablet-content-width)
+    //max-width: unset
+    min-height: unset
+    width: 380px
+    height: 420px
+
+.event__head
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 50px
+  background-color: $slight-grey-color
+  padding: 5px 25px
+  @media (min-width: $tablet-content-width)
+    padding: 5px 35px
+
+.event-category
+  color: $orange-color
+  font-size: 14px
+  letter-spacing: 0.5px
+  font-weight: 500
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  width: 100%
+  text-transform: lowercase
+
+.event-type
+  text-transform: uppercase
+  font-size: 12px
+  color: $grey-color
+  letter-spacing: 0.5px
+  white-space: nowrap
+
+.event-date
+  margin-top: 30px
+  height: 30px
+  display: flex
+  align-items: center
+  font-size: 12px
+  letter-spacing: 0.5px
+  line-height: 120%
+  padding: 0 25px
+  margin-bottom: 2px
+  @media (min-width: $tablet-content-width)
+    font-size: 13px
+    padding: 0 35px
+  i
+    font-size: 25px
+    line-height: 120%
+    margin-left: -5px
+    margin-bottom: 2px
+    margin-right: 5px
+    @media (min-width: $tablet-content-width)
+      font-size: 27px
+      line-height: 100%
+
+.event-name
+  max-height: 250px
+  overflow: hidden
+  padding: 0 25px
+  margin-bottom: 30px
+  @media (min-width: $tablet-content-width)
+    padding: 0 35px
+    margin-bottom: 0
+    max-height: unset
+    height: 250px
+
+  h2
+    font-size: 18px
+    padding-top: 27px
+    padding-bottom: 15px
+    font-weight: bold
+    @media (min-width: $tablet-content-width)
+      font-size: 19px
+  p
+    font-size: 12px
+    line-height: 160%
+    margin: 0 0 6px 0
+    @media (min-width: $tablet-content-width)
+      font-size: 13px
+      line-height: 150%
+
+.event-logo
+  display: flex
+  justify-content: flex-end
+  align-items: flex-end
+  height: 60px
+  padding-right: 23px
+  padding-bottom: 15px
+  @media (min-width: $tablet-content-width)
+    padding-right: 27px
+    padding-bottom: 18px
+
+.elem-blur
+  opacity: 0.7
+
+
+// * * * * P A G I N A T I O N * * * * * * * *
+.bx_pagination_bottom
+  *
+    vertical-align: baseline
+
+  color: $grey-color
+  font-size: 13px
+  padding: 0 10px
+
+  //.bx_pagination_section_one
+
+  .bx_pagination_section_two
+    float: right
+    text-align: right
+
+  .bx_pg_section
+    display: inline-block
+    height: 30px
+    vertical-align: top
+    line-height: 30px
+
+  .bx_pagination_select_container
+    display: inline-block
+
+    select
+      position: relative
+      margin: 2px 20px 2px 10px
+      padding: 1px 25px 3px 5px
+      height: 22px
+      outline: none
+      border: 1px solid $border-grey-color
+      border-radius: 1px
+      background: #fff url(/local/templates/ascon_eng/images/components-img/select_arrow.png) no-repeat right center
+      color: $grey-color
+      font-size: 13px
+      line-height: 16px
+      resize: none
+      -webkit-appearance: none
+
+  .bx_pagination_page
+    white-space: nowrap
+    font-size: 13px
+
+    ul
+      display: inline-block
+      margin: 0
+      padding: 0
+
+    li
+      display: inline-block
+      min-width: 22px
+      color: $grey-color
+      text-align: center
+      line-height: 22px
+
+      a
+        display: block
+        min-width: 22px
+        color: $grey-color
+        text-align: center
+        text-decoration: none
+        line-height: 22px
+
+        &:hover
+          color: $orange-color
+          font-weight: 500
+
+      &.bx_active
+        border-radius: 3px
+        background: $slight-grey-color
+        color: $orange-color
+        box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.1)
+        font-size: 13px
+
+  .bx_pg_section
+    &.bx_pg_pagination_num
+      display: block
+
+    &.bx_pg_show_col select
+      margin-right: 5px
+
+  .bx_wsnw
+    white-space: nowrap
+    font-size: 13px
+    letter-spacing: 1px
+
+  .bx_pagination_section_one, .bx_pagination_section_two
+    -webkit-transition: all 0.3s ease
+    -moz-transition: all 0.3s ease
+    -ms-transition: all 0.3s ease
+    -o-transition: all 0.3s ease
+    transition: all 0.3s ease
+
+  .bx_pagination_select_container
+    -webkit-transition: all 0.3s ease
+    -moz-transition: all 0.3s ease
+    -ms-transition: all 0.3s ease
+    -o-transition: all 0.3s ease
+    transition: all 0.3s ease
+
+    select
+      -webkit-transition: all 0.3s ease
+      -moz-transition: all 0.3s ease
+      -ms-transition: all 0.3s ease
+      -o-transition: all 0.3s ease
+      transition: all 0.3s ease
+
+  .bx_pg_section, .bx_pagination_page
+    -webkit-transition: all 0.3s ease
+    -moz-transition: all 0.3s ease
+    -ms-transition: all 0.3s ease
+    -o-transition: all 0.3s ease
+    transition: all 0.3s ease
+
+  .bx_pg_section
+    &.bx_pg_pagination_num, &.bx_pg_show_col
+      -webkit-transition: all 0.3s ease
+      -moz-transition: all 0.3s ease
+      -ms-transition: all 0.3s ease
+      -o-transition: all 0.3s ease
+      transition: all 0.3s ease
+
+  .bx_pg_text, .bx_pg_section.pg_pagination_num .bx_pg_text
+    -webkit-transition: all 0.3s ease
+    -moz-transition: all 0.3s ease
+    -ms-transition: all 0.3s ease
+    -o-transition: all 0.3s ease
+    transition: all 0.3s ease
+
+@-moz-document url-prefix()
+  .bx_pagination_bottom .bx_pagination_select_container select
+    background: #fff !important
+    padding-right: 5px
+
+/*3
+@media (min-width: 480px) and (max-width: 639px)
+  .bx_pagination_bottom .bx_pagination_select_container select
+    margin-right: 10px
+
+/*4
+@media (max-width: 479px)
+  .bx_pagination_bottom
+    //.bx_pagination_section_one
+
+    .bx_pagination_section_two
+      float: none
+      text-align: left
+
+    .bx_pagination_select_container
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      width: 47%
+
+      select
+        display: block
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+        margin-right: 0 !important
+        width: 90%
+
+    .bx_pg_section
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      width: 100%
+      text-align: left
+
+    .bx_pagination_page
+      white-space: normal
+
+    .bx_pg_section
+      &.bx_pg_pagination_num
+        width: 100%
+        height: auto
+        text-align: center
+
+      &.bx_pg_show_col
+        display: none
+
+    .bx_pg_text
+      display: inline-block
+      width: 50%
+
+    .bx_pg_section.pg_pagination_num .bx_pg_text
+      display: none
+
+/*5
+//@media (max-width: 320px)

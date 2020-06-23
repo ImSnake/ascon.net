@@ -1,0 +1,167 @@
+@charset "UTF-8"
+
+@import ../base/vars
+
+.page__name
+  h1
+    margin-bottom: 0
+
+.page__nav
+  li
+    min-width: 100px
+    @media (min-width: $tablet-content-width)
+      min-width: 140px
+
+.main
+  margin-top: 30px
+  padding: 0 10px
+  margin-bottom: 60px
+  @media (min-width: $tablet-content-width)
+    margin-top: 40px
+    margin-bottom: 100px
+  @media (min-width: $desktop-content-width)
+    margin-top: 50px
+  p
+    font-size: 13px
+    line-height: 150%
+    margin: 10px 0
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+    @media (min-width: $desktop-content-width)
+      font-size: 15px
+
+.heading-orange
+  margin-bottom: 15px
+  @media (min-width: $desktop-content-width)
+    margin-left: -10px
+    margin-bottom: 20px
+
+.group__company
+  margin-top: 35px
+  margin-bottom: 35px
+  @media (min-width: $tablet-content-width)
+    margin-top: 55px
+    margin-bottom: 50px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.company__box
+  @include box-shadow
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-width: 300px
+  min-height: 110px
+  //background-color: $slight-grey-color
+  background-color: #ffffff
+  margin-bottom: 30px
+  margin-left: 10px
+  margin-right: 10px
+  @media (min-width: $tablet-content-width)
+    flex: 1
+    width: 300px
+    min-height: 150px
+    margin-bottom: 60px
+    margin-right: 45px
+
+  img
+    position: absolute
+    z-index: 1
+    top: -10px
+    left: -10px
+    width: 55px
+
+  div
+    margin-left: 70px
+
+.company__num
+  font-size: 53px
+  font-weight: 700
+  padding-top: 10px
+  span
+    font-size: 45px
+    font-weight: 500
+    margin-right: 5px
+    line-height: 55px
+
+.company__text
+  font-size: 14px
+  font-weight: 400
+  line-height: 120%
+  margin-top: 5px
+  padding-right: 50px
+  padding-bottom: 20px
+
+.company__scheme
+  margin-top: 60px
+  margin-bottom: 200px
+  img
+    width: 100%
+    max-width: 600px
+
+.group__customer
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-top: 30px
+  margin-bottom: 100px
+  @media (min-width: $tablet-content-width)
+    justify-content: space-between
+
+  a
+    text-decoration: none
+    margin-bottom: 30px
+
+.customer-box
+  @include box-shadow
+  width: 300px
+  height: 150px
+  background-color: #ffffff
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+
+  .customer-logo
+    width: 100%
+    height: 90px
+    padding: 0 25px
+    padding-top: 15px
+    margin-bottom: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      max-width: 180px
+      max-height: 70px
+
+  .customer-text
+    width: 100%
+    height: 60px
+    margin-top: 5px
+    padding: 0 25px
+    padding-bottom: 15px
+
+  h4, h5, h6
+    text-align: center
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+  h4
+    font-size: 12px
+    font-weight: 500
+
+  h5
+    font-size: 10px
+    color: $grey-color
+    margin-top: 3px
+
+  h6
+    font-size: 10px
+    letter-spacing: 0.5px
+    text-transform: uppercase
+    color: $grey-color
+    margin-top: 2px

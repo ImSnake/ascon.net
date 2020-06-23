@@ -1,0 +1,283 @@
+@charset "UTF-8"
+
+@import ../base/vars
+
+.central-banner
+  @include unselectable
+  position: relative
+  color: #ffffff
+  height: 200px
+  padding: 25px 10px 20px 10px
+  margin-bottom: 35px
+  @media (min-width: $tablet-content-width)
+    padding: 35px 25px 35px 25px
+    height: 260px
+    margin-bottom: 60px
+  //@media (min-width: $desktop-content-width)
+    padding: 40px 25px 40px 35px
+  img
+    height: 100%
+    width: 100%
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+
+  .banner__content
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  
+  .banner__heading
+    font-size: 20px
+    font-weight: bold
+    letter-spacing: 0.5px
+    //text-transform: uppercase
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    @media (min-width: $tablet-content-width)
+      font-size: 22px
+    @media (min-width: $desktop-content-width)
+      font-size: 24px
+
+  .banner__text
+    font-size: 12px
+    height: 80px
+    padding-top: 10px
+    line-height: 145%
+    overflow: hidden
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+      height: 110px
+      padding-top: 15px
+      width: 90%
+      line-height: 150%
+    p
+      margin: 0
+
+  .banner__btn
+    margin-top: 15px
+    align-self: flex-end
+    min-width: 120px
+    height: 32px
+    @media (min-width: $tablet-content-width)
+      margin-top: 10px
+      min-width: 150px
+      height: 40px
+    @media (min-width: $desktop-content-width)
+      align-self: flex-start
+    a
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 100%
+      text-decoration: none
+      padding: 0 20px
+      text-transform: uppercase
+      font-size: 10px
+      font-weight: bold
+      letter-spacing: 1px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      border: 1px solid #ffffff
+      cursor: pointer
+      transition: all 0.3s ease-in-out
+      &:hover
+        border-width: 2px
+        padding: 0 18px
+        letter-spacing: 1.5px
+      @media (min-width: $tablet-content-width)
+        font-size: 12px
+        padding: 0 30px
+        &:hover
+          border-width: 3px
+          padding: 0 27px
+
+  .banner__nav
+    display: flex
+    justify-content: center
+    position: absolute
+    left: 0
+    bottom: 7px
+    width: 100%
+    @media (min-width: $tablet-content-width)
+      bottom: 10px
+
+  .nav__point
+    width: 15px
+    height: 15px
+    margin: 0 10px
+    border-radius: 50%
+    background-color: $orange-color
+    opacity: 0.5
+    cursor: pointer
+    &:hover
+      opacity: 1
+    @media (min-width: $tablet-content-width)
+      width: 20px
+      height: 20px
+      margin: 0 15px
+
+
+// products
+.main
+  //argin-top: 35px
+  margin-bottom: 50px
+  padding: 0 10px
+  @media (min-width: $tablet-content-width)
+    padding: 0 2%
+    //margin-top: 60px
+    margin-bottom: 150px
+  @media (min-width: $desktop-content-width)
+    padding: 0
+
+.heading__text
+  @media (min-width: $tablet-content-width)
+    font-size: 26px
+
+.product-box
+  display: flex
+  flex-direction: column
+  margin-top: 40px
+  margin-bottom: 20%
+  @media (min-width: $tablet-content-width)
+    margin-top: 35px
+    margin-bottom: 80px
+    box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.1)
+    padding: 50px 35px 30px 35px
+    background-color: $slight-grey-color
+  @media (min-width: $desktop-content-width)
+    box-shadow: unset
+    background-color: unset
+    padding: 0
+    height: 300px
+    flex-direction: row
+    margin-top: 20px
+    margin-bottom: 110px
+
+  &.left
+    @media (min-width: $desktop-content-width)
+      box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.1)
+  &.right
+    @media (min-width: $desktop-content-width)
+      box-shadow: -2px 1px 5px 0 rgba(0, 0, 0, 0.1)
+
+  .product__img
+    order: 2
+    max-width: 450px
+    @media (min-width: $tablet-content-width)
+       display: none
+    @media (min-width: $desktop-content-width)
+      display: block
+      order: unset
+      max-width: unset
+      width: 450px
+      height: 299px
+    img
+      width: 100%
+      @media (min-width: $tablet-content-width)
+        width: unset
+
+  .product__content
+    order: 1
+    display: flex
+    position: relative
+    flex-direction: column
+    justify-content: center
+    max-width: 450px
+    margin-bottom: 10px
+    @media (min-width: $tablet-content-width)
+      max-width: unset
+    @media (min-width: $desktop-content-width)
+      order: unset
+      margin-bottom: 0
+      padding: 35px 40px 25px 45px
+  
+  .content__heading
+    display: flex
+    align-items: center
+    font-size: 18px
+    letter-spacing: 0.5px
+    font-weight: bold
+    @media (min-width: $tablet-content-width)
+      font-size: 22px
+      letter-spacing: 1px
+    @media (min-width: $desktop-content-width)
+      font-size: 20px
+    span
+      line-height: 100%
+    span::before
+      margin-right: 10px
+      height: 32px
+      width: 32px
+      opacity: 0.85
+      @media (min-width: $tablet-content-width)
+        margin-right: 13px
+  
+  .content__text
+    margin-top: 5px
+    font-size: 13px
+    line-height: 150%
+    @media (min-width: $tablet-content-width)
+      margin-top: 10px
+      font-size: 14px
+    @media (min-width: $desktop-content-width)
+      height: 160px
+      padding-right: 10px
+      line-height: 145%
+      overflow: hidden
+    p
+      margin: 10px 0 0 0
+
+  .product__btn
+    position: absolute
+    top: 0
+    right: 0
+    width: 100px
+    height: 32px
+    background-color: #ffffff
+    @media (min-width: $tablet-content-width)
+      position: static
+      width: 140px
+      height: 40px
+      margin-top: 30px
+      align-self: flex-end
+    @media (min-width: $desktop-content-width)
+      margin-left: auto
+      margin-top: 0
+    a
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 100%
+      text-decoration: none
+      padding: 0 10px
+      font-size: 10px
+      letter-spacing: 1px
+      opacity: 0.8
+      text-transform: uppercase
+      font-weight: 500
+      color: $dark-grey-color
+      text-align: center
+      box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1)
+      border: 1px solid $light-grey-color
+      cursor: pointer
+      transition: all 0.3s linear
+      &:hover
+        color: $blue-color
+        padding: 0 6px
+        letter-spacing: 1.5px
+        font-weight: 600
+        background-color: #ffffff
+        box-shadow: unset
+        border: 3px solid $blue-color
+        opacity: 1
+      @media (min-width: $tablet-content-width)
+        padding: 0 20px
+        font-size: 12px
+        letter-spacing: 1px
+        &:hover
+          padding: 0 16px
+          letter-spacing: 2px

@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Support";
+$arDirProperties = Array(
+
+);
+?>

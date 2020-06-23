@@ -1,0 +1,279 @@
+@charset "UTF-8"
+
+.header__bkg
+  position: relative
+  background-color: $dark-grey-color
+
+.header__content
+  @include unselectable
+  position: relative
+  background-color: $dark-grey-color
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 50px
+  font-size: 13px
+  letter-spacing: 0.5px
+  color: #ffffff
+  @media (min-width: $tablet-content-width)
+    justify-content: flex-end
+    height: 40px
+
+.mobile__logo
+  margin-left: 10px
+  cursor: pointer
+  a
+    display: block
+  @media (min-width: $tablet-content-width)
+    display: none
+
+  .close-elem
+    //font-weight: bolder
+    font-size: 23px
+    position: absolute
+    right: 0
+    top: 45px
+    z-index: 999
+    margin-right: 5px
+
+.menu-burger
+  width: 28px
+  margin-right: 15px
+  &:hover
+    cursor: pointer
+  div
+    border: 2px solid #ffffff
+    margin-top: 4px
+  @media (min-width: $tablet-content-width)
+    display: none
+
+.mobile-close
+  cursor: pointer
+  @media (min-width: $tablet-content-width)
+    display: none
+  span::before
+    font-size: 25px
+    margin-left: 0
+    margin-right: 5px
+    top: 5px
+
+.header__menu
+  background-color: $dark-grey-color
+  display: none
+  flex-direction: column
+  position: absolute
+  z-index: 999
+  top: 50px
+  width: 100%
+  padding-bottom: 20px
+  @media (min-width: $tablet-content-width)
+    background-color: unset
+    position: static
+    z-index: unset
+    top: unset
+    width: unset
+    padding-bottom: 0
+    display: flex
+    flex-direction: row
+    height: 40px
+    align-items: center
+    justify-content: flex-end
+  a
+    display: block
+    text-decoration: none
+
+.menu__main
+  padding: 15px 10px 5px 10px
+  font-weight: 500
+  cursor: pointer
+  flex-direction: column
+  transition: all 0.2s ease-in-out
+  @media (min-width: $tablet-content-width)
+    //font-weight: bold
+    padding: 10px 15px 9px 30px
+    margin-right: 10px
+    &:hover
+      font-weight: bold
+      text-decoration: underline
+      color: $orange-color
+    &:hover .menu__drop-down
+      display: flex
+  span
+    display: none
+    @media (min-width: $tablet-content-width)
+      display: inline-block
+      padding-left: 10px
+
+.menu__drop-down
+  display: block
+  margin-left: 10px
+  margin-top: 10px
+  @media (min-width: $tablet-content-width)
+    margin-left: 0
+    margin-top: 0
+    display: none
+    position: absolute
+    z-index: 998
+    justify-content: space-around
+    align-items: baseline
+    left: 0
+    width: 100%
+    background-color: $dark-grey-color
+    color: #ffffff
+    font-weight: normal
+    padding-top: 35px
+    padding-bottom: 50px
+    padding-left: 2%
+    padding-right: 2%
+    opacity: 0.99
+  @media (min-width: $desktop-content-width)
+    padding-left: 5%
+    padding-right: 5%
+
+.drop-down__item
+  position: relative
+  text-transform: uppercase
+  font-weight: 500
+  padding: 5px
+  padding-bottom: 10px
+  margin-bottom: 5px
+  @media (min-width: $tablet-content-width)
+    padding: 0
+    margin-bottom: 0
+    font-weight: bold
+    letter-spacing: 0.5px
+    width: 25%
+    margin-left: 3%
+    white-space: nowrap
+    &::before
+      content: '/\00a0\00a0\00a0'
+  @media (min-width: $desktop-content-width)
+    margin-left: 5%
+  span
+    display: inline-block
+    @media (min-width: $tablet-content-width)
+      display: none
+
+.drop-down__sub-item
+  text-transform: capitalize
+  font-weight: 500
+  margin-left: 20px
+  padding-top: 10px
+  padding-bottom: 8px
+  &:hover
+    font-weight: bold
+    color: $orange-color
+  @media (min-width: $tablet-content-width)
+    position: relative
+    font-weight: normal
+    letter-spacing: 0.5px
+    margin-left: 22px
+    padding-top: 20px
+    padding-bottom: 0
+    margin-top: 0
+    &:hover .drop-down__sub-menu
+      display: block
+  span
+    display: inline-block
+
+.item__list
+  margin-top: 8px
+  @media (min-width: $tablet-content-width)
+    display: block
+    margin-top: 0
+    white-space: normal
+
+.drop-down__sub-menu
+  @media (min-width: $tablet-content-width)
+    display: none
+    position: absolute
+    z-index: 999
+    left: 100%
+    width: 300px
+    //color: #ffffff
+    background-color: $grey-color
+    border: 1px solid #aeaeae6e
+    top: 15px
+    padding-bottom: 10px
+    padding-left: 5px
+    padding-top: 5px
+    opacity: 0.98
+
+.menu-item
+  text-transform: capitalize
+  font-weight: normal
+  padding-top: 10px
+  padding-bottom: 8px
+  margin-left: 20px
+  transition: all 0.2s ease-in-out
+  &:hover
+    color: $orange-color
+    cursor: pointer
+    text-decoration: underline
+  @media (min-width: $tablet-content-width)
+    display: block
+    padding-top: 20px
+    padding-bottom: 5px
+    margin-left: 22px
+    letter-spacing: 0.5px
+  a
+    text-decoration: none
+
+.drop-down__sub-menu
+  margin-top: 10px
+  @media (min-width: $tablet-content-width)
+    margin-top: 0
+  .menu-item
+    letter-spacing: 0
+    color: #ffffff
+    @media (min-width: $tablet-content-width)
+      //color: $main-font-color
+      margin-left: 0px
+      padding-top: 15px
+      padding-bottom: 10px
+      padding-left: 15px
+      padding-right: 10px
+    &:hover
+      color: $orange-color
+
+
+.sub-header
+  @include unselectable
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 10px
+  //padding-bottom: 5px
+  @media (min-width: $tablet-content-width)
+    padding: 0 2%
+  @media (min-width: $desktop-content-width)
+    padding: 0 25px
+
+.sub-header__left
+  flex: 3
+  display: flex
+  align-items: center
+  font-size: 10px
+  margin-top: 12px
+  margin-bottom: 12px
+  @media (min-width: $tablet-content-width)
+    font-size: 12px
+  span
+    font-weight: bold
+    line-height: 150%
+  a
+    display: none
+    @media (min-width: $tablet-content-width)
+      display: block
+      margin-bottom: 14px
+      margin-right: 4%
+
+.sub-header__right
+  margin-left: 3%
+  .btn-orange
+    //width: 100px
+    margin: 15px 0
+    @media (min-width: $tablet-content-width)
+      //width: 140px
+      margin: 25px 0
+

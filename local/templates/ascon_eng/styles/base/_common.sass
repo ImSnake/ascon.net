@@ -1,0 +1,563 @@
+@charset "UTF-8"
+
+html,
+body
+  height: 100%
+
+// MAIN SETTINGS FOR FONTS AND CONTENT SIZE
+body
+  font-family: 'Gotham Pro', sans-serif
+  font-weight: 400
+  font-size: 14px
+  color: $main-font-color
+  display: flex
+  flex-direction: column
+  margin: 0
+
+*
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -o-box-sizing: border-box
+
+*:focus
+  outline: none
+
+ul
+  margin: 0
+  padding-left: 0
+  list-style-type: none
+
+a
+  color: inherit
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+
+select + option
+  background-color: #ffffff
+
+button
+  border: unset
+
+// Задаем ширину и отступы содержимого сайта
+.container
+  min-width: $min-site-width
+  width: 100%
+  padding: 0 5px
+  @media (min-width: $tablet-content-width)
+    padding: 0 10px
+  @media (min-width: $desktop-content-width)
+    width: $desktop-content-width
+    margin: 0 auto
+    padding: 0
+
+.center
+  flex: 1
+
+// ширма для блокирующих основной экран всплывающих окон
+.body-disable
+  position: fixed
+  z-index: 1000
+  top: 0
+  left: 0
+  color: $main-font-color
+  width: 100%
+  height: 100%
+  //padding: 0 2%
+  //max-height: 100%
+  //height: 2000px;
+  //display: flex
+  //justify-content: center
+  //align-items: center
+  background: rgba(4, 6, 38, 0.5)
+
+
+.popup-window
+  @include unselectable
+  position: relative
+  background-color: #ffffff
+  padding: 30px 40px 70px 50px
+  width: 70%
+  margin-left: auto
+  margin-right: auto
+  margin-top: 10%
+  h3
+    font-size: 24px
+    font-weight: bold
+    margin-top: 20px
+    margin-bottom: 20px
+    text-transform: uppercase
+  h4
+    font-size: 14px
+    font-weight: bold
+    margin-top: 30px
+    margin-bottom: 5px
+  p
+    width: 90%
+
+  select
+    width: 160px
+
+  button
+    margin-top: 50px
+
+  .close-elem
+    position: absolute
+    right: 0
+    margin-top: 10px
+    margin-right: 10px
+    cursor: pointer
+    &:before
+      font-size: 25px
+
+
+// класс для скрытия элементов
+.hide-element
+  display: none
+  -webkit-transition: all 0.2s ease
+  -moz-transition: all 0.2s ease
+  -o-transition: all 0.2s ease
+  transition: all 0.2s ease
+
+// класс для применения флекс-свойств к скрытому элементу
+.flex-element
+  display: flex
+
+.bold-middle
+  font-weight: 500
+
+.bold
+  font-weight: 700
+
+.bolder
+  font-weight: 800
+
+.orange
+  color: $orange-color
+
+.light-grey
+  color: $light-grey-color
+
+// иконка со стрелкой влево
+.left-arrow
+  display: inline-block
+  position: relative
+  top: 1px
+  &::before
+    font-family: 'fontello'
+    font-weight: normal
+    font-style: normal
+    content: '\e801'
+    font-size: 14px
+    padding-left: 10px
+
+// иконка со стрелкой вправо
+.right-arrow
+  display: inline-block
+  position: relative
+  top: 1px
+  &::before
+    font-family: 'fontello'
+    font-weight: normal
+    font-style: normal
+    content: '\e802'
+    font-size: 14px
+    padding-right: 10px
+
+// иконка со стрелкой вниз
+.down-arrow
+  display: inline-block
+  position: relative
+  top: 1px
+  &::before
+    font-family: 'fontello'
+    font-weight: normal
+    font-style: normal
+    content: '\e800'
+    font-size: 14px
+    padding-right: 10px
+
+// иконка закрыть окно
+.close-elem
+  display: inline-block
+  position: relative
+  top: 2px
+  &::before
+    font-family: 'fontello'
+    font-weight: normal
+    font-style: normal
+    content: '\E80C'
+    font-size: 14px
+    padding-right: 10px
+
+// ОСНОВНЫЕ КНОПКИ ДЕЙСТВИЯ
+
+.btn-orange,
+.btn-blue
+  min-width: 110px
+  width: max-content
+  height: 32px
+  @media (min-width: $tablet-content-width)
+    min-width: 130px
+    height: 40px
+  a
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    text-decoration: none
+    padding: 0 20px
+    color: #ffffff
+    font-size: 10px
+    letter-spacing: 1px
+    font-weight: 500
+    text-transform: uppercase
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.4)
+    transition: all 0.3s ease-in-out
+    &:hover
+      cursor: pointer
+      font-weight: 900
+      background-color: #ffffff
+      letter-spacing: 1.5px
+      box-shadow: unset
+      padding: 0 17px
+    @media (min-width: $tablet-content-width)
+      padding: 0 30px
+      font-size: 12px
+      letter-spacing: 1px
+      &:hover
+        padding: 0 27px
+        letter-spacing: 1.5px
+
+.btn-orange a
+  background-color: $orange-color
+  &:hover
+    color: $orange-color
+    border: 3px solid $orange-color
+
+.btn-blue a
+  background-color: $blue-color
+  &:hover
+    color: $blue-color
+    border: 3px solid $blue-color
+
+// КНОПКА ВЫБОРА ПРОДУКТА ********************************************
+.product-box__btn
+  min-width: 100px
+  height: 32px
+  @media (min-width: $tablet-content-width)
+    min-width: 140px
+    height: 40px
+  a
+    background-color: #ffffff
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    text-decoration: none
+    padding: 0 10px
+    font-size: 10px
+    letter-spacing: 1px
+    opacity: 0.6
+    text-transform: uppercase
+    font-weight: 500
+    color: $dark-grey-color
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1)
+    border: 1px solid $light-grey-color
+    cursor: pointer
+    transition: all 0.3s ease-in-out
+    &:hover
+      color: $blue-color
+      padding: 0 6px
+      font-weight: 600
+      letter-spacing: 1.5px
+      background-color: #ffffff
+      box-shadow: unset
+      border: 3px solid $blue-color
+      opacity: 1
+    @media (min-width: $tablet-content-width)
+      padding: 0 20px
+      font-size: 12px
+      letter-spacing: 1px
+      &:hover
+        padding: 0 16px
+        letter-spacing: 2px
+
+// КНОПКА ФОРМЫ (узкая)  **********************************************************
+.narrow-btn
+  font-family: 'Gotham Pro', sans-serif
+  min-width: 130px
+  height: 26px
+  padding: 0 25px
+  background-color: $slight-grey-color
+  text-align: center
+  font-size: 9px
+  letter-spacing: 1px
+  text-transform: uppercase
+  font-weight: 500
+  color: $grey-color
+  box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.2)
+  cursor: pointer
+  transition: all 0.2s linear
+  &:hover
+    background-color: $border-grey-color
+    font-weight: 600
+    color: $orange-color
+    letter-spacing: 1.5px
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2)
+  @media (min-width: $tablet-content-width)
+    height: 31px
+    font-size: 10px
+
+// КНОПКА ФОРМЫ (широкая)  **********************************************************
+.wide-btn
+  font-family: 'Gotham Pro', sans-serif
+  display: block
+  min-width: 300px
+  width: 90%
+  height: 30px
+  font-size: 9px
+  text-transform: uppercase
+  text-align: center
+  margin: 0 auto
+  color: $grey-color
+  letter-spacing: 1px
+  word-spacing: 2px
+  font-weight: 500
+  background-color: $slight-grey-color
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.2)
+  cursor: pointer
+  transition: all 0.2s linear
+  &:hover
+    background-color: $border-grey-color
+    font-weight: 600
+    color: $orange-color
+    letter-spacing: 1.5px
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2)
+  @media (min-width: $tablet-content-width)
+    min-width: unset
+    max-width: 1230px
+    height: 50px
+    font-size: 12px
+
+// ЗАГОЛОВОК ПЕРВОГО УРОВНЯ (оранжевый со стрелкой) *************************
+.heading-orange
+  color: $orange-color
+  display: flex
+  align-items: center
+
+.heading__arrow
+  display: none
+  @media (min-width: $desktop-content-width)
+    display: block
+    width: 0
+    height: 0
+    border-top: 5px solid transparent
+    border-bottom: 5px solid transparent
+    border-left: 8px solid $orange-color
+    margin-right: 8px
+
+.heading__text
+  font-size: 20px
+  letter-spacing: 1px
+  text-transform: uppercase
+  font-weight: 900
+  @media (min-width: $tablet-content-width)
+    font-size: 24px
+  @media (min-width: $desktop-content-width)
+    font-size: 26px
+
+// LOGO ICONS ***********************************************************
+.logo-ascon-desktop
+  &::before
+    display: inline-block
+    content: ""
+    background: url(../../images/logo/ascon-desktop.svg) center no-repeat
+    width: 150px
+    height: 42px
+    background-size: contain
+
+.logo-ascon-mobile
+  &::before
+    display: inline-block
+    content: ""
+    background: url(../../images/logo/ascon-mobile.svg) center no-repeat
+    width: 108px
+    height: 30px
+    background-size: contain
+
+.logo-ascon
+  &::before
+    display: inline-block
+    content: ""
+    background: url(../../images/logo/ascon-letter.svg) center no-repeat
+    background-size: contain
+
+.logo-kompas
+  &::before
+    display: inline-block
+    content: ""
+    background: url(../../images/logo/kompas.svg) center no-repeat
+    background-size: contain
+
+.logo-pilot
+  &::before
+    display: inline-block
+    content: ""
+    background: url(../../images/logo/pilot.svg) center no-repeat
+    background-size: contain
+
+.logo-renga
+  &::before
+    display: inline-block
+    content: ""
+    background: url(../../images/logo/renga.svg) center no-repeat
+    background-size: contain
+
+.logo-c3d-labs
+  &::before
+    display: inline-block
+    content: ""
+    background: url(../../images/logo/c3d-labs.svg) center no-repeat
+    background-size: contain
+
+// PAGE HEADER **********************************************************
+.page__header
+  position: relative
+  height: 100px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  color: #ffffff
+  background-color: $grey-color
+  @media (min-width: $tablet-content-width)
+    height: 170px
+
+.page__bkg
+  position: absolute
+  top: 0
+  z-index: 0
+  width: 100%
+  height: 100px
+  opacity: 0.95
+  @media (min-width: $tablet-content-width)
+    max-width: 1280px
+    height: 170px
+
+.page__name
+  z-index: 1
+  padding: 0 10px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 100%
+  max-height: 78px
+  @media (min-width: $tablet-content-width)
+    padding: 0 2%
+    max-height: 135px
+  @media (min-width: $desktop-content-width)
+    padding: 0 25px
+
+  h1
+    font-size: 20px
+    letter-spacing: 2px
+    text-transform: uppercase
+    font-weight: 900
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    @media (min-width: $tablet-content-width)
+      font-size: 30px
+      margin-bottom: 10px
+  p
+    display: none
+    font-size: 13px
+    line-height: 150%
+    margin: 0
+    width: 95%
+    overflow: hidden
+    @media (min-width: $tablet-content-width)
+      display: block
+
+.page__nav
+  display: flex
+  z-index: 1
+  li
+    min-width: 79px
+    margin-right: 1px
+    height: 24px
+    //background-color: rgba(255,255,255,0.5)
+    background-color: rgba(111, 110, 110, 0.7)
+    cursor: pointer
+    transition: all 0.3s linear
+    &:hover
+      background-color: $orange-color
+    @media (min-width: $tablet-content-width)
+      min-width: 130px
+      height: 32px
+
+  a
+    display: flex
+    height: 100%
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    padding: 0 10px
+    font-size: 8px
+    letter-spacing: 1px
+    text-transform: uppercase
+    font-weight: 500
+    cursor: unset
+    @media (min-width: $tablet-content-width)
+      padding: 0 25px
+      font-size: 10px
+
+  .active
+    background-color: $orange-color
+    &:hover
+      cursor: unset
+
+// CALL TO ACTION **********************************************************
+.action-box
+  position: fixed
+  z-index: 10
+  bottom: 0
+  width: 100%
+  height: 65px
+  display: flex
+  align-items: center
+  justify-content: space-around
+  background-color: $border-grey-color
+  box-shadow: 0px -1px 5px -1px rgba(0, 0, 0, 0.2)
+  @media (min-width: $tablet-content-width)
+    padding: 0 10%
+  @media (min-width: $desktop-content-width)
+    @include box-shadow
+    display: block
+    background-color: $slight-grey-color
+    width: 320px
+    position: sticky
+    height: min-content
+    top: 10px
+    margin-left: auto
+    padding: 40px
+  h4
+    display: none
+    @media (min-width: $desktop-content-width)
+      display: block
+      text-transform: uppercase
+      font-size: 18px
+      font-weight: bold
+  p
+    display: none
+    @media (min-width: $desktop-content-width)
+      display: block
+      font-size: 13px
+      line-height: 150%
+      margin-top: 20px
+      margin-bottom: 35px
