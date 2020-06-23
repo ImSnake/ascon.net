@@ -1,8 +1,8 @@
 <?
 $arTemplate = array (
-  'NAME' => 'Заготовка от camouf.ru',
-  'DESCRIPTION' => 'Заготовка от camouf.ru',
-  'SORT' => '',
-  'TYPE' => '',
+    'NAME' => 'ascon.net templates',
+    'DESCRIPTION' => 'ascon.net templates',
+    'SORT' => '',
+    'TYPE' => '',
 );
 ?>

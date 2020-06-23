@@ -5,29 +5,25 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/blog.css');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/blog.js');
 $APPLICATION->SetTitle("Events");
-?>
-    <div class="center container">
-        
-        <div class="page__header">
-            <div class="page__name">
-                <h1>Events</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, Ut enim ad minim veniam.
-                </p>
-            </div>
-            <ul class="page__nav events-nav">
-                <li><a href="/events/">all</a></li>
-                <li><a href="#">Learn&nbsp;&amp;&nbsp;Train</a></li>
-                <li><a href="#">Special&nbsp;offers</a></li>
-                <li><a href="#">activities</a></li>
-            </ul>
-            <img alt="bkg-events" src="/local/templates/ascon_eng/images/banner/events.png" class="page__bkg">
-        </div>
-        
-        <div class="main">
-            
-            <?$APPLICATION->IncludeComponent(
+?><div class="center container">
+	<div class="page__header">
+		<div class="page__name">
+			<h1>Events</h1>
+			<p>
+				 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Ut enim ad minim veniam.
+			</p>
+		</div>
+		<ul class="page__nav events-nav">
+			<li><a href="/events/">all</a></li>
+			<li><a href="#">Learn&nbsp;&amp;&nbsp;Train</a></li>
+			<li><a href="#">Special&nbsp;offers</a></li>
+			<li><a href="#">activities</a></li>
+		</ul>
+ <img alt="bkg-events" src="/local/templates/ascon_eng/images/banner/events.png" class="page__bkg">
+	</div>
+	<div class="main">
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"events", 
 	array(
@@ -44,7 +40,6 @@ $APPLICATION->SetTitle("Events");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"COMPONENT_TEMPLATE" => "events",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d-m-Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
@@ -55,12 +50,12 @@ $APPLICATION->SetTitle("Events");
 		),
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
 		"DETAIL_PAGER_TEMPLATE" => "",
-		"DETAIL_PAGER_TITLE" => "Страница",
+		"DETAIL_PAGER_TITLE" => "",
 		"DETAIL_PROPERTY_CODE" => array(
 			0 => "ATT_EVENT_CATEGORY",
-			1 => "ATT_EVENT_TYPE",
+			1 => "ATT_EVENT_FINISH",
 			2 => "ATT_EVENT_START",
-			3 => "ATT_EVENT_FINISH",
+			3 => "ATT_EVENT_TYPE",
 			4 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
@@ -81,8 +76,8 @@ $APPLICATION->SetTitle("Events");
 			1 => "",
 		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "9",
-		"IBLOCK_TYPE" => "events",
+		"IBLOCK_ID" => "16",
+		"IBLOCK_TYPE" => "dynamic",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d-m-Y",
 		"LIST_FIELD_CODE" => array(
@@ -94,9 +89,9 @@ $APPLICATION->SetTitle("Events");
 		"LIST_PROPERTY_CODE" => array(
 			0 => "ATT_EVENT_BRAND",
 			1 => "ATT_EVENT_CATEGORY",
-			2 => "ATT_EVENT_TYPE",
+			2 => "ATT_EVENT_FINISH",
 			3 => "ATT_EVENT_START",
-			4 => "ATT_EVENT_FINISH",
+			4 => "ATT_EVENT_TYPE",
 			5 => "",
 		),
 		"MESSAGE_404" => "",
@@ -118,7 +113,7 @@ $APPLICATION->SetTitle("Events");
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "Y",
 		"SORT_BY1" => "ATT_EVENT_START",
-		"SORT_BY2" => "SORT",
+		"SORT_BY2" => "ACTIVE_FROM",
 		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
@@ -130,6 +125,7 @@ $APPLICATION->SetTitle("Events");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
+		"COMPONENT_TEMPLATE" => "events",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
@@ -137,9 +133,7 @@ $APPLICATION->SetTitle("Events");
 		)
 	),
 	false
-);?> <br>
-        </div>
-        
-    </div>
-
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+);?>
+	</div>
+</div>
+<br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

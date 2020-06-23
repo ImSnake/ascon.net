@@ -14,7 +14,6 @@ $this->setFrameMode(true);
 ?>
 
 <div id="form-media">
-
     <form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get">
 
         <?foreach($arResult["ITEMS"] as $arItem):?>

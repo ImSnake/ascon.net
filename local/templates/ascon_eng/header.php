@@ -2,6 +2,9 @@
 <!doctype html>
 <html>
 <head>
+
+
+
 	<?
     $APPLICATION->ShowHead();
     use Bitrix\Main\Page\Asset;

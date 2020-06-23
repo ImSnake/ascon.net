@@ -12,44 +12,12 @@ $APPLICATION->SetTitle("Purchase");
 				 HOW TO BY
 			</div>
 		</div>
-
-<?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.smart.filter", 
-	".default", 
+	</div>
+	<div class="main">
+		 <?$APPLICATION->IncludeComponent(
+	"bitrix:news", 
+	"partners", 
 	array(
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CONVERT_CURRENCY" => "N",
-		"DISPLAY_ELEMENT_COUNT" => "Y",
-		"FILTER_NAME" => "arrFilter",
-		"FILTER_VIEW_MODE" => "vertical",
-		"HIDE_NOT_AVAILABLE" => "N",
-		"IBLOCK_ID" => "12",
-		"IBLOCK_TYPE" => "partners",
-		"PAGER_PARAMS_NAME" => "arrPager",
-		"POPUP_POSITION" => "left",
-		"PREFILTER_NAME" => "smartPreFilter",
-		"PRICE_CODE" => array(
-			0 => "BASE",
-		),
-		"SAVE_IN_SESSION" => "N",
-		"SECTION_CODE" => "",
-		"SECTION_DESCRIPTION" => "-",
-		"SECTION_ID" => "",
-		"SECTION_TITLE" => "-",
-		"SEF_MODE" => "N",
-		"TEMPLATE_THEME" => "blue",
-		"XML_EXPORT" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?>
-
-><?$APPLICATION->IncludeComponent(
-	"bitrix:news",
-	"partners",
-	Array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -67,11 +35,17 @@ $APPLICATION->SetTitle("Purchase");
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d/m/Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "N",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => array(0=>"",1=>"",),
+		"DETAIL_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"DETAIL_PAGER_SHOW_ALL" => "N",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"DETAIL_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "N",
 		"DISPLAY_DATE" => "Y",
@@ -80,16 +54,36 @@ $APPLICATION->SetTitle("Purchase");
 		"DISPLAY_PREVIEW_TEXT" => "N",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FILE_404" => "",
-		"FILTER_FIELD_CODE" => array(0=>"XML_ID",1=>"UF_COUNTRY_NAME",),
+		"FILTER_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
-		"FILTER_PROPERTY_CODE" => array(0=>"ATT_PARTNER_STATUS",1=>"ATT_PARTNER_COUNTRY",2=>"",),
+		"FILTER_PROPERTY_CODE" => array(
+			0 => "ATT_PARTNER_COUNTRY",
+			1 => "",
+		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "12",
 		"IBLOCK_TYPE" => "partners",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d/m/Y",
-		"LIST_FIELD_CODE" => array(0=>"NAME",1=>"PREVIEW_PICTURE",2=>"",),
-		"LIST_PROPERTY_CODE" => array(0=>"ATT_PARENT_PARTNER",1=>"ATT_PARTNER_NAME",2=>"ATT_PARTNER_STATUS",3=>"ATT_PARTNER_ALLOWED",4=>"ATT_PARTNER_WEBSITE",5=>"ATT_PARTNER_COUNTRY",6=>"ATT_PARTNER_EMAIL",7=>"ATT_PARTNER_PHONE",8=>"",),
+		"LIST_FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "PREVIEW_PICTURE",
+			2 => "",
+		),
+		"LIST_PROPERTY_CODE" => array(
+			0 => "ATT_PARENT_PARTNER",
+			1 => "ATT_PARTNER_NAME",
+			2 => "ATT_PARTNER_STATUS",
+			3 => "ATT_PARTNER_ALLOWED",
+			4 => "ATT_PARTNER_WEBSITE",
+			5 => "ATT_PARTNER_COUNTRY",
+			6 => "ATT_PARTNER_EMAIL",
+			7 => "ATT_PARTNER_PHONE",
+			8 => "",
+		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
@@ -120,11 +114,13 @@ $APPLICATION->SetTitle("Purchase");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"VARIABLE_ALIASES" => array("SECTION_ID"=>"SECTION_ID","ELEMENT_ID"=>"ELEMENT_ID",)
-	)
+		"VARIABLE_ALIASES" => array(
+			"SECTION_ID" => "SECTION_ID",
+			"ELEMENT_ID" => "ELEMENT_ID",
+		)
+	),
+	false
 );?>
 	</div>
-	<div class="main">
-	</div>
 </div>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ &nbsp;<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
