@@ -14,11 +14,9 @@ $this->setFrameMode(true);
 ?>
 
 
-<?
+<?/*
 use Bitrix\Highloadblock as HL;
 use Bitrix\Main\Entity;
-
-
 
 
 $hlblock = HL\HighloadBlockTable::getById(5)->fetch();
@@ -68,8 +66,9 @@ while ($arRes = $rsData->Fetch()) {
 
 use Bitrix\Main\Diag\Debug;
 Debug::dump($arResult["ITEMS"]);
-?>
+*/?>
 
+<?/*echo SelectBoxFromArray($arItem["INPUT_NAME"], $arr, $CHOICE,"", "", "");*/?>
 
 <form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get">
 
@@ -94,7 +93,6 @@ Debug::dump($arResult["ITEMS"]);
 					<td valign="top"><?=$arItem["NAME"]?>:</td>
 					<td valign="top"><?=$arItem["INPUT"]?></td>
 				</tr>
-                <?echo SelectBoxFromArray($arItem["INPUT_NAME"], $arr, $CHOICE,"", "", "");?>
 			<?endif?>
 		<?endforeach;?>
 	</tbody>

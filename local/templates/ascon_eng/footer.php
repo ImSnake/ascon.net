@@ -46,8 +46,8 @@
             <div class="footer_column">
                 <div class="footer__heading">OTHER</div>
                 <ul>
-                    <li><a href="/events/">Events</a></li>
                     <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/events/">Events</a></li>
                     <!--                <li><a href="#">Item</a></li>
                                         <li><a href="#">Item</a></li>-->
                 </ul>

@@ -15,9 +15,9 @@ $APPLICATION->SetTitle("Events");
 		</div>
 		<ul class="page__nav events-nav">
 			<li><a href="/events/">all</a></li>
-			<li><a href="#">Learn&nbsp;&amp;&nbsp;Train</a></li>
-			<li><a href="#">Special&nbsp;offers</a></li>
-			<li><a href="#">activities</a></li>
+			<li><a href="/events/learn/">Learn&nbsp;&amp;&nbsp;Train</a></li>
+			<li><a href="/events/offers/">Special&nbsp;offers</a></li>
+			<li><a href="/events/activities/">activities</a></li>
 		</ul>
  <img alt="bkg-events" src="/local/templates/ascon_eng/images/banner/events.png" class="page__bkg">
 	</div>
@@ -128,8 +128,8 @@ $APPLICATION->SetTitle("Events");
 		"COMPONENT_TEMPLATE" => "events",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
-			"section" => "",
-			"detail" => "#ELEMENT_ID#/",
+			"section" => "#SECTION_CODE#/",
+			"detail" => "#SECTION_CODE#/#ELEMENT_CODE#/",
 		)
 	),
 	false

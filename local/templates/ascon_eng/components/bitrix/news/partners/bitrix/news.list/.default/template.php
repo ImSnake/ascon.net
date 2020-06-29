@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -12,75 +12,87 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="news-list">
-<?if($arParams["DISPLAY_TOP_PAGER"]):?>
-	<?=$arResult["NAV_STRING"]?><br />
-<?endif;?>
-<?foreach($arResult["ITEMS"] as $arItem):?>
-	<?
-	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-	?>
-	<p class="news-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-		<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
-			<?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
-				<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><img
-						class="preview_picture"
-						border="0"
-						src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>"
-						width="<?=$arItem["PREVIEW_PICTURE"]["WIDTH"]?>"
-						height="<?=$arItem["PREVIEW_PICTURE"]["HEIGHT"]?>"
-						alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>"
-						title="<?=$arItem["PREVIEW_PICTURE"]["TITLE"]?>"
-						style="float:left"
-						/></a>
-			<?else:?>
-				<img
-					class="preview_picture"
-					border="0"
-					src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>"
-					width="<?=$arItem["PREVIEW_PICTURE"]["WIDTH"]?>"
-					height="<?=$arItem["PREVIEW_PICTURE"]["HEIGHT"]?>"
-					alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>"
-					title="<?=$arItem["PREVIEW_PICTURE"]["TITLE"]?>"
-					style="float:left"
-					/>
-			<?endif;?>
-		<?endif?>
-		<?if($arParams["DISPLAY_DATE"]!="N" && $arItem["DISPLAY_ACTIVE_FROM"]):?>
-			<span class="news-date-time"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?></span>
-		<?endif?>
-		<?if($arParams["DISPLAY_NAME"]!="N" && $arItem["NAME"]):?>
-			<?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
-				<a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><b><?echo $arItem["NAME"]?></b></a><br />
-			<?else:?>
-				<b><?echo $arItem["NAME"]?></b><br />
-			<?endif;?>
-		<?endif;?>
-		<?if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && $arItem["PREVIEW_TEXT"]):?>
-			<?echo $arItem["PREVIEW_TEXT"];?>
-		<?endif;?>
-		<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
-			<div style="clear:both"></div>
-		<?endif?>
-		<?foreach($arItem["FIELDS"] as $code=>$value):?>
-			<small>
-			<?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?=$value;?>
-			</small><br />
-		<?endforeach;?>
-		<?foreach($arItem["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
-			<small>
-			<?=$arProperty["NAME"]?>:&nbsp;
-			<?if(is_array($arProperty["DISPLAY_VALUE"])):?>
-				<?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
-			<?else:?>
-				<?=$arProperty["DISPLAY_VALUE"];?>
-			<?endif?>
-			</small><br />
-		<?endforeach;?>
-	</p>
-<?endforeach;?>
-<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
-	<br /><?=$arResult["NAV_STRING"]?>
-<?endif;?>
+
+
+<div class="partner-group">
+
+    <? foreach ($arResult["ITEMS"] as $arItem): ?>
+        <?
+        $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+        $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+        ?>
+<!--        <a href="#">-->
+            <div class="partner-box">
+
+                <div class="partner__top">
+
+                    <div class="partner__country"><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_COUNTRY"]["DISPLAY_VALUE"] ?></div>
+
+                    <div class="partner__logo">
+                        <? if (count($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_LOGO"]) > 0): ?>
+                            <img src="<?echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_LOGO"]["FILE_VALUE"]["SRC"]?>"
+                            <? else: ?>
+                            <img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"]?>"
+                                <? endif; ?>
+                             alt="<?echo $arItem["NAME"];?>">
+                    </div>
+
+                </div>
+
+                <div class="partner__content">
+
+                    <div class="partner__name"><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_NAME"]["DISPLAY_VALUE"] ?></div>
+
+                    <div class="partner__title">website</div>
+                    <div class="partner__text link"><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_WEBSITE"]["DISPLAY_VALUE"] ?></div>
+
+                    <div class="partner__title">phone</div>
+                    <div class="partner__text">
+                        <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"])): ?>
+                            <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"] as $elem): ?>
+                                <span><? echo $elem ?></span>
+                            <? endforeach; ?>
+                        <? else: ?>
+                            <span><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"] ?></span>
+                        <? endif ?>
+                    </div>
+                </div>
+
+                <div class="partner__bottom">
+
+                    <div class="partner__status">
+                        <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_STATUS"]["DISPLAY_VALUE"])): ?>
+                            <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_STATUS"]["DISPLAY_VALUE"] as $elem): ?>
+                                <div><? echo $elem ?></div>
+                            <? endforeach; ?>
+                        <? else: ?>
+                            <div><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_STATUS"]["DISPLAY_VALUE"] ?></div>
+                        <? endif ?>
+                    </div>
+
+                    <div class="partner__products">
+                        <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_ALLOWED"]["DISPLAY_VALUE"])): ?>
+                            <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_ALLOWED"]["DISPLAY_VALUE"] as $elem): ?>
+                            <? if (strtolower($elem) == "pilot-ice"): ?>
+                                    <span class="logo-<? echo substr(strtolower($elem), 0, -4) ?>"></span>
+                                <? else: ?>
+                                    <span class="logo-<? echo strtolower($elem) ?>"></span>
+                                <? endif ?>
+                            <? endforeach; ?>
+                        <? else: ?>
+                            <span class="logo-<? echo strtolower($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_ALLOWED"]["DISPLAY_VALUE"]) ?>"></span>
+                        <? endif ?>
+                    </div>
+
+                </div>
+
+            </div>
+<!--        </a>-->
+    <? endforeach; ?>
+
 </div>
+
+<? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
+    <br/><?= $arResult["NAV_STRING"] ?>
+<? endif; ?>
+

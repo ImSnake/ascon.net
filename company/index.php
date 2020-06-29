@@ -12,7 +12,7 @@ $APPLICATION->SetTitle("Company");
         <div class="page__header">
 
             <div class="page__name">
-                <h1>About ASCON company</h1>
+                <h1>About our company</h1>
             </div>
 
             <ul class="page__nav">

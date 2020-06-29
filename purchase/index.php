@@ -1,20 +1,35 @@
 <?
 use Bitrix\Main\Page\Asset;
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/purchase.css');
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/purchase.js');
 $APPLICATION->SetTitle("Purchase");
-?><div class="center container">
-	<div class="main">
-		<div class="heading-orange">
-			<div class="heading__arrow">
-			</div>
-			<div class="heading__text">
-				 HOW TO BY
-			</div>
-		</div>
-	</div>
-	<div class="main">
-		 <?$APPLICATION->IncludeComponent(
+?>
+    <div class="center container">
+
+        <div class="page__header">
+
+            <div class="page__name">
+                <h1>HOW TO BY</h1>
+            </div>
+
+            <ul class="page__nav">
+                <li class="active"><a href="#">FIND SELLER</a></li>
+                <li><a href="#">Submit request</a></li>
+            </ul>
+
+            <img class="page__bkg" src="/local/templates/ascon_eng/images/banner/purchase.jpg" alt="bkg-purchase">
+
+        </div>
+
+        <div class="main">
+
+            <div class="heading-orange">
+                <div class="heading__arrow"></div>
+                <div class="heading__text">FIND SELLER</div>
+            </div>
+
+            <? $APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"partners", 
 	array(
@@ -61,7 +76,9 @@ $APPLICATION->SetTitle("Purchase");
 		"FILTER_NAME" => "",
 		"FILTER_PROPERTY_CODE" => array(
 			0 => "ATT_PARTNER_COUNTRY",
-			1 => "",
+			1 => "ATT_PARTNER_ALLOWED",
+			2 => "ATT_PARTNER_STATUS",
+			3 => "",
 		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "12",
@@ -75,19 +92,20 @@ $APPLICATION->SetTitle("Purchase");
 		),
 		"LIST_PROPERTY_CODE" => array(
 			0 => "ATT_PARENT_PARTNER",
-			1 => "ATT_PARTNER_NAME",
-			2 => "ATT_PARTNER_STATUS",
-			3 => "ATT_PARTNER_ALLOWED",
-			4 => "ATT_PARTNER_WEBSITE",
-			5 => "ATT_PARTNER_COUNTRY",
-			6 => "ATT_PARTNER_EMAIL",
-			7 => "ATT_PARTNER_PHONE",
-			8 => "",
+			1 => "ATT_PARTNER_COUNTRY",
+			2 => "ATT_PARTNER_NAME",
+			3 => "ATT_PARTNER_WEBSITE",
+			4 => "ATT_PARTNER_EMAIL",
+			5 => "ATT_PARTNER_PHONE",
+			6 => "ATT_PARTNER_ALLOWED",
+			7 => "ATT_PARTNER_STATUS",
+			8 => "ATT_PARTNER_LOGO",
+			9 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "20",
+		"NEWS_COUNT" => "100",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -101,9 +119,9 @@ $APPLICATION->SetTitle("Purchase");
 		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "N",
 		"SHOW_404" => "Y",
-		"SORT_BY1" => "NAME",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
+		"SORT_BY1" => "SORT",
+		"SORT_BY2" => "NAME",
+		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_CATEGORIES" => "N",
@@ -120,7 +138,15 @@ $APPLICATION->SetTitle("Purchase");
 		)
 	),
 	false
-);?>
-	</div>
-</div>
- &nbsp;<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+); ?>
+
+            <div class="heading-orange">
+                <div class="heading__arrow"></div>
+                <div class="heading__text">Submit request</div>
+            </div>
+
+        </div>
+
+    </div>
+
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

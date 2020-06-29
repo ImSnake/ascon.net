@@ -3,6 +3,140 @@
 @import ../base/vars
 
 .main
-  img
-    width: 100px
+  //img
+    max-width: 200px
     height: 100%
+.heading-orange
+  margin-top: 50px
+
+.partner-group
+  display: flex
+  flex-wrap: wrap
+  @media (min-width: $desktop-content-width)
+    margin: 0 -38px
+  a
+    text-decoration: none
+
+.partner-box
+  @include box-shadow
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 300px
+  min-height: 325px
+  text-decoration: unset
+  @media (min-width: $tablet-content-width)
+    width: 600px
+    height: 340px
+  @media (min-width: $desktop-content-width)
+    margin: 0 38px
+    margin-bottom: 60px
+
+
+.partner__top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 90px
+  padding: 25px
+  @media (min-width: $tablet-content-width)
+    height: 95px
+    padding: 25px 30px
+
+.partner__country
+  color: $orange-color
+  font-size: 16px
+  font-weight: 800
+  letter-spacing: 0.5px
+  //@media (min-width: $tablet-content-width)
+    font-size: 18px
+
+.partner__logo
+  width: 140px
+  height: 60px
+  text-align: right
+  margin-top: 10px
+  img
+    //max-width: 100px
+    //max-height: 50px
+    //@media (min-width: $tablet-content-width)
+    max-width: 130px
+    max-height: 50px
+  //img[alt="Softline Armenia"],
+  //img[alt="Softline Azerbaijan"],
+  //img[alt="Softline Belarus"],
+  //img[alt="Softline de Venezuela"],
+  //img[alt="Softline Russia"]
+    padding-top: 10px
+    padding-bottom: 10px
+
+.partner__content
+  padding: 0 25px
+  height: 100%
+  @media (min-width: $tablet-content-width)
+    padding: 0 30px
+
+.partner__name
+  font-size: 22px
+  font-weight: 600
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  margin-bottom: 18px
+  @media (min-width: $tablet-content-width)
+    font-size: 26px
+
+.partner__title
+  font-size: 13px
+  font-weight: 500
+  margin-top: 15px
+  margin-bottom: 5px
+  @media (min-width: $tablet-content-width)
+    font-size: 14px
+
+.partner__text
+  font-size: 13px
+  @media (min-width: $tablet-content-width)
+    font-size: 14px
+    &.link
+      color: $blue-color
+      text-decoration: underline
+
+.partner__bottom
+  height: 70px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background-color: $slight-grey-color
+  padding: 0 25px
+  @media (min-width: $tablet-content-width)
+    padding: 0 30px
+    padding-top: 3px
+
+.partner__status
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 70px
+  color: $grey-color
+  font-size: 10px
+  text-transform: uppercase
+  letter-spacing: 0.2px
+  font-weight: 400
+  opacity: 0.7
+  line-height: 150%
+  //padding-top: 3px
+  @media (min-width: $tablet-content-width)
+    font-size: 11px
+
+.partner__products
+  //padding-top: 5px
+  span
+    margin-left: 27px
+  span::before
+    opacity: 0.7
+    width: 20px
+    height: 20px
+    @media (min-width: $tablet-content-width)
+      width: 23px
+      height: 23px

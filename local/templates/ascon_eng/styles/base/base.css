@@ -557,6 +557,7 @@ button {
   .page__name h1 {
     font-size: 30px;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
 }
 .page__name p {

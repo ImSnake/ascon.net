@@ -20,6 +20,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Products", 
+		"/products.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
