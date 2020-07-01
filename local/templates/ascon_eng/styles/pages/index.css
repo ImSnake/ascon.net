@@ -101,7 +101,11 @@
   text-overflow: ellipsis;
   border: 1px solid #ffffff;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .central-banner .banner__btn a:hover {
   border-width: 2px;
@@ -350,7 +354,11 @@
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
   border: 1px solid #dfdfdf;
   cursor: pointer;
-  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .product-box .product__btn a:hover {
   color: #3265A0;

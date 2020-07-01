@@ -130,10 +130,11 @@ button {
 
 .hide-element {
   display: none;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
 }
 
 .flex-element {
@@ -246,7 +247,11 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .btn-orange a:hover,
 .btn-blue a:hover {
@@ -314,7 +319,11 @@ button {
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
   border: 1px solid #dfdfdf;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .product-box__btn a:hover {
   color: #3265A0;
@@ -353,6 +362,10 @@ button {
   box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
 }
 .narrow-btn:hover {
   background-color: #eeeeee;
@@ -386,6 +399,10 @@ button {
   box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
 }
 .wide-btn:hover {
   background-color: #eeeeee;
@@ -584,7 +601,11 @@ button {
   height: 24px;
   background-color: rgba(111, 110, 110, 0.7);
   cursor: pointer;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
 }
 .page__nav li:hover {
   background-color: #C64F15;
@@ -640,9 +661,9 @@ button {
 }
 @media (min-width: 1280px) {
   .action-box {
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
     display: block;
     background-color: #f8f8f8;
     width: 320px;
@@ -677,6 +698,189 @@ button {
   }
 }
 
+.bx_pagination_bottom {
+  color: #6f6e6e;
+  font-size: 13px;
+  padding: 0 10px;
+}
+.bx_pagination_bottom * {
+  vertical-align: baseline;
+}
+.bx_pagination_bottom .bx_pagination_section_two {
+  float: right;
+  text-align: right;
+}
+.bx_pagination_bottom .bx_pg_section {
+  display: inline-block;
+  height: 30px;
+  vertical-align: top;
+  line-height: 30px;
+}
+.bx_pagination_bottom .bx_pagination_select_container {
+  display: inline-block;
+}
+.bx_pagination_bottom .bx_pagination_select_container select {
+  position: relative;
+  margin: 2px 20px 2px 10px;
+  padding: 1px 25px 3px 5px;
+  height: 22px;
+  outline: none;
+  border: 1px solid #eeeeee;
+  border-radius: 1px;
+  background: #fff url(/local/templates/ascon_eng/images/components-img/select_arrow.png) no-repeat right center;
+  color: #6f6e6e;
+  font-size: 13px;
+  line-height: 16px;
+  resize: none;
+  -webkit-appearance: none;
+}
+.bx_pagination_bottom .bx_pagination_page {
+  white-space: nowrap;
+  font-size: 13px;
+}
+.bx_pagination_bottom .bx_pagination_page ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.bx_pagination_bottom .bx_pagination_page li {
+  display: inline-block;
+  min-width: 22px;
+  color: #6f6e6e;
+  text-align: center;
+  line-height: 22px;
+}
+.bx_pagination_bottom .bx_pagination_page li a {
+  display: block;
+  min-width: 22px;
+  color: #6f6e6e;
+  text-align: center;
+  text-decoration: none;
+  line-height: 22px;
+}
+.bx_pagination_bottom .bx_pagination_page li a:hover {
+  color: #C64F15;
+  font-weight: 500;
+}
+.bx_pagination_bottom .bx_pagination_page li.bx_active {
+  border-radius: 3px;
+  background: #f8f8f8;
+  color: #999999;
+  box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+}
+.bx_pagination_bottom .bx_pg_section.bx_pg_pagination_num {
+  display: block;
+}
+.bx_pagination_bottom .bx_pg_section.bx_pg_show_col select {
+  margin-right: 5px;
+}
+.bx_pagination_bottom .bx_wsnw {
+  white-space: nowrap;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.bx_pagination_bottom .bx_pagination_section_one, .bx_pagination_bottom .bx_pagination_section_two {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.bx_pagination_bottom .bx_pagination_select_container {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.bx_pagination_bottom .bx_pagination_select_container select {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.bx_pagination_bottom .bx_pg_section, .bx_pagination_bottom .bx_pagination_page {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.bx_pagination_bottom .bx_pg_section.bx_pg_pagination_num, .bx_pagination_bottom .bx_pg_section.bx_pg_show_col {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.bx_pagination_bottom .bx_pg_text, .bx_pagination_bottom .bx_pg_section.pg_pagination_num .bx_pg_text {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@-moz-document url-prefix() {
+  .bx_pagination_bottom .bx_pagination_select_container select {
+    background: #fff !important;
+    padding-right: 5px;
+  }
+}
+/*3 */
+@media (min-width: 480px) and (max-width: 639px) {
+  .bx_pagination_bottom .bx_pagination_select_container select {
+    margin-right: 10px;
+  }
+}
+/*4 */
+@media (max-width: 479px) {
+  .bx_pagination_bottom .bx_pagination_section_two {
+    float: none;
+    text-align: left;
+  }
+  .bx_pagination_bottom .bx_pagination_select_container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 47%;
+  }
+  .bx_pagination_bottom .bx_pagination_select_container select {
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: 0 !important;
+    width: 90%;
+  }
+  .bx_pagination_bottom .bx_pg_section {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+  }
+  .bx_pagination_bottom .bx_pagination_page {
+    white-space: normal;
+  }
+  .bx_pagination_bottom .bx_pg_section.bx_pg_pagination_num {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .bx_pagination_bottom .bx_pg_section.bx_pg_show_col {
+    display: none;
+  }
+  .bx_pagination_bottom .bx_pg_text {
+    display: inline-block;
+    width: 50%;
+  }
+  .bx_pagination_bottom .bx_pg_section.pg_pagination_num .bx_pg_text {
+    display: none;
+  }
+}
 .header__bkg {
   position: relative;
   background-color: #505050;
@@ -1151,7 +1355,11 @@ footer .container {
 }
 .footer__sm-icon i {
   font-size: 20px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
 }
 .footer__sm-icon i:hover {
   font-size: 21px;
@@ -1183,7 +1391,11 @@ footer .container {
   padding-top: 10px;
   margin-left: 18px;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
 }
 .footer_column a:hover {
   text-decoration: underline;

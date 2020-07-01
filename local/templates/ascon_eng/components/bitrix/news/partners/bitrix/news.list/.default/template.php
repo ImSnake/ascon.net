@@ -50,7 +50,7 @@ $this->setFrameMode(true);
                     <div class="partner__text">
                         <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"])): ?>
                             <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"] as $elem): ?>
-                                <span><? echo $elem ?></span>
+                                <span class="multi-phone"><? echo $elem ?></span>
                             <? endforeach; ?>
                         <? else: ?>
                             <span><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"] ?></span>

@@ -85,9 +85,10 @@
   height: 355px
   background-color: $slight-grey-color
   overflow: hidden
-  transition: all 0.2s linear
+  @include animation-02-linear
   &:hover
     transform: scale(1.02)
+    @include box-shadow-hover
     &.media-logo
       transform: scale(1.00)
   @media (min-width: $tablet-content-width)
@@ -122,11 +123,11 @@
 .media-type
   color: $grey-color
   text-transform: uppercase
-  font-weight: 500
+  font-weight: 400
 
 .media-date
   font-weight: 500
-  color: $dark-grey-color
+  color: $grey-color
 
 .media-name
   height: 105px
@@ -153,7 +154,7 @@
     height: 55px
     padding-right: 26px
     padding-bottom: 20px
-    transition: all 0.2s linear
+    @include animation-02-linear
 
   span
     margin-left: 30px
@@ -335,7 +336,7 @@
   a
     text-decoration: underline
     color: $orange-color
-    transition: all 0.2s ease-in-out
+    @include animation-02-linear
     &:hover
       font-weight: 500
 
@@ -397,7 +398,7 @@
   min-height: 320px
   background-color: #ffffff
   overflow: hidden
-  transition: all 0.2s linear
+  @include animation-02-linear
   @media (min-width: $tablet-content-width)
     //max-width: unset
     min-height: unset
@@ -494,195 +495,3 @@
 
 .elem-blur
   opacity: 0.7
-
-
-// * * * * P A G I N A T I O N * * * * * * * *
-.bx_pagination_bottom
-  *
-    vertical-align: baseline
-
-  color: $grey-color
-  font-size: 13px
-  padding: 0 10px
-
-  //.bx_pagination_section_one
-
-  .bx_pagination_section_two
-    float: right
-    text-align: right
-
-  .bx_pg_section
-    display: inline-block
-    height: 30px
-    vertical-align: top
-    line-height: 30px
-
-  .bx_pagination_select_container
-    display: inline-block
-
-    select
-      position: relative
-      margin: 2px 20px 2px 10px
-      padding: 1px 25px 3px 5px
-      height: 22px
-      outline: none
-      border: 1px solid $border-grey-color
-      border-radius: 1px
-      background: #fff url(/local/templates/ascon_eng/images/components-img/select_arrow.png) no-repeat right center
-      color: $grey-color
-      font-size: 13px
-      line-height: 16px
-      resize: none
-      -webkit-appearance: none
-
-  .bx_pagination_page
-    white-space: nowrap
-    font-size: 13px
-
-    ul
-      display: inline-block
-      margin: 0
-      padding: 0
-
-    li
-      display: inline-block
-      min-width: 22px
-      color: $grey-color
-      text-align: center
-      line-height: 22px
-
-      a
-        display: block
-        min-width: 22px
-        color: $grey-color
-        text-align: center
-        text-decoration: none
-        line-height: 22px
-
-        &:hover
-          color: $orange-color
-          font-weight: 500
-
-      &.bx_active
-        border-radius: 3px
-        background: $slight-grey-color
-        color: $orange-color
-        box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.1)
-        font-size: 13px
-
-  .bx_pg_section
-    &.bx_pg_pagination_num
-      display: block
-
-    &.bx_pg_show_col select
-      margin-right: 5px
-
-  .bx_wsnw
-    white-space: nowrap
-    font-size: 13px
-    letter-spacing: 1px
-
-  .bx_pagination_section_one, .bx_pagination_section_two
-    -webkit-transition: all 0.3s ease
-    -moz-transition: all 0.3s ease
-    -ms-transition: all 0.3s ease
-    -o-transition: all 0.3s ease
-    transition: all 0.3s ease
-
-  .bx_pagination_select_container
-    -webkit-transition: all 0.3s ease
-    -moz-transition: all 0.3s ease
-    -ms-transition: all 0.3s ease
-    -o-transition: all 0.3s ease
-    transition: all 0.3s ease
-
-    select
-      -webkit-transition: all 0.3s ease
-      -moz-transition: all 0.3s ease
-      -ms-transition: all 0.3s ease
-      -o-transition: all 0.3s ease
-      transition: all 0.3s ease
-
-  .bx_pg_section, .bx_pagination_page
-    -webkit-transition: all 0.3s ease
-    -moz-transition: all 0.3s ease
-    -ms-transition: all 0.3s ease
-    -o-transition: all 0.3s ease
-    transition: all 0.3s ease
-
-  .bx_pg_section
-    &.bx_pg_pagination_num, &.bx_pg_show_col
-      -webkit-transition: all 0.3s ease
-      -moz-transition: all 0.3s ease
-      -ms-transition: all 0.3s ease
-      -o-transition: all 0.3s ease
-      transition: all 0.3s ease
-
-  .bx_pg_text, .bx_pg_section.pg_pagination_num .bx_pg_text
-    -webkit-transition: all 0.3s ease
-    -moz-transition: all 0.3s ease
-    -ms-transition: all 0.3s ease
-    -o-transition: all 0.3s ease
-    transition: all 0.3s ease
-
-@-moz-document url-prefix()
-  .bx_pagination_bottom .bx_pagination_select_container select
-    background: #fff !important
-    padding-right: 5px
-
-/*3
-@media (min-width: 480px) and (max-width: 639px)
-  .bx_pagination_bottom .bx_pagination_select_container select
-    margin-right: 10px
-
-/*4
-@media (max-width: 479px)
-  .bx_pagination_bottom
-    //.bx_pagination_section_one
-
-    .bx_pagination_section_two
-      float: none
-      text-align: left
-
-    .bx_pagination_select_container
-      -webkit-box-sizing: border-box
-      -moz-box-sizing: border-box
-      box-sizing: border-box
-      width: 47%
-
-      select
-        display: block
-        -webkit-box-sizing: border-box
-        -moz-box-sizing: border-box
-        box-sizing: border-box
-        margin-right: 0 !important
-        width: 90%
-
-    .bx_pg_section
-      -webkit-box-sizing: border-box
-      -moz-box-sizing: border-box
-      box-sizing: border-box
-      width: 100%
-      text-align: left
-
-    .bx_pagination_page
-      white-space: normal
-
-    .bx_pg_section
-      &.bx_pg_pagination_num
-        width: 100%
-        height: auto
-        text-align: center
-
-      &.bx_pg_show_col
-        display: none
-
-    .bx_pg_text
-      display: inline-block
-      width: 50%
-
-    .bx_pg_section.pg_pagination_num .bx_pg_text
-      display: none
-
-/*5
-//@media (max-width: 320px)

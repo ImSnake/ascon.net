@@ -18,6 +18,8 @@ $dark-grey-color: #505050
 
 $grey-color: #6f6e6e
 
+$mid-grey-color: #999999
+
 $border-grey-color: #eeeeee
 
 $light-grey-color: #dfdfdf
@@ -33,24 +35,30 @@ $slight-grey-color: #f8f8f8
 //$border-line-light-color: #ebeef2
 
 @mixin box-shadow
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1)
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1)
-  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1)
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1)
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1)
+  -moz-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1)
+
+@mixin box-shadow-hover
+  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.08)
+  -webkit-box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.08)
+  -moz-box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.08)
 
 @mixin unselectable
   -moz-user-select: none //Mozilla Firefox
   -webkit-user-select: none //Google Chrome, Opera Next, Safari
 
-@mixin animation_0_25
-  transition: all .25s ease-out
-  -webkit-transition: all .25s ease-out
-  -moz-transition: all .25s ease-out
-  -o-transition: all .25s ease-out
-  -ms-transition: all .25s ease-out
+@mixin animation-02-linear
+  transition: all .2s linear
+  -webkit-transition: all .2s linear
+  -moz-transition: all .2s linear
+  -o-transition: all .2s linear
+  -ms-transition: all .2s linear
 
-//@mixin box-sizing
-  box-sizing: border-box
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
-  -o-box-sizing: border-box
+@mixin animation-03-ease-out
+  -webkit-transition: all 0.3s ease-out
+  -moz-transition: all 0.3s ease-out
+  -ms-transition: all 0.3s ease-out
+  -o-transition: all 0.3s ease-out
+  transition: all 0.3s ease-out
 

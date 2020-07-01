@@ -83,7 +83,7 @@
       text-overflow: ellipsis
       border: 1px solid #ffffff
       cursor: pointer
-      transition: all 0.3s ease-in-out
+      @include animation-03-ease-out
       &:hover
         border-width: 2px
         padding: 0 18px
@@ -264,7 +264,7 @@
       box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1)
       border: 1px solid $light-grey-color
       cursor: pointer
-      transition: all 0.3s linear
+      @include animation-03-ease-out
       &:hover
         color: $blue-color
         padding: 0 6px

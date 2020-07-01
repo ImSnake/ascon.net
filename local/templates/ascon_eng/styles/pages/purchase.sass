@@ -3,11 +3,52 @@
 @import ../base/vars
 
 .main
-  //img
-    max-width: 200px
-    height: 100%
-.heading-orange
-  margin-top: 50px
+  margin-bottom: 60px
+  //@media (min-width: $tablet-content-width)
+    margin-bottom: 100px
+
+  .heading-orange
+    margin-top: 50px
+
+#form-partner
+  form
+    display: none
+    margin-top: 30px
+    margin-bottom: 35px
+
+  .select-cover
+    @media (min-width: $desktop-content-width)
+      display: inline-block
+
+  select
+    font-family: 'Gotham Pro', sans-serif
+    width: 110px
+    border: 1px solid $border-grey-color
+    padding: 7px 10px 5px 10px
+    font-size: 9px
+    text-transform: uppercase
+    margin-right: 10px
+    letter-spacing: 0.3px
+    @media (min-width: $tablet-content-width)
+      width: 180px
+      font-size: 10px
+      margin-right: 20px
+      padding: 9px 10px 7px 10px
+
+    option
+      color: $main-font-color
+      font-size: 10px
+      @media (min-width: $tablet-content-width)
+        font-size: 11px
+
+    option[value=""][selected][disabled]
+      color: $mid-grey-color
+      font-size: 10px
+      @media (min-width: $tablet-content-width)
+        font-size: 11px
+
+    .narrow-btn
+      margin: 0 10px
 
 .partner-group
   display: flex
@@ -25,13 +66,16 @@
   width: 300px
   min-height: 325px
   text-decoration: unset
+  @include animation-03-ease-out
+  &:hover
+    transform: scale(1.05)
+    @include box-shadow-hover
   @media (min-width: $tablet-content-width)
     width: 600px
     height: 340px
   @media (min-width: $desktop-content-width)
     margin: 0 38px
     margin-bottom: 60px
-
 
 .partner__top
   display: flex
@@ -48,8 +92,8 @@
   font-size: 16px
   font-weight: 800
   letter-spacing: 0.5px
-  //@media (min-width: $tablet-content-width)
-    font-size: 18px
+  @media (min-width: $tablet-content-width)
+    font-size: 17px
 
 .partner__logo
   width: 140px
@@ -57,18 +101,8 @@
   text-align: right
   margin-top: 10px
   img
-    //max-width: 100px
-    //max-height: 50px
-    //@media (min-width: $tablet-content-width)
     max-width: 130px
     max-height: 50px
-  //img[alt="Softline Armenia"],
-  //img[alt="Softline Azerbaijan"],
-  //img[alt="Softline Belarus"],
-  //img[alt="Softline de Venezuela"],
-  //img[alt="Softline Russia"]
-    padding-top: 10px
-    padding-bottom: 10px
 
 .partner__content
   padding: 0 25px
@@ -89,18 +123,28 @@
 .partner__title
   font-size: 13px
   font-weight: 500
-  margin-top: 15px
+  margin-top: 18px
   margin-bottom: 5px
-  @media (min-width: $tablet-content-width)
+  //@media (min-width: $tablet-content-width)
     font-size: 14px
 
 .partner__text
   font-size: 13px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
   @media (min-width: $tablet-content-width)
     font-size: 14px
     &.link
       color: $blue-color
       text-decoration: underline
+
+  .multi-phone
+    &::after
+      content: " / "
+    &:last-child
+      &::after
+        content: " "
 
 .partner__bottom
   height: 70px
@@ -109,30 +153,29 @@
   justify-content: space-between
   background-color: $slight-grey-color
   padding: 0 25px
+  padding-top: 5px
   @media (min-width: $tablet-content-width)
     padding: 0 30px
-    padding-top: 3px
+    padding-top: 5px
 
 .partner__status
   display: flex
   flex-direction: column
   justify-content: center
   height: 70px
-  color: $grey-color
+  color: $mid-grey-color
   font-size: 10px
   text-transform: uppercase
-  letter-spacing: 0.2px
-  font-weight: 400
-  opacity: 0.7
+  letter-spacing: 0.7px
+  font-weight: 500
   line-height: 150%
-  //padding-top: 3px
   @media (min-width: $tablet-content-width)
     font-size: 11px
 
 .partner__products
-  //padding-top: 5px
   span
-    margin-left: 27px
+    margin-left: 30px
+    margin-right: 5px
   span::before
     opacity: 0.7
     width: 20px
