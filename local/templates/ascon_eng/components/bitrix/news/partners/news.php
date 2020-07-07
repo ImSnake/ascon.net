@@ -50,7 +50,7 @@ $this->setFrameMode(true);
 	$component
 );
 ?>
-<br />
+<!--<br />-->
 <?endif?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",

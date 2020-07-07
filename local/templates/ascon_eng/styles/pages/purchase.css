@@ -3,24 +3,50 @@
 /*====================*/
 .main {
   margin-bottom: 60px;
+  padding: 0 5px;
+}
+@media (min-width: 1280px) {
+  .main {
+    padding: 0;
+  }
 }
 .main .heading-orange {
-  margin-top: 50px;
+  margin-top: 30px;
+}
+@media (min-width: 600px) {
+  .main .heading-orange {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 1280px) {
+  .main .heading-orange {
+    margin-top: 50px;
+  }
 }
 
 #form-partner form {
   display: none;
-  margin-top: 30px;
-  margin-bottom: 35px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 @media (min-width: 1280px) {
+  #form-partner form {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+#form-partner .select-cover {
+  margin-bottom: 12px;
+}
+@media (min-width: 600px) {
   #form-partner .select-cover {
     display: inline-block;
+    margin-bottom: 20px;
   }
 }
 #form-partner select {
   font-family: "Gotham Pro", sans-serif;
-  width: 110px;
+  width: 130px;
   border: 1px solid #eeeeee;
   padding: 7px 10px 5px 10px;
   font-size: 9px;
@@ -30,10 +56,15 @@
 }
 @media (min-width: 600px) {
   #form-partner select {
-    width: 180px;
+    width: 160px;
     font-size: 10px;
     margin-right: 20px;
     padding: 9px 10px 7px 10px;
+  }
+}
+@media (min-width: 1280px) {
+  #form-partner select {
+    width: 180px;
   }
 }
 #form-partner select option {
@@ -54,16 +85,28 @@
     font-size: 11px;
   }
 }
-#form-partner select .narrow-btn {
-  margin: 0 10px;
+#form-partner .narrow-btn {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+@media (min-width: 600px) {
+  #form-partner .narrow-btn {
+    margin-right: 10px;
+  }
 }
 
 .partner-group {
   display: flex;
   flex-wrap: wrap;
 }
+@media (min-width: 600px) {
+  .partner-group {
+    justify-content: space-between;
+  }
+}
 @media (min-width: 1280px) {
   .partner-group {
+    justify-content: flex-start;
     margin: 0 -38px;
   }
 }
@@ -78,9 +121,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 300px;
+  max-width: 500px;
+  width: 100%;
   min-height: 325px;
   text-decoration: unset;
+  margin-bottom: 40px;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
@@ -95,12 +140,14 @@
 }
 @media (min-width: 600px) {
   .partner-box {
-    width: 600px;
+    max-width: unset;
+    width: 580px;
     height: 340px;
   }
 }
 @media (min-width: 1280px) {
   .partner-box {
+    width: 600px;
     margin: 0 38px;
     margin-bottom: 60px;
   }
@@ -111,7 +158,7 @@
   justify-content: space-between;
   align-items: center;
   height: 90px;
-  padding: 25px;
+  padding: 20px;
 }
 @media (min-width: 600px) {
   .partner__top {
@@ -122,29 +169,43 @@
 
 .partner__country {
   color: #C64F15;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.5px;
+  padding-bottom: 10px;
 }
 @media (min-width: 600px) {
   .partner__country {
     font-size: 17px;
+    padding-bottom: 0;
   }
 }
 
 .partner__logo {
-  width: 140px;
+  width: 120px;
   height: 60px;
   text-align: right;
   margin-top: 10px;
 }
+@media (min-width: 600px) {
+  .partner__logo {
+    width: 140px;
+    height: 60px;
+  }
+}
 .partner__logo img {
-  max-width: 130px;
-  max-height: 50px;
+  max-width: 110px;
+  max-height: 40px;
+}
+@media (min-width: 600px) {
+  .partner__logo img {
+    max-width: 130px;
+    max-height: 50px;
+  }
 }
 
 .partner__content {
-  padding: 0 25px;
+  padding: 0 20px;
   height: 100%;
 }
 @media (min-width: 600px) {
@@ -202,7 +263,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #f8f8f8;
-  padding: 0 25px;
+  padding: 0 20px;
   padding-top: 5px;
 }
 @media (min-width: 600px) {
@@ -220,19 +281,25 @@
   color: #999999;
   font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.5px;
   font-weight: 500;
   line-height: 150%;
 }
 @media (min-width: 600px) {
   .partner__status {
     font-size: 11px;
+    letter-spacing: 0.7px;
   }
 }
 
 .partner__products span {
-  margin-left: 30px;
-  margin-right: 5px;
+  margin-left: 20px;
+}
+@media (min-width: 600px) {
+  .partner__products span {
+    margin-left: 30px;
+    margin-right: 5px;
+  }
 }
 .partner__products span::before {
   opacity: 0.7;

@@ -219,20 +219,22 @@
     font-size: 16px
 
   .bold-middle
-    font-size: 12px
+    font-size: 14px
+    font-weight: 600
     @media (min-width: $tablet-content-width)
-      font-size: 13px
+      font-size: 16px
 
   .shahs
-    font-size: 12px
+    font-size: 14px
     letter-spacing: 0.5px
+    font-weight: 500
     &::before
       content: "/"
       padding-left: 8px
       padding-right: 8px
       font-weight: 400
     @media (min-width: $tablet-content-width)
-      font-size: 13px
+      font-size: 16px
 
 .article__name
   font-size: 22px
@@ -295,10 +297,11 @@
     margin-bottom: 10px
     @media (min-width: $tablet-content-width)
       font-size: 17px
-      margin-bottom: 15px
+      margin-top: 25px
+      margin-bottom: 12px
     @media (min-width: $desktop-content-width)
       margin-top: 30px
-      font-size: 17px
+      font-size: 18px
   h4
     font-weight: bold
   p,
@@ -318,10 +321,10 @@
     width: 100%
     max-width: max-content
     margin: 10px 0
-    //@media (min-width: $tablet-content-width)
-      max-width: min-content
-    //@media (min-width: $desktop-content-width)
-      width: unset
+  span
+    display: block
+    color: $mid-grey-color
+    padding-bottom: 8px
   a
     text-decoration: underline
     color: $orange-color
@@ -331,6 +334,10 @@
 .content-source
   margin-top: 15px
   font-size: 13px
+  max-width: 400px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
   span
     font-weight: 500
   a
@@ -360,9 +367,9 @@
 .content-creator_name
   font-size: 13px
   font-weight: 500
-  @media (min-width: $tablet-content-width)
+  line-height: 125%
+  //@media (min-width: $tablet-content-width)
     font-size: 14px
-
 
 // EVENTS PAGE ****************************************************
 

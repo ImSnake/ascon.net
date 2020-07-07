@@ -219,6 +219,8 @@ button {
 
 .btn-orange,
 .btn-blue {
+  font-family: "Gotham Pro", sans-serif;
+  padding: 0;
   min-width: 110px;
   width: max-content;
   height: 32px;
@@ -231,7 +233,9 @@ button {
   }
 }
 .btn-orange a,
-.btn-blue a {
+.btn-orange span,
+.btn-blue a,
+.btn-blue span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,7 +258,9 @@ button {
   transition: all 0.3s ease-out;
 }
 .btn-orange a:hover,
-.btn-blue a:hover {
+.btn-orange span:hover,
+.btn-blue a:hover,
+.btn-blue span:hover {
   cursor: pointer;
   font-weight: 900;
   background-color: #ffffff;
@@ -264,30 +270,38 @@ button {
 }
 @media (min-width: 600px) {
   .btn-orange a,
-.btn-blue a {
+.btn-orange span,
+.btn-blue a,
+.btn-blue span {
     padding: 0 30px;
     font-size: 12px;
     letter-spacing: 1px;
   }
   .btn-orange a:hover,
-.btn-blue a:hover {
+.btn-orange span:hover,
+.btn-blue a:hover,
+.btn-blue span:hover {
     padding: 0 27px;
     letter-spacing: 1.5px;
   }
 }
 
-.btn-orange a {
+.btn-orange a,
+.btn-orange span {
   background-color: #C64F15;
 }
-.btn-orange a:hover {
+.btn-orange a:hover,
+.btn-orange span:hover {
   color: #C64F15;
   border: 3px solid #C64F15;
 }
 
-.btn-blue a {
+.btn-blue a,
+.btn-blue span {
   background-color: #3265A0;
 }
-.btn-blue a:hover {
+.btn-blue a:hover,
+.btn-blue span:hover {
   color: #3265A0;
   border: 3px solid #3265A0;
 }

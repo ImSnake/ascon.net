@@ -193,13 +193,16 @@ button
 
 .btn-orange,
 .btn-blue
+  font-family: 'Gotham Pro', sans-serif
+  padding: 0
   min-width: 110px
   width: max-content
   height: 32px
   @media (min-width: $tablet-content-width)
     min-width: 130px
     height: 40px
-  a
+  a,
+  span
     display: flex
     justify-content: center
     align-items: center
@@ -231,13 +234,15 @@ button
         padding: 0 27px
         letter-spacing: 1.5px
 
-.btn-orange a
+.btn-orange a,
+.btn-orange span
   background-color: $orange-color
   &:hover
     color: $orange-color
     border: 3px solid $orange-color
 
-.btn-blue a
+.btn-blue a,
+.btn-blue span
   background-color: $blue-color
   &:hover
     color: $blue-color
