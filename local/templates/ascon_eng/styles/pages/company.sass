@@ -2,6 +2,7 @@
 
 @import ../base/vars
 
+// P A G E   C O M P A N Y ********************************************************
 .page__name
   h1
     margin-bottom: 0
@@ -230,3 +231,146 @@
     padding: 7px 10px
     min-height: 150px
     line-height: 130%
+
+
+// P A G E  P A R T N E R S H I P ********************************************************
+
+.partnership-block
+  margin-bottom: 100px
+
+  p
+    margin: 15px 0
+
+  h3
+    font-size: 24px
+    font-weight: 700
+    margin-top: 35px
+
+  .group
+    display: flex
+    margin-top: 20px
+    margin-bottom: 60px
+
+  .stretch-blocks
+    justify-content: space-between
+
+  .product-block
+    background-color: $slight-grey-color
+    justify-content: center
+
+  .first-block
+    margin-right: 60px
+
+  .last-part
+    margin-bottom: 35px
+
+  .cover-box
+    display: flex
+    align-items: center
+    width: 380px
+    height: 120px
+    border: 1px solid $border-grey-color
+    @include box-shadow
+
+  .cover-box_icon
+    margin-left: 35px
+    margin-right: 20px
+    margin-top: 8px
+
+  .cover-box_title
+    font-size: 20px
+    font-weight: 700
+    text-transform: uppercase
+
+  .cover-box_text
+    margin-top: 5px
+    font-size: 14px
+    color: $mid-grey-color
+
+  .cover-box_logo
+    width: 35px
+    margin-left: auto
+    margin-right: 15px
+    margin-bottom: 10px
+    align-self: flex-end
+    img
+      width: 100%
+
+  .table
+    margin-top: 20px
+    margin-bottom: 60px
+    border: 1px solid $slight-grey-color
+
+  .heading
+    display: flex
+    align-items: center
+    height: 60px
+    background-color: $border-grey-color
+    text-transform: uppercase
+    font-weight: 700
+    .table_option
+      font-size: 16px
+    .table_value
+      font-size: 14px
+
+  .string
+    display: flex
+    align-items: center
+    height: 50px
+
+  .string:nth-child(2n+1)
+    background-color: $slight-grey-color
+
+  .table_option
+    flex: 1
+    height: 100%
+    display: flex
+    align-items: center
+    font-size: 16px
+    padding: 0 30px
+
+  .table_value
+    height: 100%
+    width: 200px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 14px
+    border-left: 1px solid $slight-grey-color
+
+
+  .step-block
+    @include box-shadow-hover
+    display: block
+    width: 380px
+    height: 350px
+    background-color: #ffffff
+    text-align: center
+    padding: 30px 35px 45px 35px
+    margin-top: 15px
+
+    h3
+      margin-top: 20px
+
+    p
+      font-size: 14px
+
+    .btn-orange
+      margin: 0 auto
+      margin-top: 30px
+      a
+        font-size: 14px
+
+
+
+
+
+
+.checked
+  &:before
+    display: inline-block
+    width: 21px
+    height: 18px
+    content: ""
+    background: url(../../images/icon/icon-checked-green.svg) center no-repeat
+    background-size: contain
