@@ -112,7 +112,6 @@ button
     &:before
       font-size: 25px
 
-
 // класс для скрытия элементов
 .hide-element
   display: none
@@ -122,6 +121,10 @@ button
 .flex-element
   display: flex
 
+.stretch-elem
+  justify-content: space-between
+
+// свойства текста
 .bold-middle
   font-weight: 500
 
@@ -188,6 +191,19 @@ button
     content: '\E80C'
     font-size: 14px
     padding-right: 10px
+
+// иконка "v" - зеленая галка
+.checked
+  &:before
+    display: inline-block
+    width: 17px
+    height: 17px
+    content: ""
+    background: url(../../images/icon/icon-checked-green.svg) center no-repeat
+    background-size: contain
+    @media (min-width: $tablet-content-width)
+      width: 21px
+      height: 18px
 
 // ОСНОВНЫЕ КНОПКИ ДЕЙСТВИЯ
 
@@ -365,7 +381,7 @@ button
     margin-right: 8px
 
 .heading__text
-  font-size: 20px
+  font-size: 21px
   letter-spacing: 1px
   text-transform: uppercase
   font-weight: 900

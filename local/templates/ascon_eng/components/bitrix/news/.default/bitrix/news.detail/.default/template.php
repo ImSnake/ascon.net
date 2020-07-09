@@ -38,7 +38,9 @@ $this->setFrameMode(true);
         <?endif?>
 
         <?if (count($arResult["DISPLAY_PROPERTIES"]["ATT_ARTICLE_SOURCE"]) > 0):?>
-            <div class="content-source"><span>source: </span><?echo ($arResult["DISPLAY_PROPERTIES"]["ATT_ARTICLE_SOURCE"]["DISPLAY_VALUE"])?></div>
+            <div class="content-source">
+                <a href="<?echo $arResult["DISPLAY_PROPERTIES"]["ATT_ARTICLE_SOURCE"]["VALUE"]?>" target="_blank">Source</a>
+            </div>
         <?endif?>
 
     </div>

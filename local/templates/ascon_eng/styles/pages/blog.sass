@@ -172,14 +172,15 @@
     &::before
       width: 22px
       height: 22px
-      padding: 1px
+      //padding: 1px
       @media (min-width: $tablet-content-width)
-        width: 24px
-        height: 24px
-        padding: 1px
+        width: 23px
+        height: 23px
+        //padding: 1px
 
   .logo-kompas
     opacity: 0.75
+    margin-left: 38px
   .logo-c3dlabs,
   .logo-renga,
   .logo-ascon,
@@ -237,16 +238,16 @@
       font-size: 16px
 
 .article__name
-  font-size: 22px
+  font-size: 20px
   font-weight: 800
   letter-spacing: 1.5px
   margin-top: 10px
   margin-bottom: 15px
   @media (min-width: $tablet-content-width)
-    font-size: 24px
-    margin-bottom: 30px
+    font-size: 22px
+    margin-bottom: 25px
   @media (min-width: $desktop-content-width)
-    font-size: 26px
+    font-size: 24px
 
 .event-terms
   width: 300px
@@ -303,6 +304,7 @@
       margin-top: 30px
       font-size: 18px
   h4
+    margin-top: 10px
     font-weight: bold
   p,
   li
@@ -323,6 +325,7 @@
     margin: 10px 0
   span
     display: block
+    font-size: 13px
     color: $mid-grey-color
     padding-bottom: 8px
   a
@@ -331,27 +334,35 @@
     &:hover
       font-weight: 500
 
+  iframe
+    width: 100%
+
+  .quote
+    color: $mid-grey-color
+    font-size: 12px
+    margin: 8px 0
+    @media (min-width: $tablet-content-width)
+      font-size: 13px
+    @media (min-width: $desktop-content-width)
+      font-size: 14px
+
 .content-source
   margin-top: 15px
   font-size: 13px
   max-width: 400px
-  white-space: nowrap
-  overflow: hidden
-  text-overflow: ellipsis
-  span
-    font-weight: 500
   a
+    font-weight: 500
     text-decoration: underline
     color: $orange-color
     @include animation-02-linear
     &:hover
-      font-weight: 500
+      font-weight: 700
 
 .content-creator
   display: flex
   align-items: center
   margin-top: 40px
-  margin-bottom: 50px
+  margin-bottom: 40px
   margin-left: -5px
 
 .content-creator_img

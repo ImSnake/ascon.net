@@ -231,19 +231,18 @@
 .event-logo span::before {
   width: 22px;
   height: 22px;
-  padding: 1px;
 }
 @media (min-width: 600px) {
   .media-logo span::before,
 .event-logo span::before {
-    width: 24px;
-    height: 24px;
-    padding: 1px;
+    width: 23px;
+    height: 23px;
   }
 }
 .media-logo .logo-kompas,
 .event-logo .logo-kompas {
   opacity: 0.75;
+  margin-left: 38px;
 }
 .media-logo .logo-c3dlabs,
 .media-logo .logo-renga,
@@ -330,7 +329,7 @@
 }
 
 .article__name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: 1.5px;
   margin-top: 10px;
@@ -338,13 +337,13 @@
 }
 @media (min-width: 600px) {
   .article__name {
-    font-size: 24px;
-    margin-bottom: 30px;
+    font-size: 22px;
+    margin-bottom: 25px;
   }
 }
 @media (min-width: 1280px) {
   .article__name {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -423,6 +422,7 @@
   }
 }
 .article__content h4 {
+  margin-top: 10px;
   font-weight: bold;
 }
 .article__content p,
@@ -456,6 +456,7 @@
 }
 .article__content span {
   display: block;
+  font-size: 13px;
   color: #999999;
   padding-bottom: 8px;
 }
@@ -466,19 +467,32 @@
 .article__content a:hover {
   font-weight: 500;
 }
+.article__content iframe {
+  width: 100%;
+}
+.article__content .quote {
+  color: #999999;
+  font-size: 12px;
+  margin: 8px 0;
+}
+@media (min-width: 600px) {
+  .article__content .quote {
+    font-size: 13px;
+  }
+}
+@media (min-width: 1280px) {
+  .article__content .quote {
+    font-size: 14px;
+  }
+}
 
 .content-source {
   margin-top: 15px;
   font-size: 13px;
   max-width: 400px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.content-source span {
-  font-weight: 500;
 }
 .content-source a {
+  font-weight: 500;
   text-decoration: underline;
   color: #C64F15;
   transition: all 0.2s linear;
@@ -488,14 +502,14 @@
   -ms-transition: all 0.2s linear;
 }
 .content-source a:hover {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .content-creator {
   display: flex;
   align-items: center;
   margin-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   margin-left: -5px;
 }
 

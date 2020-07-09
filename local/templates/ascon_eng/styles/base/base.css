@@ -141,6 +141,10 @@ button {
   display: flex;
 }
 
+.stretch-elem {
+  justify-content: space-between;
+}
+
 .bold-middle {
   font-weight: 500;
 }
@@ -215,6 +219,21 @@ button {
   content: "";
   font-size: 14px;
   padding-right: 10px;
+}
+
+.checked:before {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  content: "";
+  background: url(../../images/icon/icon-checked-green.svg) center no-repeat;
+  background-size: contain;
+}
+@media (min-width: 600px) {
+  .checked:before {
+    width: 21px;
+    height: 18px;
+  }
 }
 
 .btn-orange,
@@ -456,7 +475,7 @@ button {
 }
 
 .heading__text {
-  font-size: 20px;
+  font-size: 21px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 900;
@@ -1200,7 +1219,7 @@ button {
 }
 @media (min-width: 600px) {
   .drop-down__sub-menu .menu-item {
-    margin-left: 0px;
+    margin-left: 0;
     padding-top: 15px;
     padding-bottom: 10px;
     padding-left: 15px;
@@ -1226,7 +1245,7 @@ button {
 }
 @media (min-width: 1280px) {
   .sub-header {
-    padding: 0 25px;
+    padding: 0 15px;
   }
 }
 

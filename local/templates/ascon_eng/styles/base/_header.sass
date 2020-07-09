@@ -28,7 +28,6 @@
     display: none
 
   .close-elem
-    //font-weight: bolder
     font-size: 23px
     position: absolute
     right: 0
@@ -89,7 +88,6 @@
   flex-direction: column
   transition: all 0.2s ease-in-out
   @media (min-width: $tablet-content-width)
-    //font-weight: bold
     padding: 10px 15px 9px 30px
     margin-right: 10px
     &:hover
@@ -190,7 +188,6 @@
     z-index: 999
     left: 100%
     width: 300px
-    //color: #ffffff
     background-color: $grey-color
     border: 1px solid #aeaeae6e
     top: 15px
@@ -227,8 +224,7 @@
     letter-spacing: 0
     color: #ffffff
     @media (min-width: $tablet-content-width)
-      //color: $main-font-color
-      margin-left: 0px
+      margin-left: 0
       padding-top: 15px
       padding-bottom: 10px
       padding-left: 15px
@@ -236,18 +232,16 @@
     &:hover
       color: $orange-color
 
-
 .sub-header
   @include unselectable
   display: flex
   justify-content: space-between
   align-items: center
   padding: 0 10px
-  //padding-bottom: 5px
   @media (min-width: $tablet-content-width)
     padding: 0 2%
   @media (min-width: $desktop-content-width)
-    padding: 0 25px
+    padding: 0 15px
 
 .sub-header__left
   flex: 3
@@ -271,9 +265,6 @@
 .sub-header__right
   margin-left: 3%
   .btn-orange
-    //width: 100px
     margin: 15px 0
     @media (min-width: $tablet-content-width)
-      //width: 140px
       margin: 25px 0
-

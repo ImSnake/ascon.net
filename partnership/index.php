@@ -4,7 +4,7 @@ use Bitrix\Main\Page\Asset;
 
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
-//Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/company.js');
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/company.js');
 $APPLICATION->SetTitle("Partnership");
 ?>
 
@@ -17,10 +17,10 @@ $APPLICATION->SetTitle("Partnership");
             </div>
 
             <ul class="page__nav">
-                <li class="active"><a href="#">Partnership</a></li>
-                <li><a href="#">Benefits</a></li>
-                <li><a href="#">Conditions</a></li>
-                <li><a href="#">BECOME A PARTNER</a></li>
+                <li class="active"><a href="#partnership">Partnership</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#conditions">Conditions</a></li>
+                <li><a href="#how2start">how to start</a></li>
             </ul>
 
             <img class="page__bkg" src="/local/templates/ascon_eng/images/banner/partnership.png" alt="bkg-partnership">
@@ -29,7 +29,7 @@ $APPLICATION->SetTitle("Partnership");
 
         <div class="main">
 
-            <div class="heading-orange">
+            <div id="partnership" class="heading-orange">
                 <div class="heading__arrow"></div>
                 <div class="heading__text">Partnership</div>
             </div>
@@ -43,21 +43,21 @@ $APPLICATION->SetTitle("Partnership");
                     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
                     officia deserunt mollit anim id est laborum.</p>
 
-                <h3>Ascon product rage</h3>
+                <h3>ASCON product rage</h3>
 
-                <div class="group stretch-blocks">
+                <div class="group stretch-elem">
 
-                    <div class="cover-box product-block">
+                    <a href="#" class="product-block">
                         <img src="/local/templates/ascon_eng/images/logo/kompas-logo-full.svg" alt="kompas-3d">
-                    </div>
+                    </a>
 
-                    <div class="cover-box product-block">
+                    <a href="#" class="product-block">
                         <img src="/local/templates/ascon_eng/images/logo/renga-logo-full.svg" alt="renga">
-                    </div>
+                    </a>
 
-                    <div class="cover-box product-block">
+                    <a href="#" class="product-block">
                         <img src="/local/templates/ascon_eng/images/logo/pilot-logo-full.svg" alt="pilot-ice">
-                    </div>
+                    </a>
 
                 </div>
 
@@ -77,7 +77,7 @@ $APPLICATION->SetTitle("Partnership");
 
                 <div class="group">
 
-                    <div class="cover-box first-block">
+                    <div class="status-block">
 
                         <div class="cover-box_icon">
                             <img src="/local/templates/ascon_eng/images/icon/partner-resseller.svg" alt="reseller">
@@ -94,7 +94,7 @@ $APPLICATION->SetTitle("Partnership");
 
                     </div>
 
-                    <div class="cover-box">
+                    <div class="status-block">
 
                         <div class="cover-box_icon">
                             <img src="/local/templates/ascon_eng/images/icon/partner-reseller-expert.svg"
@@ -115,7 +115,7 @@ $APPLICATION->SetTitle("Partnership");
 
             </div>
 
-            <div class="heading-orange">
+            <div id="benefits" class="heading-orange">
                 <div class="heading__arrow"></div>
                 <div class="heading__text">Benefits</div>
             </div>
@@ -232,7 +232,7 @@ $APPLICATION->SetTitle("Partnership");
 
             </div>
 
-            <div class="heading-orange">
+            <div id="conditions" class="heading-orange">
                 <div class="heading__arrow"></div>
                 <div class="heading__text">Conditions</div>
             </div>
@@ -243,7 +243,7 @@ $APPLICATION->SetTitle("Partnership");
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     Duis aute irure dolor in repre</p>
 
-                <h3>general requirements for all partners</h3>
+                <h3>General requirements for all partners</h3>
 
                 <div class="table">
 
@@ -353,14 +353,14 @@ $APPLICATION->SetTitle("Partnership");
 
             </div>
 
-            <div class="heading-orange">
+            <div id="how2start" class="heading-orange">
                 <div class="heading__arrow"></div>
                 <div class="heading__text">BECOME A PARTNER</div>
             </div>
 
             <div class="partnership-block">
 
-                <div class="group stretch-blocks">
+                <div class="group stretch-elem">
 
                     <div class="step-block">
                         <img src="/local/templates/ascon_eng/images/icon/icon-email.svg" alt="email">

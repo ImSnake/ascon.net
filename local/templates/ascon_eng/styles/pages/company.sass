@@ -12,34 +12,43 @@
     min-width: 100px
     @media (min-width: $tablet-content-width)
       min-width: 140px
+  a
+    white-space: nowrap
+    overflow: hidden
 
 .main
   margin-top: 30px
-  padding: 0 10px
   margin-bottom: 60px
+  padding: 0 5px
   @media (min-width: $tablet-content-width)
     margin-top: 40px
     margin-bottom: 100px
+    padding: 0 10px
   @media (min-width: $desktop-content-width)
     margin-top: 50px
+
   p
     font-size: 13px
     line-height: 150%
-    margin: 10px 0
+    margin: 12px 0
     @media (min-width: $tablet-content-width)
       font-size: 14px
+      margin: 15px 0
     @media (min-width: $desktop-content-width)
       font-size: 15px
+    &.last-part
+      margin-bottom: 25px
+      @media (min-width: $tablet-content-width)
+        margin-bottom: 35px
 
 .heading-orange
-  margin-bottom: 15px
-  @media (min-width: $desktop-content-width)
-    margin-left: -10px
+  margin-bottom: 12px
+  @media (min-width: $tablet-content-width)
     margin-bottom: 20px
 
 .group__company
-  margin-top: 35px
-  margin-bottom: 35px
+  margin-top: 40px
+  margin-bottom: 40px
   @media (min-width: $tablet-content-width)
     margin-top: 55px
     margin-bottom: 50px
@@ -49,15 +58,15 @@
 
 .company__box
   @include box-shadow
+  border: 1px solid $border-grey-color
   position: relative
   display: flex
   flex-direction: column
   justify-content: center
   min-width: 300px
   min-height: 110px
-  //background-color: $slight-grey-color
   background-color: #ffffff
-  margin-bottom: 30px
+  margin-bottom: 40px
   margin-left: 10px
   margin-right: 10px
   @media (min-width: $tablet-content-width)
@@ -78,9 +87,13 @@
     margin-left: 70px
 
 .company__num
-  font-size: 53px
+  font-size: 45px
   font-weight: 700
   padding-top: 10px
+  @media (min-width: $tablet-content-width)
+    font-size: 50px
+  @media (min-width: $desktop-content-width)
+    font-size: 53px
   span
     font-size: 45px
     font-weight: 500
@@ -88,12 +101,15 @@
     line-height: 55px
 
 .company__text
-  font-size: 14px
+  color: $grey-color
+  font-size: 13px
   font-weight: 400
   line-height: 120%
   margin-top: 5px
   padding-right: 50px
   padding-bottom: 20px
+  @media (min-width: $tablet-content-width)
+    font-size: 14px
 
 .company__scheme
   margin-top: 60px
@@ -170,40 +186,66 @@
 // P A G E   C O N T A C T S ********************************************************
 
 .contacts-box
-  padding: 0 8px
-  margin-bottom: 100px
+  //padding: 0 8px
+  margin-bottom: 50px
+  font-size: 13px
+  @media (min-width: $tablet-content-width)
+    font-size: 14px
+    margin-bottom: 80px
+  @media (min-width: $desktop-content-width)
+    font-size: 15px
+    margin-bottom: 100px
   h3
-    font-size: 22px
+    font-size: 18px
     font-weight: 700
-    margin-top: 25px
-    margin-bottom: 25px
+    margin-top: 20px
+    margin-bottom: 20px
+    @media (min-width: $tablet-content-width)
+      font-size: 20px
+      margin-top: 25px
+      margin-bottom: 25px
+    @media (min-width: $desktop-content-width)
+      font-size: 22px
 
 .contacts__title
-  font-size: 15px
   font-weight: 500
 
 .contacts__text
-  font-size: 15px
   margin-top: 5px
-  margin-bottom: 30px
+  margin-bottom: 20px
+  @media (min-width: $tablet-content-width)
+    margin-bottom: 30px
   div
     margin-top: 5px
 
 .question-form
-  padding: 0 8px
+  //padding: 0 8px
 
   .contacts__title
-    font-size: 17px
+    font-size: 14px
+    @media (min-width: $tablet-content-width)
+      font-size: 15px
+    @media (min-width: $desktop-content-width)
+      font-size: 16px
 
   .btn-blue
-    margin-top: 50px
+    display: block
+    margin: 0 auto
+    margin-top: 30px
+    @media (min-width: $tablet-content-width)
+      margin: 0
+      margin-top: 50px
 
 .question-title
-  font-size: 14px
+  font-size: 13px
   margin-top: 25px
   margin-bottom: 5px
   color: $grey-color
   padding-left: 2px
+  @media (min-width: $tablet-content-width)
+    font-size: 14px
+  @media (min-width: $desktop-content-width)
+    font-size: 15px
 
 .question-field
   max-width: 600px
@@ -236,141 +278,183 @@
 // P A G E  P A R T N E R S H I P ********************************************************
 
 .partnership-block
-  margin-bottom: 100px
-
-  p
-    margin: 15px 0
-
+  margin-bottom: 60px
+  @media (min-width: $tablet-content-width)
+    margin-bottom: 80px
+  @media (min-width: $desktop-content-width)
+    margin-bottom: 100px
   h3
-    font-size: 24px
+    font-size: 18px
+    margin-top: 25px
     font-weight: 700
-    margin-top: 35px
+    @media (min-width: $tablet-content-width)
+      font-size: 20px
+      margin-top: 35px
+    @media (min-width: $desktop-content-width)
+      font-size: 22px
 
   .group
     display: flex
+    flex-wrap: wrap
     margin-top: 20px
-    margin-bottom: 60px
-
-  .stretch-blocks
-    justify-content: space-between
+    margin-bottom: 25px
+    @media (min-width: $tablet-content-width)
+      margin-bottom: 35px
+    @media (min-width: $desktop-content-width)
+      margin-bottom: 60px
 
   .product-block
-    background-color: $slight-grey-color
+    display: flex
     justify-content: center
+    align-items: center
+    width: 380px
+    height: 100px
+    border: 1px solid $border-grey-color
+    background-color: $slight-grey-color
+    margin-bottom: 25px
+    @include box-shadow
+    @include unselectable
+    @include animation-02-linear
+    &:hover
+      cursor: pointer
+      transform: scale(1.05)
+    @media (min-width: $desktop-content-width)
+      margin-bottom: 0
 
-  .first-block
-    margin-right: 60px
-
-  .last-part
-    margin-bottom: 35px
-
-  .cover-box
+  .status-block
     display: flex
     align-items: center
     width: 380px
-    height: 120px
+    height: 140px
     border: 1px solid $border-grey-color
-    @include box-shadow
+    padding-bottom: 10px
+    &:first-child
+      margin-bottom: 25px
+      @media (min-width: $tablet-content-width)
+        margin-right: 60px
+      @media (min-width: $desktop-content-width)
+        margin-bottom: 0
 
   .cover-box_icon
     margin-left: 35px
     margin-right: 20px
-    margin-top: 8px
+    margin-top: 10px
 
   .cover-box_title
-    font-size: 20px
+    font-size: 18px
     font-weight: 700
     text-transform: uppercase
+    @media (min-width: $tablet-content-width)
+      font-size: 20px
 
   .cover-box_text
     margin-top: 5px
-    font-size: 14px
+    font-size: 13px
     color: $mid-grey-color
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
 
   .cover-box_logo
     width: 35px
     margin-left: auto
     margin-right: 15px
-    margin-bottom: 10px
     align-self: flex-end
     img
       width: 100%
 
   .table
-    margin-top: 20px
-    margin-bottom: 60px
+    margin-top: 15px
+    margin-bottom: 40px
     border: 1px solid $slight-grey-color
+    @media (min-width: $tablet-content-width)
+      margin-top: 20px
+      margin-bottom: 60px
 
   .heading
     display: flex
     align-items: center
-    height: 60px
+    min-height: 60px
     background-color: $border-grey-color
     text-transform: uppercase
     font-weight: 700
     .table_option
-      font-size: 16px
+      font-size: 12px
+      @media (min-width: $tablet-content-width)
+        font-size: 13px
+      @media (min-width: $desktop-content-width)
+        font-size: 14px
     .table_value
-      font-size: 14px
+      font-size: 11px
+      @media (min-width: $tablet-content-width)
+        font-size: 12px
+      @media (min-width: $desktop-content-width)
+        font-size: 13px
 
   .string
     display: flex
     align-items: center
-    height: 50px
+    min-height: 50px
 
   .string:nth-child(2n+1)
     background-color: $slight-grey-color
 
   .table_option
-    flex: 1
+    flex: 3
     height: 100%
     display: flex
     align-items: center
-    font-size: 16px
-    padding: 0 30px
+    font-size: 13px
+    padding: 10px
+    overflow: hidden
+    text-overflow: ellipsis
+    @media (min-width: $tablet-content-width)
+      flex: 4
+      font-size: 14px
+      padding: 15px 20px
+    @media (min-width: $desktop-content-width)
+      flex: 5
+      font-size: 15px
+      padding: 15px 30px
 
   .table_value
+    flex: 1
     height: 100%
-    width: 200px
-    display: flex
-    align-items: center
-    justify-content: center
-    font-size: 14px
-    border-left: 1px solid $slight-grey-color
-
+    //display: flex
+    //align-items: center
+    //justify-content: center
+    font-size: 12px
+    //border-left: 1px solid $slight-grey-color
+    padding: 10px
+    overflow: hidden
+    text-overflow: ellipsis
+    text-align: center
+    @media (min-width: $tablet-content-width)
+      font-size: 13px
+      padding: 15px 20px
+    @media (min-width: $desktop-content-width)
+      font-size: 14px
 
   .step-block
-    @include box-shadow-hover
     display: block
     width: 380px
     height: 350px
+    border: 1px solid $light-grey-color
     background-color: #ffffff
     text-align: center
-    padding: 30px 35px 45px 35px
-    margin-top: 15px
-
+    padding: 35px 30px 45px 30px
+    margin-bottom: 30px
+    @media (min-width: $tablet-content-width)
+      padding: 30px 35px 45px 35px
+      margin-top: 15px
+      margin-bottom: 50px
     h3
       margin-top: 20px
-
     p
       font-size: 14px
 
     .btn-orange
       margin: 0 auto
       margin-top: 30px
+      height: 36px
       a
         font-size: 14px
-
-
-
-
-
-
-.checked
-  &:before
-    display: inline-block
-    width: 21px
-    height: 18px
-    content: ""
-    background: url(../../images/icon/icon-checked-green.svg) center no-repeat
-    background-size: contain
