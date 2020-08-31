@@ -20,7 +20,7 @@
     height: 40px
 
 .mobile__logo
-  margin-left: 10px
+  margin-left: 5px
   cursor: pointer
   a
     display: block
@@ -37,7 +37,7 @@
 
 .menu-burger
   width: 28px
-  margin-right: 15px
+  margin-right: 12px
   &:hover
     cursor: pointer
   div
@@ -65,6 +65,7 @@
   top: 50px
   width: 100%
   padding-bottom: 20px
+  margin-left: -5px
   @media (min-width: $tablet-content-width)
     background-color: unset
     position: static
@@ -88,14 +89,16 @@
   flex-direction: column
   transition: all 0.2s ease-in-out
   @media (min-width: $tablet-content-width)
-    padding: 10px 15px 9px 30px
-    margin-right: 10px
+    padding: 10px 15px 9px 50px
+    //margin-right: 10px
     &:hover
       font-weight: bold
       text-decoration: underline
       color: $orange-color
     &:hover .menu__drop-down
       display: flex
+  @media (min-width: $desktop-content-width)
+    margin-right: 10px
   span
     display: none
     @media (min-width: $tablet-content-width)
@@ -239,17 +242,19 @@
   align-items: center
   padding: 0 10px
   @media (min-width: $tablet-content-width)
-    padding: 0 2%
-  @media (min-width: $desktop-content-width)
+    //padding: 0 2%
+    padding: 0 15px
+  //@media (min-width: $desktop-content-width)
     padding: 0 15px
 
 .sub-header__left
-  flex: 3
+  flex: 2
   display: flex
   align-items: center
   font-size: 10px
-  margin-top: 12px
-  margin-bottom: 12px
+  margin-top: 5px
+  //margin-top: 12px
+  //margin-bottom: 12px
   @media (min-width: $tablet-content-width)
     font-size: 12px
   span
@@ -259,12 +264,131 @@
     display: none
     @media (min-width: $tablet-content-width)
       display: block
-      margin-bottom: 14px
+      margin-bottom: 2px
+    @media (min-width: $desktop-content-width)
+      margin-bottom: 8px
       margin-right: 4%
 
+  div
+    display: none
+    @media (min-width: $desktop-content-width)
+      display: block
+
 .sub-header__right
-  margin-left: 3%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  @media (min-width: $tablet-content-width)
+    width: unset
+    justify-content: unset
+    margin-left: 3%
+
   .btn-orange
-    margin: 15px 0
+    margin: 10px 0
     @media (min-width: $tablet-content-width)
-      margin: 25px 0
+      margin: 16px 0
+
+  .language
+    position: relative
+    display: flex
+    align-items: center
+    @media (min-width: $tablet-content-width)
+      justify-content: flex-end
+  //.language__current
+    font-size: 11px
+    font-weight: 600
+    @media (min-width: $tablet-content-width)
+      font-size: 12px
+      margin-right: 35px
+    @media (min-width: $desktop-content-width)
+      font-size: 14px
+      margin-right: 35px
+
+  
+  .language__icon
+    display: flex
+    align-items: center
+    font-size: 11px
+    font-weight: 500
+    margin-right: 25px
+    letter-spacing: 0.3px
+    cursor: pointer
+    @media (min-width: $tablet-content-width)
+      margin-top: 5px
+      font-size: 12px
+      margin-right: 35px
+    @media (min-width: $desktop-content-width)
+      margin-right: 50px
+      font-size: 14px
+    &:before
+      display: inline-block
+      width: 20px
+      height: 20px
+      content: ""
+      background: url(../../images/icon/icon-language.svg) center no-repeat
+      background-size: contain
+      margin-right: 5px
+      @media (min-width: $tablet-content-width)
+        width: 22px
+        height: 22px
+      @media (min-width: $desktop-content-width)
+        width: 24px
+        height: 24px
+
+    .down-arrow
+      margin-left: 5px
+      color: $main-font-color
+      &:before
+        padding-right: 0
+        padding-left: 1px
+        font-size: 12px
+        @media (min-width: $tablet-content-width)
+          font-size: 14px
+        @media (min-width: $desktop-content-width)
+          font-size: 16px
+
+  .language__change
+    position: absolute
+    z-index: 98
+    min-width: 130px
+    width: 100%
+    background-color: $slight-grey-color
+    padding: 18px 30px
+    top: -5px
+    left: -5px
+    margin-right: 20px
+    cursor: default
+    @include box-shadow
+    @media (min-width: $tablet-content-width)
+      top: -10px
+      left: unset
+    ul
+      margin-top: 5px
+      li
+        font-size: 11px
+        font-weight: 400
+        text-transform: uppercase
+        padding: 6px 0
+        margin-top: 3px
+        cursor: pointer
+        &:hover
+          color: $orange-color
+          text-decoration: underline
+        a
+          display: block
+          text-decoration: none
+
+    .current
+      color: $orange-color
+      font-weight: 600
+      cursor: default
+      &:hover
+        text-decoration: none
+
+    .close-elem
+      position: absolute
+      z-index: 99
+      color: $grey-color
+      right: 5px
+      top: 8px

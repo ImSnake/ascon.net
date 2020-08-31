@@ -7,14 +7,25 @@
   position: relative;
   color: #ffffff;
   height: 200px;
-  padding: 25px 10px 20px 10px;
-  margin-bottom: 35px;
+  padding: 23px 15px 20px 15px;
+  margin-bottom: 50px;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 @media (min-width: 600px) {
   .central-banner {
-    padding: 35px 25px 35px 25px;
+    padding: 35px 25px 30px 25px;
     height: 260px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+@media (min-width: 1280px) {
+  .central-banner {
+    margin-bottom: 70px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .central-banner img {
@@ -50,7 +61,7 @@
 }
 .central-banner .banner__text {
   font-size: 12px;
-  height: 80px;
+  height: 90px;
   padding-top: 10px;
   line-height: 145%;
   overflow: hidden;
@@ -58,10 +69,15 @@
 @media (min-width: 600px) {
   .central-banner .banner__text {
     font-size: 14px;
-    height: 110px;
+    height: 115px;
     padding-top: 15px;
     width: 90%;
     line-height: 150%;
+  }
+}
+@media (min-width: 1280px) {
+  .central-banner .banner__text {
+    padding-top: 20px;
   }
 }
 .central-banner .banner__text p {
@@ -127,20 +143,25 @@
   justify-content: center;
   position: absolute;
   left: 0;
-  bottom: 7px;
+  bottom: -18px;
   width: 100%;
 }
 @media (min-width: 600px) {
   .central-banner .banner__nav {
-    bottom: 10px;
+    bottom: -30px;
+  }
+}
+@media (min-width: 1280px) {
+  .central-banner .banner__nav {
+    bottom: -32px;
   }
 }
 .central-banner .nav__point {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   margin: 0 10px;
   border-radius: 50%;
-  background-color: #C64F15;
+  background-color: #6f6e6e;
   opacity: 0.5;
   cursor: pointer;
 }
@@ -149,10 +170,19 @@
 }
 @media (min-width: 600px) {
   .central-banner .nav__point {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     margin: 0 15px;
   }
+}
+@media (min-width: 1280px) {
+  .central-banner .nav__point {
+    width: 20px;
+    height: 20px;
+  }
+}
+.central-banner .nav__point.active {
+  opacity: 1;
 }
 
 .main {
@@ -180,12 +210,12 @@
 .product-box {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20%;
 }
 @media (min-width: 600px) {
   .product-box {
-    margin-top: 35px;
+    margin-top: 30px;
     margin-bottom: 80px;
     box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.1);
     padding: 50px 35px 30px 35px;
@@ -263,13 +293,13 @@
 .product-box .content__heading {
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   font-weight: bold;
 }
 @media (min-width: 600px) {
   .product-box .content__heading {
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1px;
   }
 }

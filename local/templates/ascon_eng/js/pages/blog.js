@@ -31,8 +31,6 @@
             $('#form-media select').attr('size', '1').attr('multiple', false)
                 .prepend('<option val="" selected disabled>BY BRAND</option>').parent().css('display', 'block');
 
-
-
         });
 })
 (jQuery);

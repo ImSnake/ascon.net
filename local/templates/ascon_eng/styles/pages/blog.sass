@@ -216,14 +216,14 @@
   align-items: center
   @media (min-width: $tablet-content-width)
     font-size: 15px
-  @media (min-width: $desktop-content-width)
+  //@media (min-width: $desktop-content-width)
     font-size: 16px
 
   .bold-middle
     font-size: 14px
     font-weight: 600
     @media (min-width: $tablet-content-width)
-      font-size: 16px
+      font-size: 15px
 
   .shahs
     font-size: 14px
@@ -234,13 +234,14 @@
       padding-left: 8px
       padding-right: 8px
       font-weight: 400
-    @media (min-width: $tablet-content-width)
-      font-size: 16px
+    //@media (min-width: $tablet-content-width)
+      font-size: 15px
 
 .article__name
   font-size: 20px
   font-weight: 800
   letter-spacing: 1.5px
+  line-height: 130%
   margin-top: 10px
   margin-bottom: 15px
   @media (min-width: $tablet-content-width)
@@ -256,6 +257,7 @@
   border: 1px solid $border-grey-color
   @media (min-width: $tablet-content-width)
     width: 340px
+    margin-top: 34px
     margin-bottom: 40px
   div
     display: flex
@@ -286,12 +288,14 @@
   height: 40px
   font-size: 13px
   font-weight: 500
+  letter-spacing: 0.3px
   @media (min-width: $tablet-content-width)
     height: 45px
-    font-size: 14px
+    //font-size: 14px
 
 .article__content
   h3
+    color: $main-font-color
     font-size: 16px
     font-weight: bold
     margin-top: 20px
@@ -304,16 +308,17 @@
       margin-top: 30px
       font-size: 18px
   h4
+    color: $main-font-color
     margin-top: 10px
     font-weight: bold
   p,
   li
     font-size: 13px
-    line-height: 150%
+    line-height: 160%
     margin: 10px 0
     @media (min-width: $tablet-content-width)
       font-size: 14px
-    @media (min-width: $desktop-content-width)
+    //@media (min-width: $desktop-content-width)
       font-size: 15px
   ul
     margin-left: 20px
@@ -322,7 +327,8 @@
   img
     width: 100%
     max-width: max-content
-    margin: 10px 0
+    margin-top: 10px
+    //margin: 10px 0
   span
     display: block
     font-size: 13px
@@ -338,12 +344,21 @@
     width: 100%
 
   .quote
+    font-size: 13px
     color: $mid-grey-color
-    font-size: 12px
-    margin: 8px 0
+    line-height: 160%
+    border-left: 1px solid $mid-grey-color
+    margin-left: 5px
+    padding-left: 15px
+    margin-bottom: 24px
+
+  .signature
+    color: $mid-grey-color
+    font-size: 13px
+    margin: 5px 0 20px 0
     @media (min-width: $tablet-content-width)
-      font-size: 13px
-    @media (min-width: $desktop-content-width)
+
+    //@media (min-width: $desktop-content-width)
       font-size: 14px
 
 .content-source
@@ -462,7 +477,8 @@
   padding: 0 25px
   margin-bottom: 2px
   @media (min-width: $tablet-content-width)
-    font-size: 13px
+    margin-top: 32px
+    //font-size: 13px
     padding: 0 35px
   i
     font-size: 25px
@@ -483,7 +499,7 @@
     padding: 0 35px
     margin-bottom: 0
     max-height: unset
-    height: 250px
+    height: 245px
 
   h2
     font-size: 18px
@@ -491,14 +507,14 @@
     padding-bottom: 15px
     font-weight: bold
     @media (min-width: $tablet-content-width)
-      font-size: 19px
+      padding-top: 32px
   p
     font-size: 12px
     line-height: 160%
     margin: 0 0 6px 0
     @media (min-width: $tablet-content-width)
       font-size: 13px
-      line-height: 150%
+      line-height: 170%
 
 .event-logo
   display: flex

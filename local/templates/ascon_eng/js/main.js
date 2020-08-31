@@ -26,6 +26,41 @@ const commonMethods = {
     scrollToBottom(elem, height) {
         $('html,body').animate({scrollTop: elem.offset().top - height}, 'slow');
     },
+
+    // поведение выпадающих по клику элементов
+    // показать\скрыть элементы "help" и по-ап скрытых меню, содержащие класс "hover";
+    //openClickedElem(event, elem) {
+
+        //if (event.target.classList.contains('hover')) {
+        //    $(elem).children('.fade').removeClass('hide-element');
+        //}
+        // запуск функции контроля закрытия элемента
+        //this.onClickClose(elem);
+    //},
+
+    // закрытие всплывающих элементов (меню, pop-up) при клике вне открытого окна
+    onClickClose(elem) { // вызвать в момент показа окна, где elem - окно
+
+        function outsideClickListener(event) {
+            console.log('сработало');
+            if (!elem[0].contains(event.target) && commonMethods.isVisible(elem[0])   // клик не по элементу и элемент виден
+                || event.target.classList.contains('close-elem')    // клик по "закрыть" внутри открытого блока
+                || event.target.tagName === 'A')                     // клик по ссылке внутри открытого блока
+            {
+                elem.addClass('hide-element'); //скрыть
+                document.removeEventListener('click', outsideClickListener); //удалить слушатель события
+            } else {
+                elem.removeClass('hide-element');
+            }
+        }
+        document.addEventListener('click', outsideClickListener);
+    },
+
+    //проверяет открыт ли элемент в момент клика
+    isVisible(elem) { //открыто ли условное окно
+        return !!elem && !!(elem.offsetWidth || elem.offsetHeight ||
+            elem.getClientRects().length);
+    },
 };
 
 (function($) {
@@ -68,6 +103,10 @@ const commonMethods = {
                 }
             });
 
+            $('.language__icon').on('click',function () {
+                commonMethods.onClickClose($('.language__change'));
+            });
+
 
 // ********* С К А Ч А Т Ь   П Р О Б Н У Ю   В Е Р С И Ю
             $('#try-now-btn').on('click', function () {
@@ -91,5 +130,10 @@ const commonMethods = {
         });
 
 
+    /*            $(".article__content img").on('click', function() {
+
+                    $.fancybox.open('<div class="message"><h2>Hello!</h2><p>You are awesome!</p></div>');
+
+                });*/
 })
 (jQuery);

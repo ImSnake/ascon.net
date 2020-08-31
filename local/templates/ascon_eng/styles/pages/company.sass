@@ -283,6 +283,7 @@
     margin-bottom: 80px
   @media (min-width: $desktop-content-width)
     margin-bottom: 100px
+
   h3
     font-size: 18px
     margin-top: 25px
@@ -302,6 +303,9 @@
       margin-bottom: 35px
     @media (min-width: $desktop-content-width)
       margin-bottom: 60px
+    &.stretch-elem
+      @media (min-width: $desktop-content-width)
+        margin-bottom: 70px
 
   .product-block
     display: flex
@@ -310,24 +314,28 @@
     width: 380px
     height: 100px
     border: 1px solid $border-grey-color
-    background-color: $slight-grey-color
+    background-color: #FFFFFF
     margin-bottom: 25px
-    @include box-shadow
     @include unselectable
     @include animation-02-linear
     &:hover
       cursor: pointer
-      transform: scale(1.05)
+      transform: scale(1.03)
     @media (min-width: $desktop-content-width)
       margin-bottom: 0
 
   .status-block
     display: flex
     align-items: center
-    width: 380px
-    height: 140px
+    width: 340px
+    height: 110px
     border: 1px solid $border-grey-color
     padding-bottom: 10px
+    @include unselectable
+    @include animation-02-linear
+    &:hover
+      cursor: pointer
+      transform: scale(1.03)
     &:first-child
       margin-bottom: 25px
       @media (min-width: $tablet-content-width)
@@ -341,10 +349,11 @@
     margin-top: 10px
 
   .cover-box_title
-    font-size: 18px
+    margin-top: 8px
+    font-size: 17px
     font-weight: 700
     text-transform: uppercase
-    @media (min-width: $tablet-content-width)
+    //@media (min-width: $tablet-content-width)
       font-size: 20px
 
   .cover-box_text
@@ -355,9 +364,9 @@
       font-size: 14px
 
   .cover-box_logo
-    width: 35px
+    width: 30px
     margin-left: auto
-    margin-right: 15px
+    margin-right: 20px
     align-self: flex-end
     img
       width: 100%
@@ -369,6 +378,8 @@
     @media (min-width: $tablet-content-width)
       margin-top: 20px
       margin-bottom: 60px
+    @media (min-width: $desktop-content-width)
+      margin-bottom: 80px
 
   .heading
     display: flex
@@ -443,6 +454,10 @@
     text-align: center
     padding: 35px 30px 45px 30px
     margin-bottom: 30px
+    @include animation-02-linear
+    &:hover
+      cursor: pointer
+      transform: scale(1.03)
     @media (min-width: $tablet-content-width)
       padding: 30px 35px 45px 35px
       margin-top: 15px

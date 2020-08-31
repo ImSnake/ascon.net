@@ -297,18 +297,13 @@
     font-size: 15px;
   }
 }
-@media (min-width: 1280px) {
-  .article__title {
-    font-size: 16px;
-  }
-}
 .article__title .bold-middle {
   font-size: 14px;
   font-weight: 600;
 }
 @media (min-width: 600px) {
   .article__title .bold-middle {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 .article__title .shahs {
@@ -322,16 +317,12 @@
   padding-right: 8px;
   font-weight: 400;
 }
-@media (min-width: 600px) {
-  .article__title .shahs {
-    font-size: 16px;
-  }
-}
 
 .article__name {
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 1.5px;
+  line-height: 130%;
   margin-top: 10px;
   margin-bottom: 15px;
 }
@@ -356,6 +347,7 @@
 @media (min-width: 600px) {
   .event-terms {
     width: 340px;
+    margin-top: 34px;
     margin-bottom: 40px;
   }
 }
@@ -394,15 +386,16 @@
   height: 40px;
   font-size: 13px;
   font-weight: 500;
+  letter-spacing: 0.3px;
 }
 @media (min-width: 600px) {
   .terms_date {
     height: 45px;
-    font-size: 14px;
   }
 }
 
 .article__content h3 {
+  color: #1F3045;
   font-size: 16px;
   font-weight: bold;
   margin-top: 20px;
@@ -422,25 +415,20 @@
   }
 }
 .article__content h4 {
+  color: #1F3045;
   margin-top: 10px;
   font-weight: bold;
 }
 .article__content p,
 .article__content li {
   font-size: 13px;
-  line-height: 150%;
+  line-height: 160%;
   margin: 10px 0;
 }
 @media (min-width: 600px) {
   .article__content p,
 .article__content li {
     font-size: 14px;
-  }
-}
-@media (min-width: 1280px) {
-  .article__content p,
-.article__content li {
-    font-size: 15px;
   }
 }
 .article__content ul {
@@ -452,7 +440,7 @@
 .article__content img {
   width: 100%;
   max-width: max-content;
-  margin: 10px 0;
+  margin-top: 10px;
 }
 .article__content span {
   display: block;
@@ -471,21 +459,19 @@
   width: 100%;
 }
 .article__content .quote {
+  font-size: 13px;
   color: #999999;
-  font-size: 12px;
-  margin: 8px 0;
+  line-height: 160%;
+  border-left: 1px solid #999999;
+  margin-left: 5px;
+  padding-left: 15px;
+  margin-bottom: 24px;
 }
-@media (min-width: 600px) {
-  .article__content .quote {
-    font-size: 13px;
-  }
+.article__content .signature {
+  color: #999999;
+  font-size: 13px;
+  margin: 5px 0 20px 0;
 }
-@media (min-width: 1280px) {
-  .article__content .quote {
-    font-size: 14px;
-  }
-}
-
 .content-source {
   margin-top: 15px;
   font-size: 13px;
@@ -640,7 +626,7 @@
 }
 @media (min-width: 600px) {
   .event-date {
-    font-size: 13px;
+    margin-top: 32px;
     padding: 0 35px;
   }
 }
@@ -669,7 +655,7 @@
     padding: 0 35px;
     margin-bottom: 0;
     max-height: unset;
-    height: 250px;
+    height: 245px;
   }
 }
 .event-name h2 {
@@ -680,7 +666,7 @@
 }
 @media (min-width: 600px) {
   .event-name h2 {
-    font-size: 19px;
+    padding-top: 32px;
   }
 }
 .event-name p {
@@ -691,7 +677,7 @@
 @media (min-width: 600px) {
   .event-name p {
     font-size: 13px;
-    line-height: 150%;
+    line-height: 170%;
   }
 }
 

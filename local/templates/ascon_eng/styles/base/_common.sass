@@ -205,8 +205,7 @@ button
       width: 21px
       height: 18px
 
-// ОСНОВНЫЕ КНОПКИ ДЕЙСТВИЯ
-
+// ОСНОВНЫЕ КНОПКИ ДЕЙСТВИЯ ********************************************
 .btn-orange,
 .btn-blue
   font-family: 'Gotham Pro', sans-serif
@@ -396,7 +395,7 @@ button
     display: inline-block
     content: ""
     background: url(../../images/logo/ascon-desktop.svg) center no-repeat
-    width: 150px
+    width: 140px
     height: 42px
     background-size: contain
 
@@ -418,28 +417,32 @@ button
 
 .logo-kompas
   &::before
-    display: inline-block
+    //display: inline-block
+    display: block
     content: ""
     background: url(../../images/logo/kompas.svg) center no-repeat
     background-size: contain
 
 .logo-pilot
   &::before
-    display: inline-block
+    //display: inline-block
+    display: block
     content: ""
     background: url(../../images/logo/pilot.svg) center no-repeat
     background-size: contain
 
 .logo-renga
   &::before
-    display: inline-block
+    //display: inline-block
+    display: block
     content: ""
     background: url(../../images/logo/renga.svg) center no-repeat
     background-size: contain
 
 .logo-c3d-labs
   &::before
-    display: inline-block
+    //display: inline-block
+    display: block
     content: ""
     background: url(../../images/logo/c3d-labs.svg) center no-repeat
     background-size: contain
@@ -453,8 +456,15 @@ button
   justify-content: space-between
   color: #ffffff
   background-color: $grey-color
+  margin-left: -5px
+  margin-right: -5px
   @media (min-width: $tablet-content-width)
     height: 170px
+    margin-left: -10px
+    margin-right: -10px
+  @media (min-width: $desktop-content-width)
+    margin-left: 0
+    margin-right: 0
 
 .page__bkg
   position: absolute
@@ -491,7 +501,7 @@ button
     text-overflow: ellipsis
     @media (min-width: $tablet-content-width)
       font-size: 30px
-      margin-bottom: 10px
+      //margin-bottom: 10px
       margin-top: 10px
   p
     display: none
@@ -506,6 +516,14 @@ button
 .page__nav
   display: flex
   z-index: 1
+  //margin-left: 5px
+  //margin-right: 5px
+  @media (min-width: $tablet-content-width)
+    //margin-left: 10px
+    //margin-right: 10px
+  @media (min-width: $desktop-content-width)
+    margin-left: 0
+    margin-right: 0
   li
     min-width: 79px
     margin-right: 1px

@@ -406,6 +406,11 @@
     margin-bottom: 60px;
   }
 }
+@media (min-width: 1280px) {
+  .partnership-block .group.stretch-elem {
+    margin-bottom: 70px;
+  }
+}
 .partnership-block .product-block {
   display: flex;
   justify-content: center;
@@ -413,11 +418,8 @@
   width: 380px;
   height: 100px;
   border: 1px solid #eeeeee;
-  background-color: #f8f8f8;
+  background-color: #FFFFFF;
   margin-bottom: 25px;
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
   -moz-user-select: none;
   -webkit-user-select: none;
   transition: all 0.2s linear;
@@ -428,7 +430,7 @@
 }
 .partnership-block .product-block:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 @media (min-width: 1280px) {
   .partnership-block .product-block {
@@ -438,10 +440,21 @@
 .partnership-block .status-block {
   display: flex;
   align-items: center;
-  width: 380px;
-  height: 140px;
+  width: 340px;
+  height: 110px;
   border: 1px solid #eeeeee;
   padding-bottom: 10px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+}
+.partnership-block .status-block:hover {
+  cursor: pointer;
+  transform: scale(1.03);
 }
 .partnership-block .status-block:first-child {
   margin-bottom: 25px;
@@ -462,14 +475,10 @@
   margin-top: 10px;
 }
 .partnership-block .cover-box_title {
-  font-size: 18px;
+  margin-top: 8px;
+  font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
-}
-@media (min-width: 600px) {
-  .partnership-block .cover-box_title {
-    font-size: 20px;
-  }
 }
 .partnership-block .cover-box_text {
   margin-top: 5px;
@@ -482,9 +491,9 @@
   }
 }
 .partnership-block .cover-box_logo {
-  width: 35px;
+  width: 30px;
   margin-left: auto;
-  margin-right: 15px;
+  margin-right: 20px;
   align-self: flex-end;
 }
 .partnership-block .cover-box_logo img {
@@ -499,6 +508,11 @@
   .partnership-block .table {
     margin-top: 20px;
     margin-bottom: 60px;
+  }
+}
+@media (min-width: 1280px) {
+  .partnership-block .table {
+    margin-bottom: 80px;
   }
 }
 .partnership-block .heading {
@@ -596,6 +610,15 @@
   text-align: center;
   padding: 35px 30px 45px 30px;
   margin-bottom: 30px;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+}
+.partnership-block .step-block:hover {
+  cursor: pointer;
+  transform: scale(1.03);
 }
 @media (min-width: 600px) {
   .partnership-block .step-block {
