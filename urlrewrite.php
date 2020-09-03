@@ -8,27 +8,11 @@ $arUrlRewrite=array (
     'PATH' => '/desktop_app/router.php',
     'SORT' => 100,
   ),
-  3 => 
+  26 => 
   array (
-    'CONDITION' => '#^\\/?\\/mobileapp/jn\\/(.*)\\/.*#',
-    'RULE' => 'componentName=$1',
-    'ID' => NULL,
-    'PATH' => '/bitrix/services/mobileapp/jn.php',
-    'SORT' => 100,
-  ),
-  5 => 
-  array (
-    'CONDITION' => '#^/bitrix/services/ymarket/#',
-    'RULE' => '',
-    'ID' => '',
-    'PATH' => '/bitrix/services/ymarket/index.php',
-    'SORT' => 100,
-  ),
-  2 => 
-  array (
-    'CONDITION' => '#^/online/(/?)([^/]*)#',
-    'RULE' => '',
-    'ID' => NULL,
+    'CONDITION' => '#^/video/([\\.\\-0-9a-zA-Z]+)(/?)([^/]*)#',
+    'RULE' => 'alias=$1&videoconf',
+    'ID' => 'bitrix:im.router',
     'PATH' => '/desktop_app/router.php',
     'SORT' => 100,
   ),
@@ -40,44 +24,20 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/stssync/calendar/index.php',
     'SORT' => 100,
   ),
-  8 => 
+  29 => 
   array (
-    'CONDITION' => '#^/personal/order/#',
+    'CONDITION' => '#^/products/#',
     'RULE' => '',
-    'ID' => 'bitrix:sale.personal.order',
-    'PATH' => '/personal/order/index.php',
+    'ID' => 'bitrix:news',
+    'PATH' => '/products/index.php',
     'SORT' => 100,
   ),
-  9 => 
-  array (
-    'CONDITION' => '#^/personal/#',
-    'RULE' => '',
-    'ID' => 'bitrix:sale.personal.section',
-    'PATH' => '/personal/index.php',
-    'SORT' => 100,
-  ),
-  24 => 
+  27 => 
   array (
     'CONDITION' => '#^/events/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/events/index.php',
-    'SORT' => 100,
-  ),
-  10 => 
-  array (
-    'CONDITION' => '#^/store/#',
-    'RULE' => '',
-    'ID' => 'bitrix:catalog.store',
-    'PATH' => '/store/index.php',
-    'SORT' => 100,
-  ),
-  4 => 
-  array (
-    'CONDITION' => '#^/rest/#',
-    'RULE' => '',
-    'ID' => NULL,
-    'PATH' => '/bitrix/services/rest/index.php',
     'SORT' => 100,
   ),
   6 => 
@@ -88,7 +48,7 @@ $arUrlRewrite=array (
     'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
-  25 =>
+  28 => 
   array (
     'CONDITION' => '#^/blog/#',
     'RULE' => '',

@@ -1,6 +1,11 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Support");
+
+use Bitrix\Main\Page\Asset;
+$additional = true;
+//Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/blog.css');
+//Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/blog.js');
 ?>
 
     <div class="center container">

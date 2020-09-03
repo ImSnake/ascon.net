@@ -81,11 +81,13 @@
   a
     display: block
     text-decoration: none
+  @media (min-width: $desktop-content-width)
+    padding-right: 15px
 
 .menu__main
   padding: 15px 10px 5px 10px
   font-weight: 500
-  cursor: pointer
+  //cursor: pointer
   flex-direction: column
   transition: all 0.2s ease-in-out
   @media (min-width: $tablet-content-width)
@@ -98,7 +100,8 @@
     &:hover .menu__drop-down
       display: flex
   @media (min-width: $desktop-content-width)
-    margin-right: 10px
+    min-width: 150px
+    margin-left: 10px
   span
     display: none
     @media (min-width: $tablet-content-width)
@@ -169,9 +172,10 @@
     font-weight: normal
     letter-spacing: 0.5px
     margin-left: 22px
-    padding-top: 20px
+    padding-top: 15px
     padding-bottom: 0
     margin-top: 0
+    margin-bottom: 5px
     &:hover .drop-down__sub-menu
       display: block
   span
@@ -189,11 +193,11 @@
     display: none
     position: absolute
     z-index: 999
-    left: 100%
+    left: 90%
     width: 300px
     background-color: $grey-color
     border: 1px solid #aeaeae6e
-    top: 15px
+    top: 10px
     padding-bottom: 10px
     padding-left: 5px
     padding-top: 5px
@@ -202,34 +206,36 @@
 .menu-item
   text-transform: capitalize
   font-weight: normal
-  padding-top: 10px
-  padding-bottom: 8px
+  padding-top: 5px
+  padding-bottom: 5px
   margin-left: 20px
-  transition: all 0.2s ease-in-out
-  &:hover
-    color: $orange-color
-    cursor: pointer
-    text-decoration: underline
   @media (min-width: $tablet-content-width)
     display: block
-    padding-top: 20px
-    padding-bottom: 5px
+    padding-top: 7px
+    padding-bottom: 0px
     margin-left: 22px
     letter-spacing: 0.5px
   a
     text-decoration: none
+    cursor: pointer
+    padding-top: 7px
+    padding-bottom: 7px
+    transition: all 0.2s ease-in-out
+    &:hover
+      color: $orange-color
+      text-decoration: underline
 
 .drop-down__sub-menu
   margin-top: 10px
   @media (min-width: $tablet-content-width)
-    margin-top: 0
+    margin-top: -10px
   .menu-item
     letter-spacing: 0
     color: #ffffff
     @media (min-width: $tablet-content-width)
       margin-left: 0
-      padding-top: 15px
-      padding-bottom: 10px
+      padding-top: 5px
+      padding-bottom: 3px
       padding-left: 15px
       padding-right: 10px
     &:hover
@@ -264,7 +270,7 @@
     display: none
     @media (min-width: $tablet-content-width)
       display: block
-      margin-bottom: 2px
+      margin-bottom: 5px
     @media (min-width: $desktop-content-width)
       margin-bottom: 8px
       margin-right: 4%
@@ -288,6 +294,8 @@
     margin: 10px 0
     @media (min-width: $tablet-content-width)
       margin: 16px 0
+    @media (min-width: $desktop-content-width)
+      min-width: 150px
 
   .language
     position: relative

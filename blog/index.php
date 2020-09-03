@@ -1,9 +1,12 @@
 <?
-use Bitrix\Main\Page\Asset;
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle("Blog");
+
+use Bitrix\Main\Page\Asset;
+$additional = true;
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/blog.css');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/blog.js');
-$APPLICATION->SetTitle("Blog");
+
 ?>
   <div class="center container">
 
@@ -11,9 +14,6 @@ $APPLICATION->SetTitle("Blog");
 
 		<div class="page__name">
 			<h1>blog</h1>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Ut enim ad minim veniam.
-			</p>
 		</div>
 
 		<ul class="page__nav">
@@ -30,7 +30,7 @@ $APPLICATION->SetTitle("Blog");
 	<div class="main">
 		 <?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	".default", 
+	"blog", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -81,8 +81,8 @@ $APPLICATION->SetTitle("Blog");
 			1 => "",
 		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "15",
-		"IBLOCK_TYPE" => "dynamic",
+		"IBLOCK_ID" => "7",
+		"IBLOCK_TYPE" => "ascon_eng",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d-m-Y",
 		"LIST_FIELD_CODE" => array(
@@ -127,7 +127,7 @@ $APPLICATION->SetTitle("Blog");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "blog",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "#SECTION_CODE#/",
@@ -137,5 +137,7 @@ $APPLICATION->SetTitle("Blog");
 	false
 );?> <span id="bx-cursor-node"> </span>
 	</div>
+
 </div>
-<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -1,11 +1,12 @@
 <?
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle("Partnership");
 
 use Bitrix\Main\Page\Asset;
-
-require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$additional = true;
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/company.js');
-$APPLICATION->SetTitle("Partnership");
+
 ?>
 
     <div class="center container">

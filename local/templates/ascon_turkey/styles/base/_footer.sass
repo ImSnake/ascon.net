@@ -1,0 +1,114 @@
+@charset "UTF-8"
+
+footer
+  z-index: 999
+  background-color: $dark-grey-color
+  color: #ffffff
+  padding: 40px 0 25px 0
+  font-size: 12px
+  @media (min-width: $tablet-content-width)
+    font-size: 13px
+    padding: 60px 0
+
+  .container
+    display: flex
+    flex-direction: column
+    padding: 0 5px
+    @media (min-width: $tablet-content-width)
+      flex-direction: row
+      padding: 0
+
+.footer__left
+  flex: 1
+  order: 2
+  display: flex
+  justify-content: space-between
+  margin-top: 55px
+  margin-left: 4%
+  margin-right: 4%
+  @media (min-width: $tablet-content-width)
+    order: 1
+    flex-direction: column
+    margin-top: 0
+    margin-right: 0
+    margin-left: 5%
+  @media (min-width: $desktop-content-width)
+    margin-left: 100px
+
+.footer__logo
+  display: flex
+  align-items: center
+
+  .logo-ascon
+    &::before
+      width: 30px
+      height: 31px
+      @media (min-width: $tablet-content-width)
+        width: 41px
+        height: 42px
+
+  .group
+    margin-left: 10px
+    @media (min-width: $tablet-content-width)
+      margin-left: 15px
+    div:last-child
+      margin-top: 4px
+      @media (min-width: $tablet-content-width)
+        margin-top: 8px
+
+.footer__sm-icon
+  display: flex
+  align-items: center
+  .sm-icon
+    width: 20px
+    height: 18px
+    cursor: pointer
+    margin-right: 10px
+    margin-left: 20px
+    @media (min-width: $tablet-content-width)
+      margin-right: 25px
+      margin-left: 10px
+  i
+    font-size: 20px
+    @include animation-02-linear
+    &:hover
+      font-size: 21px
+      color: $orange-color
+
+.footer__right
+  flex: 3
+  order: 1
+  display: flex
+  justify-content: space-around
+  letter-spacing: 0.5px
+  @media (min-width: $tablet-content-width)
+    order: 2
+    margin-right: 5%
+  @media (min-width: $desktop-content-width)
+    margin-right: 100px
+
+.footer_column
+  a
+    display: block
+    margin-top: 10px
+    padding-top: 10px
+    margin-left: 18px
+    text-decoration: none
+    @include animation-02-linear
+    &:hover
+      text-decoration: underline
+      color: $orange-color
+    @media (min-width: $tablet-content-width)
+      margin-left: 23px
+
+.footer__heading
+  text-transform: uppercase
+  width: 28%
+  font-weight: bold
+  &::before
+    content: '/\00a0\00a0'
+  @media (min-width: $tablet-content-width)
+    margin-left: 6%
+    &::before
+      &::before
+    content: '/\00a0\00a0\00a0'

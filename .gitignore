@@ -1,6 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
-/upload/
 .idea/.gitignore
 .idea/ascon_eng.iml
 .idea/bitrixlangplugin.xml
@@ -11,7 +10,6 @@
 .idea/vcs.xml
 .idea/watcherTasks.xml
 .idea/webServers.xml
-upload/
 !/local/templates/ascon_eng/images/icon/old/
 !/local/templates/ascon_eng/images/banner/temp/
 !/local/templates/ascon_eng/js/_old/

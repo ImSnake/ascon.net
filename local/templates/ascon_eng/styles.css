@@ -1,0 +1,50 @@
+.text-editor {
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.text-editor ul  {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.text-editor li {
+    line-height: 160%;
+    margin: 10px 0;
+    margin-left: -2px;
+}
+
+.text-editor p a {
+color: #C64F15;
+}
+
+.text-editor h3 {
+  font-size: 18px;
+   margin: 16px 0;
+}
+
+.text-editor h4 {
+  font-size: 14px;
+   font-weight: bold;
+   color: #0000ff;
+   margin: 16px 0;
+}
+
+.text-editor .quote {
+  font-size: 13px;
+  color: #0000ff;
+   line-height: 160%;
+   border-left: 1px solid #0000ff;
+   margin-left: 5px;
+   padding-left: 15px;
+   margin-bottom: 16px;
+}
+
+.text-editor .signature {
+  color: #999999;
+  font-size: 13px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}

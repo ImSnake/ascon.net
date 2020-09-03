@@ -140,6 +140,9 @@ button
 .light-grey
   color: $light-grey-color
 
+.capitalize
+  text-transform: capitalize
+
 // иконка со стрелкой влево
 .left-arrow
   display: inline-block
@@ -170,7 +173,7 @@ button
 .down-arrow
   display: inline-block
   position: relative
-  top: 1px
+  top: 2px
   &::before
     font-family: 'fontello'
     font-weight: normal
@@ -395,7 +398,7 @@ button
     display: inline-block
     content: ""
     background: url(../../images/logo/ascon-desktop.svg) center no-repeat
-    width: 140px
+    width: 134px
     height: 42px
     background-size: contain
 
@@ -429,6 +432,14 @@ button
     display: block
     content: ""
     background: url(../../images/logo/pilot.svg) center no-repeat
+    background-size: contain
+
+.logo-pilot-white
+  &::before
+    //display: inline-block
+    display: block
+    content: ""
+    background: url(../../images/logo/pilot-white.svg) center no-repeat
     background-size: contain
 
 .logo-renga
@@ -500,7 +511,7 @@ button
     overflow: hidden
     text-overflow: ellipsis
     @media (min-width: $tablet-content-width)
-      font-size: 30px
+      font-size: 28px
       //margin-bottom: 10px
       margin-top: 10px
   p
@@ -565,19 +576,22 @@ button
   z-index: 10
   bottom: 0
   width: 100%
-  height: 65px
+  height: 80px
   display: flex
   align-items: center
   justify-content: space-around
   background-color: $border-grey-color
   box-shadow: 0px -1px 5px -1px rgba(0, 0, 0, 0.2)
+  margin-left: -10px
+  padding-top: 5px
   @media (min-width: $tablet-content-width)
-    padding: 0 10%
+    padding: 0 5%
+    margin-left: -20px
   @media (min-width: $desktop-content-width)
     @include box-shadow
     display: block
     background-color: $slight-grey-color
-    width: 320px
+    width: 330px
     position: sticky
     height: min-content
     top: 10px

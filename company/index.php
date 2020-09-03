@@ -1,10 +1,12 @@
 <?
-use Bitrix\Main\Page\Asset;
-
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle("Company");
+
+use Bitrix\Main\Page\Asset;
+$additional = true;
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/company.js');
-$APPLICATION->SetTitle("Company");
+
 ?>
 
     <div class="center container">
@@ -12,7 +14,7 @@ $APPLICATION->SetTitle("Company");
         <div class="page__header">
 
             <div class="page__name">
-                <h1>About our company</h1>
+                <h1>About company</h1>
             </div>
 
             <ul class="page__nav">
@@ -94,7 +96,7 @@ $APPLICATION->SetTitle("Company");
 
             <div id="customers" class="heading-orange">
                 <div class="heading__arrow"></div>
-                <div class="heading__text">Our customers</div>
+                <div class="heading__text">customers</div>
             </div>
 
             <?$APPLICATION->IncludeComponent(
@@ -103,9 +105,9 @@ $APPLICATION->SetTitle("Company");
 	array(
 		"ACTIVE_DATE_FORMAT" => "d/m/Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
-		"AJAX_MODE" => "N",
+		"AJAX_MODE" => "Y",
 		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_HISTORY" => "Y",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
 		"CACHE_FILTER" => "N",
@@ -129,25 +131,26 @@ $APPLICATION->SetTitle("Company");
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "10",
-		"IBLOCK_TYPE" => "dynamic",
+		"IBLOCK_ID" => "4",
+		"IBLOCK_TYPE" => "ascon_eng",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "30",
+		"NEWS_COUNT" => "50",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => "",
-		"PAGER_TITLE" => "Новости",
+		"PAGER_TITLE" => "Customers",
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
 			0 => "ATT_CUSTOMER_LINK",
 			1 => "ATT_CUSTOMER_SVG",
+			2 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
@@ -158,7 +161,7 @@ $APPLICATION->SetTitle("Company");
 		"SHOW_404" => "N",
 		"SORT_BY1" => "NAME",
 		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N"
 	),

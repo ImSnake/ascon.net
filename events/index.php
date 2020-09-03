@@ -1,17 +1,16 @@
 <?
-use Bitrix\Main\Page\Asset;
-
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle("Events");
+
+use Bitrix\Main\Page\Asset;
+$additional = true;
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/blog.css');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/blog.js');
-$APPLICATION->SetTitle("Events");
-?><div class="center container">
+?>
+    <div class="center container">
 	<div class="page__header">
 		<div class="page__name">
 			<h1>Events</h1>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Ut enim ad minim veniam.
-			</p>
 		</div>
 		<ul class="page__nav events-nav">
 			<li><a href="/events/">all</a></li>
@@ -22,7 +21,6 @@ $APPLICATION->SetTitle("Events");
  <img alt="bkg-events" src="/local/templates/ascon_eng/images/banner/events.png" class="page__bkg">
 	</div>
 	<div class="main">
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"events", 
@@ -76,8 +74,8 @@ $APPLICATION->SetTitle("Events");
 			1 => "",
 		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "16",
-		"IBLOCK_TYPE" => "dynamic",
+		"IBLOCK_ID" => "6",
+		"IBLOCK_TYPE" => "ascon_eng",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d-m-Y",
 		"LIST_FIELD_CODE" => array(

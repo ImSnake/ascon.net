@@ -2,36 +2,31 @@
 <!doctype html>
 <html>
 <head>
-
-
-
-	<?
+    <?
     $APPLICATION->ShowHead();
-    use Bitrix\Main\Page\Asset;
+    //META
+    $APPLICATION->AddHeadString("<meta http-equiv='X-UA-Compatible' content='ie=edge'>", true);
+    $APPLICATION->AddHeadString("<link rel='icon' href='/favicon.ico' type='image/x-icon'>", true);
+    $APPLICATION->AddHeadString("<link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'>", true);
+    $APPLICATION->AddHeadString("<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no'/>", true);
+    //$APPLICATION->AddHeadString("<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>", true);
+    //CSS
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/styles/reset.css');
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/styles/fonts/fonts.css');
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/styles/web-icons/fontello/css/fontello.css');
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/fancybox/dist/jquery.fancybox.min.css');
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/styles/base/base.css');
+    // JS
+    CJSCore::Init(array("jquery"));
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/jquery/jq.js');
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/fancybox/dist/jquery.fancybox.min.js');
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/main.js');
 
-    //STRING
-    Asset::getInstance()->addString("<meta charset='UTF-8'>");
-    Asset::getInstance()->addString("<meta http-equiv='X-UA-Compatible' content='ie=edge'>");
-    Asset::getInstance()->addString("<link rel='icon' href='/favicon.ico' type='image/x-icon'>");
-    Asset::getInstance()->addString("<link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'>");
-    Asset::getInstance()->addString("<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no'/>");
-    Asset::getInstance()->addString("<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>");
-
-    // CSS
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/reset.css');
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/fonts/fonts.css');
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/web-icons/fontello/css/fontello.css');
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/base/base.css');
-
+    //use Bitrix\Main\Page\Asset;
+    //$additional = true;
     //Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/index.css');
     //if ( $APPLICATION ->GetCurPage() ==  '/' )  $APPLICATION ->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/styles/pages/index.css');
     //if ( $APPLICATION ->GetCurPage() ==  '/company/' )  $APPLICATION ->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/styles/pages/company.css' );
-
-    // JS
-    CJSCore::Init(array("jquery"));
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery/jq.js');
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
-
  ?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>
@@ -81,27 +76,27 @@
                                 <li class="drop-down__sub-item">Mechanical Engineering&nbsp;›
 
                                     <ul class="drop-down__sub-menu hide-element">
-                                        <li class="menu-item"><a href="/catalog/">Data manage, revision &
+                                        <li class="menu-item"><a href="/products/">Data manage, revision &
                                                 collaboration</a></li>
-                                        <li class="menu-item"><a href="/catalog/">Electrical design</a></li>
-                                        <li class="menu-item"><a href="/catalog/">Manufacturing Design</a></li>
-                                        <li class="menu-item"><a href="/catalog/">Mechanical design</a></li>
+                                        <li class="menu-item"><a href="/products/">Electrical design</a></li>
+                                        <li class="menu-item"><a href="/products/">Manufacturing Design</a></li>
+                                        <li class="menu-item"><a href="/products/">Mechanical design</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="drop-down__sub-item">Building & Construction&nbsp;›
                                     <ul class="drop-down__sub-menu hide-element">
-                                        <li class="menu-item"><a href="/catalog/">Building Information Modeling</a></li>
-                                        <li class="menu-item"><a href="/catalog/">Collaborative project delivery</a></li>
-                                        <li class="menu-item"><a href="/catalog/">Industrial Equipment Manufacturing</a></li>
-                                        <li class="menu-item"><a href="/catalog/">mep engineering</a></li>
-                                        <li class="menu-item"><a href="/catalog/">Steel Structures Design</a></li>
+                                        <li class="menu-item"><a href="/products/">Building Information Modeling</a></li>
+                                        <li class="menu-item"><a href="/products/">Collaborative project delivery</a></li>
+                                        <li class="menu-item"><a href="/products/">Industrial Equipment Manufacturing</a></li>
+                                        <li class="menu-item"><a href="/products/">mep engineering</a></li>
+                                        <li class="menu-item"><a href="/products/">Steel Structures Design</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="drop-down__sub-item">Software Development&nbsp;›
                                     <ul class="drop-down__sub-menu hide-element">
-                                        <li class="menu-item"><a href="/catalog/">Software&nbsp;Development</a></li>
+                                        <li class="menu-item"><a href="/products/">Software&nbsp;Development</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -110,33 +105,33 @@
                         <li class="drop-down__item"><span class="down-arrow"></span>by category
 
                             <ul class="item__list hide-element">
-                                <li class="menu-item"><a href="/catalog/">3D CAD</a></li>
-                                <li class="menu-item"><a href="/catalog/">2D CAD</a></li>
-                                <li class="menu-item"><a href="/catalog/">BIM</a></li>
-                                <li class="menu-item"><a href="/catalog/">CAM</a></li>
-                                <li class="menu-item"><a href="/catalog/">CAE</a></li>
-                                <li class="menu-item"><a href="/catalog/">Collaboration</a></li>
-                                <li class="menu-item"><a href="/catalog/">Visualization & Simulation</a></li>
+                                <li class="menu-item"><a href="/products/">3D CAD</a></li>
+                                <li class="menu-item"><a href="/products/">2D CAD</a></li>
+                                <li class="menu-item"><a href="/products/">BIM</a></li>
+                                <li class="menu-item"><a href="/products/">CAM</a></li>
+                                <li class="menu-item"><a href="/products/">CAE</a></li>
+                                <li class="menu-item"><a href="/products/">Collaboration</a></li>
+                                <li class="menu-item"><a href="/products/">Visualization & Simulation</a></li>
                             </ul>
                         </li>
 
                         <li class="drop-down__item"><span class="down-arrow"></span>by license
 
                             <ul class="item__list hide-element">
-                                <li class="menu-item"><a href="/catalog/">Business</a></li>
-                                <li class="menu-item"><a href="/catalog/">Home</a></li>
-                                <li class="menu-item"><a href="/catalog/">Education</a></li>
-                                <li class="menu-item"><a href="/catalog/">Free</a></li>
+                                <li class="menu-item"><a href="/products/">Business</a></li>
+                                <li class="menu-item"><a href="/products/">Home</a></li>
+                                <li class="menu-item"><a href="/products/">Education</a></li>
+                                <li class="menu-item"><a href="/products/">Free</a></li>
                             </ul>
                         </li>
 
                         <li class="drop-down__item"><span class="down-arrow"></span>by brand
 
                             <ul class="item__list hide-element">
-                                <li class="menu-item"><a href="/catalog/">KOMPAS</a></li>
-                                <li class="menu-item"><a href="/catalog/">Pilot-ICE</a></li>
-                                <li class="menu-item"><a href="/catalog/">renga</a></li>
-                                <li class="menu-item"><a href="/catalog/">C3D labs</a></li>
+                                <li class="menu-item"><a href="/products/">KOMPAS</a></li>
+                                <li class="menu-item"><a href="/products/">Pilot-ICE</a></li>
+                                <li class="menu-item"><a href="/products/">renga</a></li>
+                                <li class="menu-item"><a href="/products/">C3D labs</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -166,7 +161,29 @@
         </div>
 
         <div class="sub-header__right">
+
+            <div class="language">
+
+                <div class="language__icon">EN<span class="down-arrow"></span></div>
+
+<!--                <div class="language__current">EN<span class="down-arrow"></span></div>-->
+
+                <div class="language__change hide-element">
+
+                    <div class="close-elem"></div>
+
+                    <ul>
+                        <li class="current"><a href="/">english</a></li>
+                        <li><a href="/turk/">Türk</a></li>
+                        <li><a href="https://ascon.ru/">русский</a></li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+
             <div id="try-now-btn" class="btn-orange"><a href="#">try&nbsp;now</a></div>
+
         </div>
 
     </div>

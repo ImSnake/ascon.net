@@ -31,6 +31,44 @@
             $('#form-media select').attr('size', '1').attr('multiple', false)
                 .prepend('<option val="" selected disabled>BY BRAND</option>').parent().css('display', 'block');
 
+
+            $.each($(".article__content img"), function () {
+
+                let img = $(this);
+                
+                if ( img.parent().is( "p" ) ) {
+                    img.unwrap();
+                }
+                if (img.attr('title') === '' || img.attr('title') === undefined) {
+                    img.attr('title', 'image');
+                }
+                if (img.attr('alt') === '' || img.attr('alt') === undefined) {
+                    img.attr('alt', img.attr('title'));
+                }
+                img.wrap("<a></a>")
+/*                    .attr('href', img.attr('src'))
+                    .attr("data-fancybox", "images")
+                    .attr("data-caption", img.attr('title'));*/
+
+                img.parent('a')
+                    .attr('href', img.attr('src'))
+                    .attr("data-fancybox", "images")
+                    .attr("data-caption", img.attr('title'));
+            });
+
+            $('[data-fancybox="images"]').fancybox({
+                buttons : [
+                    //'slideShow',
+                    'share',
+                    'zoom',
+                    'fullScreen',
+                    'close'
+                ],
+                thumbs : {
+                    autoStart : false
+                }
+            });
+
         });
 })
 (jQuery);

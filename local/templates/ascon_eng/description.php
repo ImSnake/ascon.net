@@ -1,8 +1,8 @@
 <?
 $arTemplate = array (
-    'NAME' => 'ascon.net templates',
-    'DESCRIPTION' => 'ascon.net templates',
-    'SORT' => '',
-    'TYPE' => '',
+  'NAME' => 'ascon_eng',
+  'DESCRIPTION' => 'ascon.net',
+  'SORT' => 1,
+  'TYPE' => '',
 );
 ?>

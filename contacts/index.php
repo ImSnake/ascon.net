@@ -1,8 +1,11 @@
 <?
-use Bitrix\Main\Page\Asset;
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
 $APPLICATION->SetTitle("Contacts");
+
+use Bitrix\Main\Page\Asset;
+$additional = true;
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
+
 ?>
 
     <div class="center container">
@@ -60,13 +63,13 @@ $APPLICATION->SetTitle("Contacts");
 
                 <div class="question-title">Subject&nbsp;<span class="orange bold">*</span></div>
                 <div class="question-field">
-                    <select name="" id="">
+                    <select name="form-subject" id="form-subject">
                         <option value="" selected disabled></option>
-                        <option value="">KOMPAS</option>
-                        <option value="">Pilot-Ice</option>
-                        <option value="">Renga</option>
-                        <option value="">C3D Labs</option>
-                        <option value="">Other question</option>
+                        <option value="kompas">KOMPAS</option>
+                        <option value="pilot">Pilot-Ice</option>
+                        <option value="renga">Renga</option>
+                        <option value="c3dlabs">C3D Labs</option>
+                        <option value="other">Other question</option>
                     </select>
                 </div>
 

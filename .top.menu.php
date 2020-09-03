@@ -1,8 +1,8 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Catalog", 
-		"/catalog/", 
+		"Products", 
+		"/products/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -17,13 +17,6 @@ $aMenuLinks = Array(
 	Array(
 		"Purchase", 
 		"/purchase/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Products", 
-		"/products.php", 
 		Array(), 
 		Array(), 
 		"" 

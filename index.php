@@ -1,24 +1,21 @@
 <?
-
 use Bitrix\Main\Page\Asset;
-
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/index.css');
-$APPLICATION->SetTitle("");
+$APPLICATION->SetTitle("ASCON Solutions");
 ?>
     <div class="center container">
         <div class="central-banner">
             <img alt="banner" src="/local/templates/ascon_eng/images/banner/banner(1).jpg">
             <div class="banner__content">
                 <div class="banner__heading">
-                    CENTRAL MOVING BANNER
+                    Central moving banner
                 </div>
                 <div class="banner__text">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, corporis dicta eligendi eum
                         fugiat, labore neque, odio pariatur quisquam quo soluta sunt tenetur ullam. Commodi ipsa odit
-                        quaerat quia tempora. Beatae, corporis dicta eligendi eum fugiat, labore neque, odio pariatur
-                        quisquam quo soluta sunt tenetur ullam. Commodi ipsa odit quaerat quia tempora.
+                        quaerat quia tempora.
                     </p>
                 </div>
                 <div class="banner__btn">
@@ -26,7 +23,7 @@ $APPLICATION->SetTitle("");
                 </div>
             </div>
             <div class="banner__nav">
-                <div class="nav__point">
+                <div class="nav__point active">
                 </div>
                 <div class="nav__point">
                 </div>
@@ -65,7 +62,7 @@ $APPLICATION->SetTitle("");
                         </p>
                     </div>
                     <div class="product__btn">
-                        <a href="/catalog/products.php">view</a>
+                        <a href="/products/kompas/kompas-3d-v18/">view</a>
                     </div>
                 </div>
             </div>
@@ -87,7 +84,7 @@ $APPLICATION->SetTitle("");
                         </p>
                     </div>
                     <div class="product__btn">
-                        <a href="#">view</a>
+                        <a href="/products/pilot/pilot-ice/">view</a>
                     </div>
                 </div>
                 <div class="product__img">
@@ -115,14 +112,14 @@ $APPLICATION->SetTitle("");
                         </p>
                     </div>
                     <div class="product__btn">
-                        <a href="#">view</a>
+                        <a href="/products/renga/renga/">view</a>
                     </div>
                 </div>
             </div>
             <div class="product-box right">
                 <div class="product__content">
                     <div class="content__heading">
-                        <span class="logo-c3dlabs"></span>
+                        <span class="logo-c3d-labs"></span>
                         C3D Toolkit
                     </div>
                     <div class="content__text">
@@ -138,7 +135,7 @@ $APPLICATION->SetTitle("");
                         </p>
                     </div>
                     <div class="product__btn">
-                        <a href="#">view</a>
+                        <a href="/products/c3d-labs/c3d-toolkit/">view</a>
                     </div>
                 </div>
                 <div class="product__img">
