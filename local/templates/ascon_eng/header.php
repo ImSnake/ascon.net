@@ -76,62 +76,62 @@
                                 <li class="drop-down__sub-item">Mechanical Engineering&nbsp;›
 
                                     <ul class="drop-down__sub-menu hide-element">
-                                        <li class="menu-item"><a href="/products/">Data manage, revision &
+                                        <li class="menu-item"><a href="/products/manage-revision-collaboration/">Data manage, revision &
                                                 collaboration</a></li>
-                                        <li class="menu-item"><a href="/products/">Electrical design</a></li>
-                                        <li class="menu-item"><a href="/products/">Manufacturing Design</a></li>
-                                        <li class="menu-item"><a href="/products/">Mechanical design</a></li>
+                                        <li class="menu-item"><a href="/products/electrical-design/">Electrical design</a></li>
+                                        <li class="menu-item"><a href="/products/manufacturing-design/">Manufacturing Design</a></li>
+                                        <li class="menu-item"><a href="/products/mechanical-design/">Mechanical design</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="drop-down__sub-item">Building & Construction&nbsp;›
                                     <ul class="drop-down__sub-menu hide-element">
-                                        <li class="menu-item"><a href="/products/">Building Information Modeling</a></li>
-                                        <li class="menu-item"><a href="/products/">Collaborative project delivery</a></li>
-                                        <li class="menu-item"><a href="/products/">Industrial Equipment Manufacturing</a></li>
-                                        <li class="menu-item"><a href="/products/">mep engineering</a></li>
-                                        <li class="menu-item"><a href="/products/">Steel Structures Design</a></li>
+                                        <li class="menu-item"><a href="/products/building-information-modeling/">Building Information Modeling</a></li>
+                                        <li class="menu-item"><a href="/products/collaborative-project-delivery/">Collaborative project delivery</a></li>
+                                        <li class="menu-item"><a href="/products/equipment-manufacturing/">Industrial Equipment Manufacturing</a></li>
+                                        <li class="menu-item"><a href="/products/mep-engineering/">MEP engineering</a></li>
+                                        <li class="menu-item"><a href="/products/steel-structures-design/">Steel Structures Design</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="drop-down__sub-item">Software Development&nbsp;›
                                     <ul class="drop-down__sub-menu hide-element">
-                                        <li class="menu-item"><a href="/products/">Software&nbsp;Development</a></li>
+                                        <li class="menu-item"><a href="/products/soft-development/">CAD/CAM/CAE&nbsp;programming</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="drop-down__item"><span class="down-arrow"></span>by category
+                        <li class="drop-down__item"><span class="down-arrow"></span>by function
 
                             <ul class="item__list hide-element">
-                                <li class="menu-item"><a href="/products/">3D CAD</a></li>
-                                <li class="menu-item"><a href="/products/">2D CAD</a></li>
-                                <li class="menu-item"><a href="/products/">BIM</a></li>
-                                <li class="menu-item"><a href="/products/">CAM</a></li>
-                                <li class="menu-item"><a href="/products/">CAE</a></li>
-                                <li class="menu-item"><a href="/products/">Collaboration</a></li>
-                                <li class="menu-item"><a href="/products/">Visualization & Simulation</a></li>
+                                <li class="menu-item"><a href="/products/3d-design/">3D design</a></li>
+                                <li class="menu-item"><a href="/products/2d-design/">2D design</a></li>
+                                <li class="menu-item"><a href="/products/bim/">BIM</a></li>
+                                <li class="menu-item"><a href="/products/cam/">CAM</a></li>
+                                <li class="menu-item"><a href="/products/cae/">CAE</a></li>
+                                <li class="menu-item"><a href="/products/collaboration/">Collaboration</a></li>
+                                <li class="menu-item"><a href="/products/visual-simulation/">Visualization & Simulation</a></li>
                             </ul>
                         </li>
 
                         <li class="drop-down__item"><span class="down-arrow"></span>by license
 
                             <ul class="item__list hide-element">
-                                <li class="menu-item"><a href="/products/">Business</a></li>
-                                <li class="menu-item"><a href="/products/">Home</a></li>
-                                <li class="menu-item"><a href="/products/">Education</a></li>
-                                <li class="menu-item"><a href="/products/">Free</a></li>
+                                <li class="menu-item"><a href="/products/business/">Business</a></li>
+                                <li class="menu-item"><a href="/products/home/">Home</a></li>
+                                <li class="menu-item"><a href="/products/education/">Education</a></li>
+                                <li class="menu-item"><a href="/products/free/">Free</a></li>
                             </ul>
                         </li>
 
                         <li class="drop-down__item"><span class="down-arrow"></span>by brand
 
                             <ul class="item__list hide-element">
-                                <li class="menu-item"><a href="/products/">KOMPAS</a></li>
-                                <li class="menu-item"><a href="/products/">Pilot-ICE</a></li>
-                                <li class="menu-item"><a href="/products/">renga</a></li>
-                                <li class="menu-item"><a href="/products/">C3D labs</a></li>
+                                <li class="menu-item"><a href="/products/kompas/">KOMPAS</a></li>
+                                <li class="menu-item"><a href="/products/pilot/">Pilot</a></li>
+                                <li class="menu-item"><a href="/products/renga/">renga</a></li>
+                                <li class="menu-item"><a href="/products/c3d-labs/">C3D labs</a></li>
                             </ul>
                         </li>
                     </ul>

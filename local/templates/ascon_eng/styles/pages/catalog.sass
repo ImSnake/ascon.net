@@ -146,13 +146,13 @@
     @media (min-width: $desktop-content-width)
       color: #ffffff
       background-color: $blue-color
-      opacity: 0.97
+      opacity: 0.98
 
   &.add-on
-    color: $grey-color
+    color: $dark-grey-color
     @media (min-width: $desktop-content-width)
       color: #ffffff
-      background-color: $grey-color
+      background-color: $dark-grey-color
       opacity: 0.97
       //&::after
         display: block
@@ -224,25 +224,36 @@
   @media (min-width: $desktop-content-width)
     padding-top: 0
     //margin-bottom: 20px
+  a
+    display: flex
+    align-items: center
+    height: 40px
+    padding-top: 6px
+    @include animation-02-linear
+    &:hover .bold
+      text-decoration: underline
+    &:hover .parent__logo
+      transform: scale(1.05)
 
 .parent__logo
   height: 26px
   line-height: 130%
   margin-right: 8px
-  //opacity: 0.9
+  opacity: 0.88
   @media (min-width: $tablet-content-width)
-    height: 30px
+    height: 40px
+    margin-top: 2px
   &::before
     height: 26px
     width: 26px
-    //opacity: 0.9
     @media (min-width: $tablet-content-width)
-      height: 30px
+      height: 40px
       width: 30px
 
 .parent__name
   font-size: 11px
   letter-spacing: 0.3px
+  margin-top: 1px
   //opacity: 0.85
   //line-height: 130%
   //@media (min-width: $desktop-content-width)
@@ -252,7 +263,7 @@
     letter-spacing: unset
     margin-top: 2px
     font-size: 12px
-    text-transform: uppercase
+    //text-transform: uppercase
 
 .product-box__btn
   //@media (min-width: $desktop-content-width)

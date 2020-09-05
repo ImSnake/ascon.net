@@ -207,8 +207,8 @@
       &:hover
         letter-spacing: 1.5px
 
-  .btn-orange
-    margin-left: 25px
+  .btn-blue
+    margin-right: 25px
 
 .heading-orange
   margin-bottom: 12px
@@ -247,7 +247,7 @@
       margin-bottom: 12px
   h4
     font-weight: 500
-    color: $orange-color
+    //color: $orange-color
   p,
   li
     font-size: 13px
@@ -272,7 +272,7 @@
     margin-top: 15px
   li
     list-style-type: disc
-  a
+  a:hover
     color: $orange-color
 
   .group
@@ -292,18 +292,29 @@
   align-items: center
   text-decoration: none
   width: max-content
-  font-size: 12px
-  @media (min-width: $tablet-content-width)
-    font-size: 13px
+  //font-size: 12px
+  //@media (min-width: $tablet-content-width)
+    //font-size: 13px
+  //@media (min-width: $desktop-content-width)
+    //font-size: 14px
   div
     &::before
       width: 32px
       height: 32px
-      opacity: 0.8
+      opacity: 0.88
       margin: 0
-  span
+  h4
     padding-left: 8px
     font-weight: 500
+
+a.product__link
+  color: $main-font-color
+  @include animation-02-linear
+  &:hover
+    color: $orange-color
+    text-decoration: underline
+  &:hover div
+    transform: scale(1.05)
 
 .product__gallery
   margin-bottom: 70px
@@ -325,21 +336,24 @@
   @include box-shadow
   position: relative
   width: 100%
-  height: 200px
+  min-height: 200px
   background-color: $slight-grey-color
   display: flex
   flex-wrap: wrap
   justify-content: space-around
   align-items: center
-  overflow: hidden
+  //overflow: hidden
   padding: 0 12px
+  padding-top: 10px
+  padding-bottom: 20px
   margin-bottom: 50px
   @media (min-width: $desktop-content-width)
     height: 300px
     flex-wrap: nowrap
     justify-content: unset
-    padding: 0 30px 0 30px
+    padding: 10px 30px 20px 30px
     margin-bottom: 70px
+    overflow: hidden
   h4
     font-size: 12px
     color: $blue-color
@@ -358,7 +372,7 @@
     font-size: 12px
     max-width: 300px
 
-  &.column
+  //&.column
     flex-wrap: wrap
     padding-top: 10px
     padding-bottom: 20px
@@ -388,9 +402,9 @@
 .gallery__img
   cursor: zoom-in
   max-width: 200px
-  margin: 25px 10px
-  height: 150px
   transition: all 0.3s linear
+  margin: 10px 20px 0 20px
+  max-height: 150px
   @media (min-width: $desktop-content-width)
     max-width: unset
     width: 300px
@@ -404,9 +418,9 @@
 
 .gallery__video
   position: relative
-  width: 200px
-  overflow: hidden
-  margin: 15px 10px
+  //width: 280px
+  //overflow: hidden
+  margin: 20px
   cursor: pointer
   @media (min-width: $desktop-content-width)
     margin: 0 15px
@@ -448,18 +462,20 @@
 .gallery__article
   display: flex
   align-items: center
+  justify-content: center
   width: 350px
-  height: 55px
+  height: unset
   cursor: pointer
-  margin: 15px 20px 20px 20px
+  margin: 20px
   @media (min-width: $desktop-content-width)
+    justify-content: flex-start
     position: relative
     z-index: 5
     padding: 0
-    margin: 0 10px 0 10px
+    margin: 0 15px 0 15px
     margin-top: 55px
     align-items: baseline
-    width: 200px
+    width: 220px
     height: 200px
   a
     text-decoration: none
@@ -473,7 +489,7 @@
     content: ""
     background: url(../../images/icon/icon-pdf.svg) center no-repeat
     background-size: contain
-    margin-right: 5px
+    margin-right: 0px
     opacity: 0.7
     @include animation-03-ease-out
   &:hover::before
@@ -484,7 +500,7 @@
   h4
     max-height: 60px
   h5
-    margin-top: 8px
+    margin-top: 1px
 
 .product__add-on
   @media (min-width: $desktop-content-width)

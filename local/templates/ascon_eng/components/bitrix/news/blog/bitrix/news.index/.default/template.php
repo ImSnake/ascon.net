@@ -14,7 +14,6 @@ $this->setFrameMode(true);
 ?>
 <div class="news-index">
 <?foreach($arResult["IBLOCKS"] as $arIBlock):?>
-1111111
 	<?if(count($arIBlock["ITEMS"])>0):?>
 		<b><?=$arIBlock["NAME"]?></b>
 		<ul>

@@ -12,87 +12,91 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-d($arResult);
-d($arResult['ID']);
-d($arResult['ITEMS']);
+//d($arResult['ITEMS']);
+?>
 
+    <div class="catalog__header">
 
-/*$arFilter = Array('IBLOCK_ID'=>$arResult['ID'],'ID'=>16, 'GLOBAL_ACTIVE'=>'Y');
-$db_list = CIBlockSection::GetList(Array("timestamp_x"=>"DESC"), $arFilter, false, Array("UF_ELEMCOUNT"));
-if($uf_value = $db_list->GetNext()):
-    $value=$uf_value["UF_ELEMCOUNT"];
-    echo $value;
-endif;*/
-/*
+    <?foreach($arResult['SECTION']['PATH'] as $arItem):?>
+        <?if($arItem['IBLOCK_SECTION_ID'] != null):?>
+            <?$arSect["photo"] = CFile::GetPath($arItem["PICTURE"]); ?>
+            <?if($arSect["photo"] != null):?>
+                <img src="<?echo $arSect["photo"]?>" alt="catalog-background">
+            <?endif;?>
+            <div class="catalog__description"> <?echo $arItem['DESCRIPTION']?> </div>
+        <?endif;?>
+    <?endforeach;?>
 
-
-
-$filter_7 = array('IBLOCK_ID'=>"9", 'ACTIVE'=>'Y');
-$db_list_id7 = CIBlockSection::GetList(array(), $filter_7, true, Array("UF_DATE"));
-//d($db_list_id7);
-while ($arSect = $db_list_id7->GetNext()) {
-    $arSect["photo"] = CFile::GetPath($arSect["PICTURE"]);
-    d($arSect);
-    */?><!--<!--
-    <img class="preview_picture" border="0" src="<?/*/*=$arSect["photo"]*/*/?>" alt="<?/*/*=$arSect["NAME"]*/*/?>">
--->--><?/* }
-*/?>
-
-
-<div class="catalog__header">
-
-    <img src="/local/templates/ascon_eng/images/products/background/building-information-modeling.jpg" alt="background">
-
-    <div class="catalog__description">
-        <h2>Data manage, revision & collaboration</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
-    </div>
 </div>
 
-<div class="catalog">
+    <div class="catalog">
 
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+    //d($arItem["PROPERTIES"]['ATT_PRODUCT_PARENT']['VALUE']);
 	?>
 
-    <a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
-        <div class="product-box" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-            <img class="media-img"
-                 src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>"
-                 alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>"/>
-            
-            <div class="media__head">
-                <span class="media-type"><?echo $arItem["DISPLAY_PROPERTIES"]["ATT_ARTICLE_TYPE"]["DISPLAY_VALUE"]?></span>
-                <span class="media-date"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?></span>
+    <? $type = $arItem["DISPLAY_PROPERTIES"]['ATT_PRODUCT_TYPE']['DISPLAY_VALUE'] ?>
+
+    <div class="product-box">
+
+        <div class="product-box__img">
+            <img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"] ?>">
+        </div>
+
+        <div class="product-box__content">
+
+            <? if($type == "add-on"): ?>
+                <div class="product-box__type <?echo $type ?>"><?echo $type ?>&nbsp;pack</div>
+            <?else:?>
+                <div class="product-box__type <?echo $type ?>"><?echo $type ?></div>
+            <?endif;?>
+
+            <div class="product-box__name"><?echo $arItem["NAME"] ?></div>
+
+            <div class="product-box__description">
+                <p><?echo $arItem['PREVIEW_TEXT'] ?></p>
             </div>
 
-            <div class="media-name">
-                <?echo $arItem["NAME"]?>
+        </div>
+
+        <div class="product-box__bottom">
+
+            <div class="product-box__parent">
+
+                <? if($type == "add-on"): ?>
+                    <?$res = CIBlockElement::GetByID($arItem["PROPERTIES"]['ATT_PRODUCT_PARENT_LINK']['VALUE']);
+                    if($ar_res = $res->GetNext())?>
+
+                    <a href="/products/<?echo strtolower($arItem["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE']) ?>/<?echo($ar_res['CODE'])?>/">
+
+                        <div class="parent__logo logo-<?echo strtolower($arItem["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE'])?>"></div>
+
+                        <div class="parent__name">
+                            <div>required</div>
+                            <div class="bold"><?echo $ar_res['NAME']?></div>
+                        </div>
+                    </a>
+
+                <?endif;?>
             </div>
 
-            <div class="media-logo">
-                <?if(is_array($arItem["DISPLAY_PROPERTIES"]["ATT_ARTICLE_BRAND"]["DISPLAY_VALUE"])):?>
-                    <?foreach($arItem["DISPLAY_PROPERTIES"]["ATT_ARTICLE_BRAND"]["DISPLAY_VALUE"] as $elem):?>
-                    <span class="logo-<?echo $elem ?>"></span>
-                    <?endforeach;?>
-                <?else:?>
-                    <span class="logo-<?echo $arItem["DISPLAY_PROPERTIES"]["ATT_ARTICLE_BRAND"]["DISPLAY_VALUE"]?>"></span>
-                <?endif?>
-            </div>
+            <div class="product-box__btn"><a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">view</a></div>
 
-	    </div>
-    </a>
+        </div>
+
+        <div class="product-box__line"></div>
+
+    </div>
+
 <?endforeach;?>
 
 <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
 	<br /><?=$arResult["NAV_STRING"]?>
 <?endif;?>
-
+<!--
 
 <div class="product-box">
 
@@ -181,6 +185,6 @@ while ($arSect = $db_list_id7->GetNext()) {
 
     <div class="product-box__line"></div>
 
-</div>
+</div>-->
 
 </div>

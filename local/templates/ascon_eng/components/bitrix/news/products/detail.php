@@ -68,7 +68,7 @@ $this->setFrameMode(true);
 	),
 	$component
 );?>
-
+<p><a href="<?=$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"]?>"><?=GetMessage("T_NEWS_DETAIL_BACK")?></a></p>
 <?if($arParams["USE_RATING"]=="Y" && $ElementID):?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:iblock.vote",
@@ -106,7 +106,7 @@ $this->setFrameMode(true);
 				foreach($arProperty["VALUE"] as $value)
 					$arCategoryFilter[$value]=true;
 			}
-			elseif(!is_array($arProperty["VALUE"]) && strlen($arProperty["VALUE"])>0)
+			elseif(!is_array($arProperty["VALUE"]) && $arProperty["VALUE"] <> '')
 				$arCategoryFilter[$arProperty["VALUE"]]=true;
 		}
 		$obCache->EndDataCache($arCategoryFilter);

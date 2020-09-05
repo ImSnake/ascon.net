@@ -36,7 +36,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/products.js');
 			0 => "",
 			1 => "",
 		),
-		"DETAIL_PAGER_SHOW_ALL" => "Y",
+		"DETAIL_PAGER_SHOW_ALL" => "N",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "",
 		"DETAIL_PROPERTY_CODE" => array(
@@ -86,9 +86,11 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/products.js');
 			3 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "ATT_PRODUCT_TYPE",
-			1 => "ATT_PRODUCT_PARENT",
-			2 => "",
+			0 => "ATT_PRODUCT_PARENT_RAGE",
+			1 => "ATT_PRODUCT_TYPE",
+			2 => "ATT_PRODUCT_PARENT",
+			3 => "ATT_PRODUCT_PARENT_LINK",
+			4 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
