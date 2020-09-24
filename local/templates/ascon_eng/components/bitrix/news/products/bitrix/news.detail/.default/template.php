@@ -169,6 +169,10 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                 </div>
             </div>
 
+        <?if($arResult['PROPERTIES']['ATT_ACTION_BAR_TEXT']['VALUE']
+            || $arResult['PROPERTIES']['ATT_PRODUCT_HOME_LINK']['VALUE']
+            || $arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_DOWNLOAD_LINK']['DISPLAY_VALUE']):?>
+
             <div class="action-box">
 
                 <?if($arResult['PROPERTIES']['ATT_ACTION_BAR_TEXT']['VALUE']):?>
@@ -184,6 +188,8 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                 <?endif;?>
 
             </div>
+        <?endif;?>
+
         </div>
 
         <?if($arResult['PROPERTIES']['ATT_GALLERY_IMAGE']['VALUE']
@@ -248,7 +254,7 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                     <div class="group">
                         <h3>Documents & Instructions</h3>
 
-                        <div class="gallery__content">
+                        <div id='article' class="gallery__content">
 
                             <?foreach($arResult['PROPERTIES']['ATT_GALLERY_DOCS']['VALUE'] as $doc):?>
                             <? $title = CFile::MakeFileArray($doc); ?>
@@ -273,6 +279,7 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
         <?endif;?>
 
         <?if($arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_ADDONS'] != null):?>
+
             <div id="add-on">
 
                 <div class="heading-orange">
@@ -282,30 +289,37 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
 
                 <div class="product__add-on">
 
-                    <div class="add-on__box">
+                    <?foreach($arResult["PROPERTIES"]['ATT_PRODUCT_ADDONS']['VALUE'] as $item):?>
+                        <?$res = CIBlockElement::GetByID($item);
+                            if($ar_res = $res->GetNextElement()) {
+                                $el = $ar_res->GetFields();
+                                $el["PROPERTIES"] = $ar_res->GetProperties();
+                            }
+                        $alBrand = strtolower($el['PROPERTIES']['ATT_PRODUCT_PARENT_RAGE']['VALUE']);
+                        $elType = strtolower($el['PROPERTIES']['ATT_PRODUCT_TYPE']['VALUE']);?>
 
-                        <div class="group">
-                            <span class="logo-kompas"></span>
-                            <div>
-                                <h5>application</h5>
-                                <h4>Steel Structures 3D</h4>
+                        <div class="add-on__box">
+
+                            <div class="group">
+                                <span class="logo-<?echo $alBrand?>"></span>
+                                <div>
+                                    <h5 class="<?echo $elType?>"><?echo $elType?></h5>
+                                    <h4><?echo $el['NAME']?></h4>
+                                </div>
                             </div>
+
+                            <div>
+                                <?echo $el['PREVIEW_TEXT']?>
+                            </div>
+
+                            <div class="product-box__btn">
+                                <a href="/products/<?echo $alBrand?>/<?echo $el['CODE']?>/">view</a>
+                            </div>
+
                         </div>
+                    <?endforeach;?>
 
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua.</p>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                nisi ut aliquip ex ea commodo</p>
-                        </div>
-
-                        <div class="product-box__btn"><a href="#">view</a></div>
-
-                    </div>
-
-                    <div class="add-on__box">
+<!--                    <div class="add-on__box">
 
                         <div class="group">
                             <span class="logo-kompas"></span>
@@ -323,7 +337,7 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
 
                         <div class="product-box__btn"><a href="#">view</a></div>
 
-                    </div>
+                    </div>-->
 
                 </div>
 

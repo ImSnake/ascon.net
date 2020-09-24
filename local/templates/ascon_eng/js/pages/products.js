@@ -1,7 +1,22 @@
 'use strict';
 
-const gallery = {
+const product = {
     imgCount: 0,
+
+    navElemCheck(elem){
+        $('.product__nav li').removeClass('active');
+        elem.addClass('active');
+
+        $(window).on('scroll', product.navScroll);
+    },
+
+    navScroll(){
+        if(window.pageYOffset <= $('#description').offset().top){
+            $('.product__nav li').removeClass('active');
+            $('.product__nav li:first-child').addClass('active');
+            $(window).off('scroll', product.navScroll);
+        }
+    },
 };
 
 (function($) {
@@ -47,13 +62,13 @@ const gallery = {
             });
 
             $.each($('.gallery__img'), function (){
-                gallery.imgCount += 1;
-                if(gallery.imgCount < 5){
+                product.imgCount += 1;
+                if(product.imgCount < 5){
                     $(this).removeClass('hide-element');
                 }
             });
 
-            if(gallery.imgCount > 4){
+            if(product.imgCount > 4){
                 $('.gallery__nav .right-arrow').css('display', 'block');
             }
         });

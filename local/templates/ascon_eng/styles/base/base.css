@@ -65,6 +65,10 @@ button {
   .container {
     width: 1280px;
     margin: 0 auto;
+  }
+}
+@media (min-width: 1320px) {
+  .container {
     padding: 0;
   }
 }
@@ -285,7 +289,7 @@ button {
 .btn-blue a:hover,
 .btn-blue span:hover {
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 600;
   background-color: #ffffff;
   letter-spacing: 1.5px;
   box-shadow: unset;
@@ -304,7 +308,7 @@ button {
 .btn-orange span:hover,
 .btn-blue a:hover,
 .btn-blue span:hover {
-    padding: 0 27px;
+    padding: 0 26px;
     letter-spacing: 1.5px;
   }
 }
@@ -363,13 +367,13 @@ button {
   transition: all 0.3s ease-out;
 }
 .product-box__btn a:hover {
-  color: #3265A0;
+  color: #C64F15;
   padding: 0 6px;
   font-weight: 600;
   letter-spacing: 1.5px;
   background-color: #ffffff;
   box-shadow: unset;
-  border: 3px solid #3265A0;
+  border: 3px solid #C64F15;
   opacity: 1;
 }
 @media (min-width: 600px) {
@@ -377,6 +381,7 @@ button {
     padding: 0 20px;
     font-size: 12px;
     letter-spacing: 1px;
+    border: 2px solid #dfdfdf;
   }
   .product-box__btn a:hover {
     padding: 0 16px;
@@ -658,7 +663,7 @@ button {
   min-width: 79px;
   margin-right: 1px;
   height: 24px;
-  background-color: rgba(111, 110, 110, 0.7);
+  background-color: rgba(80, 80, 80, 0.85);
   cursor: pointer;
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
@@ -668,6 +673,9 @@ button {
 }
 .page__nav li:hover {
   background-color: #C64F15;
+}
+.page__nav li:active, .page__nav li:visited {
+  background-color: rgba(80, 80, 80, 0.85);
 }
 @media (min-width: 600px) {
   .page__nav li {
@@ -745,6 +753,7 @@ button {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
 }
 .action-box p {
@@ -1339,6 +1348,11 @@ button {
     margin-left: 3%;
   }
 }
+@media (min-width: 1280px) {
+  .sub-header__right {
+    margin-right: 25px;
+  }
+}
 .sub-header__right .btn-orange {
   margin: 10px 0;
 }
@@ -1349,13 +1363,14 @@ button {
 }
 @media (min-width: 1280px) {
   .sub-header__right .btn-orange {
-    min-width: 150px;
+    min-width: 160px;
   }
 }
 .sub-header__right .language {
   position: relative;
   display: flex;
   align-items: center;
+  padding-left: 2px;
 }
 @media (min-width: 600px) {
   .sub-header__right .language {
@@ -1373,8 +1388,8 @@ button {
 }
 @media (min-width: 600px) {
   .sub-header__right .language__icon {
-    margin-top: 5px;
-    font-size: 12px;
+    margin-top: 1px;
+    font-size: 13px;
     margin-right: 35px;
   }
 }
@@ -1395,8 +1410,8 @@ button {
 }
 @media (min-width: 600px) {
   .sub-header__right .language__icon:before {
-    width: 22px;
-    height: 22px;
+    width: 23px;
+    height: 23px;
   }
 }
 @media (min-width: 1280px) {
@@ -1408,6 +1423,12 @@ button {
 .sub-header__right .language__icon .down-arrow {
   margin-left: 5px;
   color: #1F3045;
+  top: 1px;
+}
+@media (min-width: 600px) {
+  .sub-header__right .language__icon .down-arrow {
+    top: 2px;
+  }
 }
 .sub-header__right .language__icon .down-arrow:before {
   padding-right: 0;
@@ -1478,6 +1499,54 @@ button {
   color: #6f6e6e;
   right: 5px;
   top: 8px;
+}
+
+.dlay-cookienotice-load {
+  background-color: rgba(198, 79, 21, 0.9) !important;
+  color: #FFFFFF !important;
+  font-size: 13px !important;
+}
+@media (min-width: 600px) {
+  .dlay-cookienotice-load {
+    font-size: 14px !important;
+  }
+}
+
+.dlay-cookienotice-text {
+  max-width: 100% !important;
+  margin: 0 !important;
+  width: unset !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.dlay-cookienotice-text .dlay-cookienotice-p {
+  margin-top: 0 !important;
+  padding: 0 20px !important;
+  padding-top: 10px !important;
+}
+
+.dlay-cookienotice-button.cookie-btn {
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+  margin-left: 0 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.8px !important;
+  border-radius: 0 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  padding: 6px 25px 5px 25px !important;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+}
+.dlay-cookienotice-button.cookie-btn:hover {
+  background-color: #ffffff !important;
+  color: #C64F15 !important;
+  font-weight: 600 !important;
 }
 
 footer {

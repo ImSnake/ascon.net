@@ -33,6 +33,7 @@
 @media (min-width: 1280px) {
   .main {
     margin-top: 50px;
+    padding: 0;
   }
 }
 .main p {
@@ -640,4 +641,8 @@
 }
 .partnership-block .step-block .btn-orange a {
   font-size: 14px;
+}
+
+.support__group {
+  margin-bottom: 60px;
 }

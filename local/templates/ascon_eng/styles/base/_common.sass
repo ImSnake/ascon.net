@@ -51,6 +51,7 @@ button
   @media (min-width: $desktop-content-width)
     width: $desktop-content-width
     margin: 0 auto
+  @media (min-width: $desktop-content-width + 40px)
     padding: 0
 
 .center
@@ -239,7 +240,7 @@ button
     @include animation-03-ease-out
     &:hover
       cursor: pointer
-      font-weight: 900
+      font-weight: 600
       background-color: #ffffff
       letter-spacing: 1.5px
       box-shadow: unset
@@ -249,7 +250,7 @@ button
       font-size: 12px
       letter-spacing: 1px
       &:hover
-        padding: 0 27px
+        padding: 0 26px
         letter-spacing: 1.5px
 
 .btn-orange a,
@@ -292,18 +293,19 @@ button
     cursor: pointer
     @include animation-03-ease-out
     &:hover
-      color: $blue-color
+      color: $orange-color
       padding: 0 6px
       font-weight: 600
       letter-spacing: 1.5px
       background-color: #ffffff
       box-shadow: unset
-      border: 3px solid $blue-color
+      border: 3px solid $orange-color
       opacity: 1
     @media (min-width: $tablet-content-width)
       padding: 0 20px
       font-size: 12px
       letter-spacing: 1px
+      border: 2px solid $light-grey-color
       &:hover
         padding: 0 16px
         letter-spacing: 2px
@@ -540,11 +542,14 @@ button
     margin-right: 1px
     height: 24px
     //background-color: rgba(255,255,255,0.5)
-    background-color: rgba(111, 110, 110, 0.7)
+    background-color: rgba(80, 80, 80, 0.85)
     cursor: pointer
     @include animation-02-linear
     &:hover
       background-color: $orange-color
+    &:active,
+    &:visited
+      background-color: rgba(80, 80, 80, 0.85)
     @media (min-width: $tablet-content-width)
       min-width: 130px
       height: 32px
@@ -604,6 +609,7 @@ button
       text-transform: uppercase
       font-size: 18px
       font-weight: bold
+      margin-bottom: 20px
   p
     display: none
     @media (min-width: $desktop-content-width)

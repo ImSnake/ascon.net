@@ -5,10 +5,19 @@
 .catalog__header
   position: relative
   background-color: $dark-grey-color
-  width: 100%
+  z-index: 0
+  margin-left: -5px
+  margin-right: -5px
+  //width: 100%
   height: 100px
   @media (min-width: $tablet-content-width)
     height: 150px
+    margin-left: -15px
+    margin-right: -15px
+  @media (min-width: $desktop-content-width)
+    width: 100%
+    margin-left: 0
+    margin-right: 0
   img
     width: 100%
     height: 100px
@@ -16,28 +25,28 @@
       height: 150px
     //@media (min-width: $desktop-content-width)
       height: 200px
-
-
 .catalog__description
   position: absolute
   top: 0
+  width: 100%
   height: 100px
   display: flex
   //height: 100%
   align-items: center
   color: #ffffff
-  padding: 6px 10px
+  padding: 10px 15px
   overflow: hidden
   @media (min-width: $tablet-content-width)
     width: 100%
-    padding: 0 2%
     height: 150px
     flex-direction: column
     align-items: baseline
     justify-content: center
     padding-bottom: 25px
-    padding-top: 10px
-  @media (min-width: $desktop-content-width)
+    padding-top: 20px
+    padding-left: 25px
+    padding-right: 25px
+  //@media (min-width: $desktop-content-width)
     padding-left: 25px
     padding-right: 25px
     padding-bottom: 25px
@@ -66,26 +75,35 @@
       line-height: 150%
       width: 90%
 
+
 .catalog
   margin-bottom: 50px
-  padding: 0 10px
+  padding: 0 8px
   @media (min-width: $tablet-content-width)
-    padding: 0 2%
+    padding: 0
     margin-top: 50px
     margin-bottom: 80px
-  @media (min-width: $desktop-content-width)
+  //@media (min-width: $desktop-content-width)
     padding: 0
+  .heading-orange
+    @media (min-width: $tablet-content-width)
+      padding-left: 5px
+    @media (min-width: $desktop-content-width)
+      padding-left: 0px
 
 .product-box
   display: flex
   flex-direction: column
   margin-top: 30px
   margin-bottom: 70px
-  padding: 0 5px
+  padding: 0
+  max-width: 500px
   @media (min-width: $tablet-content-width)
     @include box-shadow
-    padding: 40px 40px 30px 40px
+    max-width: unset
+    padding: 50px 35px 30px 35px
     background-color: $slight-grey-color
+    margin-top: 0
     //background-color: rgba(248, 248, 248, 0.3)
   @media (min-width: $desktop-content-width)
     padding: 0
@@ -93,7 +111,11 @@
     position: relative
 
 .product-box__img
-  display: none
+  //display: none
+  display: block
+  order: 2
+  @media (min-width: $tablet-content-width)
+    display: none
   @media (min-width: $desktop-content-width)
     display: block
     position: absolute
@@ -139,57 +161,46 @@
     @media (min-width: $desktop-content-width)
       color: #ffffff
       background-color: $orange-color
-      //opacity: 0.95
   &.toolkit,
   &.mobile-app
     color: $blue-color
     @media (min-width: $desktop-content-width)
       color: #ffffff
       background-color: $blue-color
-      opacity: 0.98
-
+      opacity: 0.99
   &.add-on
-    color: $dark-grey-color
+    color: $grey-color
     @media (min-width: $desktop-content-width)
       color: #ffffff
       background-color: $dark-grey-color
-      opacity: 0.97
-      //&::after
-        display: block
-        position: relative
-        top: -26px
-        right: -165px
-        content: ''
-        width: 0
-        height: 0
-        border-top: 20px solid transparent
-        border-bottom: 20px solid transparent
-        border-left: 23px solid $grey-color
+      opacity: 0.98
 
 .product-box__name
   font-size: 18px
   font-weight: 800
   letter-spacing: 1px
   //text-transform: capitalize
-  margin-bottom: 15px
+  margin-bottom: 10px
   @media (min-width: $tablet-content-width)
-    font-size: 20px
+    font-size: 21px
     font-weight: 600
     letter-spacing: 0.5px
+    margin-bottom: 5px
   @media (min-width: $desktop-content-width)
     margin-bottom: 0
-    font-size: 21px
+    font-size: 22px
     //letter-spacing: 1.5px
 
 .product-box__description
-  font-size: 12px
-  line-height: 145%
+  font-size: 13px
+  line-height: 150%
   @media (min-width: $tablet-content-width)
     margin-top: 12px
-    font-size: 13px
-    line-height: 150%
-  @media (min-width: $desktop-content-width)
     font-size: 14px
+    line-height: 160%
+  @media (min-width: $desktop-content-width)
+    //font-size: 14px
+    line-height: 150%
   p
     margin: 8px 0
     //line-height: 150%
@@ -203,9 +214,9 @@
   display: flex
   align-items: center
   justify-content: space-between
-  margin-top: 25px
+  margin-top: 15px
   @media (min-width: $tablet-content-width)
-    margin-top: 30px
+    margin-top: 25px
   @media (min-width: $desktop-content-width)
     align-items: flex-end
     margin-top: 0
@@ -220,20 +231,22 @@
   display: flex
   align-items: center
   //cursor: pointer
-  padding-top: 5px
-  @media (min-width: $desktop-content-width)
+  padding-top: 0
+  //@media (min-width: $desktop-content-width)
     padding-top: 0
     //margin-bottom: 20px
   a
     display: flex
     align-items: center
     height: 40px
-    padding-top: 6px
+    padding-top: 0
     @include animation-02-linear
     &:hover .bold
       text-decoration: underline
     &:hover .parent__logo
       transform: scale(1.05)
+    @media (min-width: $desktop-content-width)
+      padding-top: 5px
 
 .parent__logo
   height: 26px
@@ -268,13 +281,3 @@
 .product-box__btn
   //@media (min-width: $desktop-content-width)
     margin-top: -5px
-
-
-.product-box__line
-  order: 3
-  width: 100%
-  height: 5px
-  margin-top: 25px
-  border-bottom: 1px solid $border-grey-color
-  @media (min-width: $tablet-content-width)
-    display: none

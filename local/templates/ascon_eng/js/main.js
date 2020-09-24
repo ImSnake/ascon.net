@@ -1,6 +1,5 @@
 'use strict';
 
-
 const commonMethods = {
     // блокировка экрана при всплытии поп-ап
     bodyFix(body) {
@@ -67,6 +66,12 @@ const commonMethods = {
     $(document).ready(
         function() {
 
+            if($('#dlay-cookienotice-modal').length > 0) {
+                console.log('cookie!');
+                $('.dlay-cookienotice-text').addClass('container');
+                $('.dlay-cookienotice-button').addClass('cookie-btn');
+            }
+
 // ********* Н А В И Г А Ц И Я
             $('#mobile-open').on('click', function () {
                 $(this).addClass('hide-element');
@@ -124,9 +129,11 @@ const commonMethods = {
                 event.preventDefault();
                 let id = $(this).attr('href');
                 commonMethods.scrollToBottom($(id), 50);
+
+                if($('#description').length > 0){
+                    product.navElemCheck($(this).parent());
+                }
             });
-
-
         });
 
 

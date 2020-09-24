@@ -45,6 +45,18 @@
 
 <header>
 
+    <?$APPLICATION->IncludeComponent(
+        "dlay:cookienotice",
+        ".default",
+        Array(
+            "COMPONENT_TEMPLATE" => ".default",
+            "NOTICE_BUTTON" => "Accept",
+            "NOTICE_LINK" => "",
+            "NOTICE_LINK_TEXT" => "",
+            "NOTICE_TEXT" => "We use cookies to help provide you with the best possible online experience"
+        )
+    );?>
+
     <div class="header__bkg">
 
         <div class="container header__content">

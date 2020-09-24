@@ -4,6 +4,7 @@
   position: relative
   background-color: $dark-grey-color
 
+// MAIN-HEADER ******************************************
 .header__content
   @include unselectable
   position: relative
@@ -241,6 +242,8 @@
     &:hover
       color: $orange-color
 
+
+// SUB-HEADER ******************************************
 .sub-header
   @include unselectable
   display: flex
@@ -289,18 +292,21 @@
     width: unset
     justify-content: unset
     margin-left: 3%
+  @media (min-width: $desktop-content-width)
+    margin-right: 25px
 
   .btn-orange
     margin: 10px 0
     @media (min-width: $tablet-content-width)
       margin: 16px 0
     @media (min-width: $desktop-content-width)
-      min-width: 150px
+      min-width: 160px
 
   .language
     position: relative
     display: flex
     align-items: center
+    padding-left: 2px
     @media (min-width: $tablet-content-width)
       justify-content: flex-end
   //.language__current
@@ -313,7 +319,6 @@
       font-size: 14px
       margin-right: 35px
 
-  
   .language__icon
     display: flex
     align-items: center
@@ -323,8 +328,8 @@
     letter-spacing: 0.3px
     cursor: pointer
     @media (min-width: $tablet-content-width)
-      margin-top: 5px
-      font-size: 12px
+      margin-top: 1px
+      font-size: 13px
       margin-right: 35px
     @media (min-width: $desktop-content-width)
       margin-right: 50px
@@ -338,8 +343,8 @@
       background-size: contain
       margin-right: 5px
       @media (min-width: $tablet-content-width)
-        width: 22px
-        height: 22px
+        width: 23px
+        height: 23px
       @media (min-width: $desktop-content-width)
         width: 24px
         height: 24px
@@ -347,6 +352,9 @@
     .down-arrow
       margin-left: 5px
       color: $main-font-color
+      top: 1px
+      @media (min-width: $tablet-content-width)
+        top: 2px
       &:before
         padding-right: 0
         padding-left: 1px
@@ -400,3 +408,40 @@
       color: $grey-color
       right: 5px
       top: 8px
+
+// COOKIE MESSAGE  ******************************************
+.dlay-cookienotice-load
+  background-color: rgb(198 79 21 / 90%) !important
+  color: #FFFFFF !important
+  font-size: 13px !important
+  @media (min-width: $tablet-content-width)
+    font-size: 14px !important
+
+.dlay-cookienotice-text
+  max-width: 100% !important
+  margin: 0 !important
+  width: unset !important
+  display: flex !important
+  flex-wrap: wrap !important
+  align-items: center !important
+  justify-content: center !important
+  .dlay-cookienotice-p
+    margin-top: 0 !important
+    padding: 0 20px !important
+    padding-top: 10px !important
+
+.dlay-cookienotice-button.cookie-btn
+  border-color: #FFFFFF !important
+  color: #FFFFFF !important
+  margin-left: 0 !important
+  font-weight: 500 !important
+  letter-spacing: 0.8px !important
+  border-radius: 0 !important
+  font-size: 11px !important
+  text-transform: uppercase !important
+  padding: 6px 25px 5px 25px !important
+  @include animation-02-linear
+  &:hover
+    background-color: #ffffff !important
+    color: $orange-color !important
+    font-weight: 600 !important
