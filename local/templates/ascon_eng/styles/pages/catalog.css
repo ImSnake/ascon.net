@@ -71,7 +71,8 @@
 }
 @media (min-width: 1280px) {
   .catalog__description h2 {
-    font-size: 24px;
+    font-size: 26px;
+    margin-bottom: 2px;
   }
 }
 .catalog__description p {
@@ -323,9 +324,7 @@
 }
 .product-box__parent a:hover .bold {
   text-decoration: underline;
-}
-.product-box__parent a:hover .parent__logo {
-  transform: scale(1.05);
+  color: #C64F15;
 }
 @media (min-width: 1280px) {
   .product-box__parent a {

@@ -60,7 +60,8 @@
       font-weight: 600
     @media (min-width: $desktop-content-width)
       //margin-top: 10px
-      font-size: 24px
+      font-size: 26px
+      margin-bottom: 2px
   p
     display: none
     @media (min-width: $tablet-content-width)
@@ -243,7 +244,8 @@
     @include animation-02-linear
     &:hover .bold
       text-decoration: underline
-    &:hover .parent__logo
+      color: $orange-color
+    //&:hover .parent__logo
       transform: scale(1.05)
     @media (min-width: $desktop-content-width)
       padding-top: 5px

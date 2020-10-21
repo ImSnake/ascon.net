@@ -11,6 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
+//d($arResult);
 ?>
 
 
@@ -26,36 +28,63 @@ $this->setFrameMode(true);
 
                 <div class="partner__top">
 
-                    <div class="partner__country"><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_COUNTRY"]["DISPLAY_VALUE"] ?></div>
+                    <div class="partner__country"><?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_COUNTRY"]["DISPLAY_VALUE"]?></div>
 
                     <div class="partner__logo">
                         <? if (count($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_LOGO"]) > 0): ?>
-                            <img src="<?echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_LOGO"]["FILE_VALUE"]["SRC"]?>"
+                            <img src="<?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_LOGO"]["FILE_VALUE"]["SRC"]?>"
                             <? else: ?>
-                            <img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"]?>"
+                            <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>"
                                 <? endif; ?>
-                             alt="<?echo $arItem["NAME"];?>">
+                             alt="<?=$arItem["NAME"]?>">
                     </div>
 
                 </div>
 
                 <div class="partner__content">
 
-                    <div class="partner__name"><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_NAME"]["DISPLAY_VALUE"] ?></div>
+                    <div class="partner__name"><?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_NAME"]["DISPLAY_VALUE"]?></div>
 
-                    <div class="partner__title">website</div>
-                    <div class="partner__text link"><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_WEBSITE"]["DISPLAY_VALUE"] ?></div>
+                    <div class="group">
+                        <div class="content__block">
+                            <div class="icon-address"></div>
+                            <div class="partner__text link hide-element">
+                                <?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_WEBSITE"]["DISPLAY_VALUE"]?>
+                            </div>
+                        </div>
 
-                    <div class="partner__title">phone</div>
-                    <div class="partner__text">
-                        <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"])): ?>
-                            <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"] as $elem): ?>
-                                <span class="multi-phone"><? echo $elem ?></span>
-                            <? endforeach; ?>
-                        <? else: ?>
-                            <span><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"] ?></span>
-                        <? endif ?>
+                        <div class="content__block">
+                            <div class="icon-phone"></div>
+                            <div class="partner__text hide-element">
+                                <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"])): ?>
+                                    <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"] as $elem): ?>
+                                        <a class="multi-phone" href="tel:<?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"]?>"><?=$elem?></a>
+                                    <? endforeach; ?>
+                                <? else: ?>
+                                    <a href="tel:<?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"]?>"><?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"]?></a>
+                                <? endif ?>
+                            </div>
+                        </div>
+
+                        <div class="content__block">
+                            <div class="icon-mail"></div>
+                            <div class="partner__text hide-element">
+                                <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_EMAIL"]["DISPLAY_VALUE"])): ?>
+                                    <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_EMAIL"]["DISPLAY_VALUE"] as $elem): ?>
+                                        <a class="protect multi-mail" href="mailto:<?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_EMAIL"]["DISPLAY_VALUE"]?>"><?=$elem?></a>
+                                    <? endforeach; ?>
+                                <? else: ?>
+                                    <a class="protect" href="mailto:<?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_EMAIL"]["DISPLAY_VALUE"]?>"><?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_EMAIL"]["DISPLAY_VALUE"]?></a>
+                                <? endif ?>
+                            </div>
+                        </div>
                     </div>
+                    <!--<div class="partner__title">website</div> -->
+                   <!-- <div class="partner__text link hide-element"><?/*=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_WEBSITE"]["DISPLAY_VALUE"]*/?></div>-->
+
+                    <!--<div class="partner__title">phone</div> -->
+
+
                 </div>
 
                 <div class="partner__bottom">
@@ -63,10 +92,10 @@ $this->setFrameMode(true);
                     <div class="partner__status">
                         <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_STATUS"]["DISPLAY_VALUE"])): ?>
                             <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_STATUS"]["DISPLAY_VALUE"] as $elem): ?>
-                                <div><? echo $elem ?></div>
+                                <div><?=$elem?></div>
                             <? endforeach; ?>
                         <? else: ?>
-                            <div><? echo $arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_STATUS"]["DISPLAY_VALUE"] ?></div>
+                            <div><?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_STATUS"]["DISPLAY_VALUE"]?></div>
                         <? endif ?>
                     </div>
 
@@ -74,13 +103,13 @@ $this->setFrameMode(true);
                         <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_ALLOWED"]["DISPLAY_VALUE"])): ?>
                             <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_ALLOWED"]["DISPLAY_VALUE"] as $elem): ?>
                             <? if (strtolower($elem) == "pilot-ice"): ?>
-                                    <span class="logo-<? echo substr(strtolower($elem), 0, -4) ?>"></span>
+                                    <span class="logo-<?= substr(strtolower($elem), 0, -4);?>"></span>
                                 <? else: ?>
-                                    <span class="logo-<? echo strtolower($elem) ?>"></span>
+                                    <span class="logo-<?= strtolower($elem);?>"></span>
                                 <? endif ?>
                             <? endforeach; ?>
                         <? else: ?>
-                            <span class="logo-<? echo strtolower($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_ALLOWED"]["DISPLAY_VALUE"]) ?>"></span>
+                            <span class="logo-<?= strtolower($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_ALLOWED"]["DISPLAY_VALUE"]);?>"></span>
                         <? endif ?>
                     </div>
 

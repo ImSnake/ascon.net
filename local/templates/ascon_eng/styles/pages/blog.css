@@ -1,6 +1,16 @@
 /* RESOLUTION SETTINGS START*/
 /* COLORS =====================================*/
 /*====================*/
+.page__nav li {
+  flex: 1;
+}
+@media (min-width: 600px) {
+  .page__nav {
+    min-width: 140px;
+    max-width: 150px;
+  }
+}
+
 .events-nav li {
   min-width: 50px;
 }
@@ -469,8 +479,18 @@
 }
 .article__content .signature {
   color: #999999;
-  font-size: 13px;
+  font-size: 11px;
   margin: 5px 0 20px 0;
+}
+@media (min-width: 600px) {
+  .article__content .signature {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .article__content .signature {
+    font-size: 13px;
+  }
 }
 
 .content-source {
@@ -503,8 +523,8 @@
 .content-creator_img {
   border-radius: 50%;
   background-color: #f8f8f8;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-right: 12px;
 }
 .content-creator_img img {
@@ -516,6 +536,9 @@
   font-size: 13px;
   font-weight: 500;
   line-height: 125%;
+}
+.content-creator_name p {
+  margin: 6px 0;
 }
 
 .heading-orange {

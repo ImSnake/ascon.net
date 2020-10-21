@@ -124,6 +124,22 @@ const commonMethods = {
                 commonMethods.bodyScroll($('body'));
             });
 
+
+            $('.page__nav li').on('mouseenter', function () {
+
+                if(!$(this).hasClass('active')) {
+
+                    var el = $('.page__nav li.active');
+                    el.removeClass('active');
+
+                    $(this).on('mouseleave', el, function (){
+                        el.addClass('active');
+                    });
+
+                }
+                console.log('done');
+            });
+
 // ********* ПЛАВНАЯ НАВИГАЦИЯ
             $('.product__nav a').on('click', function (event) {
                 event.preventDefault();

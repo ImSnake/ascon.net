@@ -3,6 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Contacts");
 
 use Bitrix\Main\Page\Asset;
+
 $additional = true;
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
 
@@ -19,7 +20,7 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
             <ul class="page__nav">
                 <li class="active"><a href="#">Head office</a></li>
                 <li><a href="/purchase/">Our Resellers</a></li>
-<!--                <li><a href="#">Аsk a question</a></li>-->
+                <!--                <li><a href="#">Аsk a question</a></li>-->
             </ul>
 
             <img class="page__bkg" src="/local/templates/ascon_eng/images/banner/contacts.png" alt="bkg-contacts">
@@ -58,57 +59,57 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
             </div>
 
             <div class="question-form">
+                <form action="">
+                    <div class="contacts__title">Send us a message and we will contact you</div>
 
-                <div class="contacts__title">Send us a message and we will contact you</div>
+                    <div class="question-title">Subject&nbsp;<span class="orange bold">*</span></div>
+                    <div class="question-field">
+                        <select name="form-subject" id="form-subject">
+                            <option value="" selected disabled></option>
+                            <option value="kompas">KOMPAS</option>
+                            <option value="pilot">Pilot-Ice</option>
+                            <option value="renga">Renga</option>
+                            <option value="c3dlabs">C3D Labs</option>
+                            <option value="other">Other question</option>
+                        </select>
+                    </div>
 
-                <div class="question-title">Subject&nbsp;<span class="orange bold">*</span></div>
-                <div class="question-field">
-                    <select name="form-subject" id="form-subject">
-                        <option value="" selected disabled></option>
-                        <option value="kompas">KOMPAS</option>
-                        <option value="pilot">Pilot-Ice</option>
-                        <option value="renga">Renga</option>
-                        <option value="c3dlabs">C3D Labs</option>
-                        <option value="other">Other question</option>
-                    </select>
-                </div>
+                    <div class="question-title">Full name</div>
+                    <div class="question-field">
+                        <input type="text">
+                    </div>
 
-                <div class="question-title">Full name</div>
-                <div class="question-field">
-                    <input type="text">
-                </div>
+                    <div class="question-title">Company</div>
+                    <div class="question-field">
+                        <input type="text">
+                    </div>
 
-                <div class="question-title">Company</div>
-                <div class="question-field">
-                    <input type="text">
-                </div>
+                    <div class="question-title">Website</div>
+                    <div class="question-field">
+                        <input type="url">
+                    </div>
 
-                <div class="question-title">Website</div>
-                <div class="question-field">
-                    <input type="url">
-                </div>
+                    <div class="question-title">Phone</div>
+                    <div class="question-field">
+                        <input type="tel">
+                    </div>
 
-                <div class="question-title">Phone</div>
-                <div class="question-field">
-                    <input type="tel">
-                </div>
+                    <div class="question-title">Email&nbsp;<span class="orange bold">*</span></div>
+                    <div class="question-field">
+                        <input type="email" required>
+                    </div>
 
-                <div class="question-title">Email&nbsp;<span class="orange bold">*</span></div>
-                <div class="question-field">
-                    <input type="email" required>
-                </div>
+                    <div class="question-title">Your question&nbsp;<span class="orange bold">*</span></div>
+                    <div class="question-field">
+                        <textarea></textarea>
+                    </div>
 
-                <div class="question-title">Your question&nbsp;<span class="orange bold">*</span></div>
-                <div class="question-field">
-                    <textarea></textarea>
-                </div>
-
-                <button type="submit" class="btn-blue"><span>SEND</span></button>
-
+                    <button type="submit" class="btn-blue"><span>SEND</span></button>
+                </form>
             </div>
         </div>
 
     </div>
 
 
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

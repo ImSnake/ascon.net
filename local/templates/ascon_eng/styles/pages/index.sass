@@ -54,14 +54,14 @@
   letter-spacing: 0.3px
   overflow: hidden
   @media (min-width: $tablet-content-width)
-    font-size: 20px
+    font-size: 24px
     font-weight: 600
     height: 45px
     padding-left: 5px
     white-space: nowrap
     text-overflow: ellipsis
   @media (min-width: $desktop-content-width)
-    font-size: 26px
+    font-size: 28px
     padding-top: 5px
     padding-left: 0
     font-weight: bold
@@ -134,6 +134,8 @@
     //@media (min-width: $desktop-content-width)
       //font-weight: bold
 
+.master-slider-parent
+  margin-top: 1px !important
 
 .ms-skin-light-3 .ms-nav-prev
   left: 0 !important
@@ -151,7 +153,7 @@
   display: block !important
   width: 100% !important
   min-height: 90px !important
-  max-width: 1180px !important
+  max-width: 1160px !important
   padding: 15px 10px !important
   text-align: left !important
   border-radius: unset !important
@@ -161,7 +163,7 @@
     padding: 15px !important
     height: 85% !important
   @media (min-width: $desktop-content-width)
-    padding: 30px 50px !important
+    padding: 30px 60px !important
     height: 200px !important
 
 //.ms-bullets.ms-dir-h
@@ -246,7 +248,7 @@
     img
       width: 100%
       @media (min-width: $tablet-content-width)
-        width: unset
+        width: 450px
 
   .product__content
     order: 1
@@ -264,14 +266,14 @@
   .content__heading
     display: flex
     align-items: center
-    font-size: 17px
-    letter-spacing: 0.5px
+    font-size: 16px
+    letter-spacing: 0.4px
     font-weight: bold
     @media (min-width: $tablet-content-width)
-      font-size: 20px
+      font-size: 18px
       font-weight: 600
     @media (min-width: $desktop-content-width)
-      font-size: 21px
+      font-size: 19px
 
     span
       line-height: 100%
@@ -293,7 +295,7 @@
       font-size: 14px
       line-height: 160%
     @media (min-width: $desktop-content-width)
-      line-height: 150%
+      line-height: 155%
       height: 160px
       margin-bottom: 0
       padding-right: 10px
@@ -317,7 +319,7 @@
       margin-top: 30px
       align-self: flex-end
     @media (min-width: $desktop-content-width)
-      min-width: 160px
+      min-width: 150px
       width: unset
       height: 42px
       margin-left: auto
@@ -336,8 +338,8 @@
       font-weight: 500
       color: $dark-grey-color
       text-align: center
-      box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1)
-      border: 1px solid $light-grey-color
+      //box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1)
+      border: 2px solid $light-grey-color
       cursor: pointer
       @include animation-03-ease-out
       &:hover
@@ -353,7 +355,7 @@
         padding: 0 20px
         font-size: 12px
         letter-spacing: 1px
-        border: 2px solid $light-grey-color
+        border: 3px solid $light-grey-color
         &:hover
           padding: 0 16px
           letter-spacing: 2px

@@ -44,8 +44,6 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
         elseif ($logo == "pilot") { $logo = $logo . '-white'; }
     }
 }
-
-//d($arResult['PROPERTIES']);
 //d($arResult['PROPERTIES']['ATT_GALLERY_VIDEO']['VALUE']);
 //d($arResult["DISPLAY_PROPERTIES"]['ATT_GALLERY_VIDEO']['DISPLAY_VALUE']);
 ?>
@@ -125,16 +123,39 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                         <div class="heading__text">Specification</div>
                     </div>
 
-                    <div class="group">
-                        <h3>Producer</h3>
-                        <?if(implode('', $prodLink) != ''):?>
-                            <a href="<?echo implode('', $prodLink)?>" target="_blank">
-                                <h4> <?echo $arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_PRODUSER']['DISPLAY_VALUE'] ?></h4>
-                            </a>
-                        <?else:?>
-                            <h4><?echo $arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_PRODUSER']['DISPLAY_VALUE'] ?></h4>
-                        <?endif?>
-                    </div>
+                    <?if(is_array($arResult['PROPERTIES']['ATT_PRODUCT_PARTS']['VALUE'])):?>
+
+                        <div class="group contains">
+                            <h3>Contains</h3>
+
+                            <?foreach($arResult["PROPERTIES"]['ATT_PRODUCT_PARTS']['VALUE'] as $item):?>
+                                <?$res = CIBlockElement::GetByID($item);
+                                if($ar_res = $res->GetNextElement()) {
+                                    $el = $ar_res->GetFields();
+                                    $el["PROPERTIES"] = $ar_res->GetProperties();
+                                }
+                                $elBrand = strtolower($el['PROPERTIES']['ATT_PRODUCT_PARENT_RAGE']['VALUE']);?>
+
+                                <a class="product__link" href="/products/<?=$elBrand?>/<?=$el['CODE']?>/">
+                                    <div class="logo-<?=$elBrand?>"></div>
+                                    <h4><?=$el['NAME']?></h4>
+                                </a>
+                            <?endforeach;?>
+                        </div>
+                    <?endif;?>
+
+                    <?if($arResult['PROPERTIES']['ATT_PRODUCT_PARENT_LINK']['VALUE']):?>
+                        <?$res = CIBlockElement::GetByID($arResult["PROPERTIES"]['ATT_PRODUCT_PARENT_LINK']['VALUE']);
+                        if($ar_res = $res->GetNext())?>
+
+                            <div class="group">
+                            <h3>Required</h3>
+                            <a class="product__link" href="/products/<?echo strtolower($arResult["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE']) ?>/<?echo($ar_res['CODE'])?>/">
+                        <div class="logo-<?echo strtolower($arResult["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE'])?>"></div>
+                        <h4><?echo $ar_res['NAME']?></h4>
+                        </a>
+                        </div>
+                    <?endif;?>
 
                     <div class="group">
                         <h3>Supported languages</h3>
@@ -154,18 +175,17 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                         <?echo $arResult['DISPLAY_PROPERTIES']['ATT_SYSTEM_REQUIREMENTS']['DISPLAY_VALUE'] ?>
                     </div>
 
-                    <?if($arResult['PROPERTIES']['ATT_PRODUCT_PARENT_LINK']['VALUE']):?>
-                        <?$res = CIBlockElement::GetByID($arResult["PROPERTIES"]['ATT_PRODUCT_PARENT_LINK']['VALUE']);
-                        if($ar_res = $res->GetNext())?>
-
-                        <div class="group">
-                            <h3>Required</h3>
-                            <a class="product__link" href="/products/<?echo strtolower($arResult["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE']) ?>/<?echo($ar_res['CODE'])?>/">
-                                <div class="logo-<?echo strtolower($arResult["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE'])?>"></div>
-                                <h4><?echo $ar_res['NAME']?></h4>
+                    <div class="group">
+                        <h3>Producer</h3>
+                        <?if(implode('', $prodLink) != ''):?>
+                            <a href="<?echo implode('', $prodLink)?>" target="_blank">
+                                <h4> <?echo $arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_PRODUSER']['DISPLAY_VALUE'] ?></h4>
                             </a>
-                        </div>
-                    <?endif;?>
+                        <?else:?>
+                            <h4><?echo $arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_PRODUSER']['DISPLAY_VALUE'] ?></h4>
+                        <?endif?>
+                    </div>
+
                 </div>
             </div>
 
@@ -208,7 +228,7 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                         <div class="gallery__content">
 
                             <div class="gallery__nav">
-<!--                                <span class="left-arrow"></span>-->
+                                <span class="left-arrow"></span>
                                 <span class="right-arrow"></span>
                             </div>
 

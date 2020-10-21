@@ -173,7 +173,7 @@
     font-weight: normal
     letter-spacing: 0.5px
     margin-left: 22px
-    padding-top: 15px
+    padding-top: 16px
     padding-bottom: 0
     margin-top: 0
     margin-bottom: 5px
@@ -222,6 +222,8 @@
     padding-top: 7px
     padding-bottom: 7px
     transition: all 0.2s ease-in-out
+    @media (min-width: $tablet-content-width)
+      padding-top: 8px
     &:hover
       color: $orange-color
       text-decoration: underline
@@ -265,10 +267,13 @@
   //margin-top: 12px
   //margin-bottom: 12px
   @media (min-width: $tablet-content-width)
+    margin-top: 0
     font-size: 12px
+  @media (min-width: $desktop-content-width)
+    margin-top: 5px
   span
     font-weight: bold
-    line-height: 150%
+    line-height: 130%
   a
     display: none
     @media (min-width: $tablet-content-width)
@@ -282,6 +287,7 @@
     display: none
     @media (min-width: $desktop-content-width)
       display: block
+      line-height: 150%
 
 .sub-header__right
   display: flex
@@ -353,7 +359,7 @@
       margin-left: 5px
       color: $main-font-color
       top: 1px
-      @media (min-width: $tablet-content-width)
+      //@media (min-width: $desktop-content-width)
         top: 2px
       &:before
         padding-right: 0

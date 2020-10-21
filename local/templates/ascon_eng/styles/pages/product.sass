@@ -32,9 +32,9 @@
   position: relative
   z-index: 2
   color: #ffffff
-  font-size: 10px
+  font-size: 11px
   margin: 0 15px
-  padding-top: 10px
+  padding-top: 9px
   padding-bottom: 0
   @media (min-width: $tablet-content-width)
     padding-top: 15px
@@ -86,7 +86,8 @@
       margin-left: 15px
     @media (min-width: $desktop-content-width)
       font-size: 32px
-      font-weight: 700
+      letter-spacing: 2.5px
+      font-weight: 900
       margin-left: 25px
 
   .logo-kompas,
@@ -191,22 +192,23 @@
 
 .product__main
   position: relative
-  margin-top: 30px
+  margin-top: 25px
   margin-bottom: 80px
   @media (min-width: $tablet-content-width)
     margin-top: 35px
     margin-bottom: 100px
   @media (min-width: $desktop-content-width)
-    margin-top: 60px
+    margin-top: 50px
 
   .fancy-img
     cursor: zoom-in
 
 .product__content
   //width: 100%
+  //height: 100%
   @media (min-width: $desktop-content-width)
     display: flex
-    height: 100%
+    //height: unset
 
 .action-box
   //margin-left: -10px
@@ -233,19 +235,54 @@
     margin-right: 25px
 
 .heading-orange
-  margin-bottom: 12px
+  margin-bottom: 10px
   @media (min-width: $tablet-content-width)
-    margin-bottom: 15px
+    margin-bottom: 12px
   @media (min-width: $desktop-content-width)
     margin-left: -10px
     //margin-bottom: 20px
 
   .heading__text
-    font-size: 18px
+    font-size: 19px
     @media (min-width: $tablet-content-width)
-      font-size: 20px
+      font-size: 21px
     @media (min-width: $desktop-content-width)
-      font-size: 24px
+      font-size: 25px
+
+  .heading__arrow
+    border-left: 7px solid $orange-color
+    margin-right: 4px
+    margin-left: -1px
+
+#features
+  margin-bottom: 20px
+
+#specification
+  margin-bottom: 40px
+  ul
+    margin-top: 10px
+    margin-bottom: 8px
+    li
+      font-size: 13px
+      @media (min-width: $tablet-content-width)
+        font-size: 14px
+  p
+    font-size: 13px
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+
+  .contains
+    h3
+      margin-bottom: 16px
+    a.product__link
+      margin-right: 30px
+      margin-bottom: 12px
+      margin-top: 10px
+      max-width: 200px
+
+  .subgroup
+    padding-top: 0
+    padding-bottom: 6px
 
 .product__section
   margin-bottom: 50px
@@ -266,24 +303,34 @@
       margin-bottom: 12px
     @media (min-width: $desktop-content-width)
       font-size: 19px
-      margin-bottom: 12px
+      margin-bottom: 10px
   h4
+    font-size: 13px
     font-weight: 500
-    //color: $orange-color
+    margin-bottom: 5px
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+    //@media (min-width: $desktop-content-width)
+      font-size: 15px
   h6
-    font-size: 14px
-    font-weight: 600
+    font-size: 13px
+    font-weight: 500
     margin: 0
+    padding-top: 6px
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+    @media (min-width: $desktop-content-width)
+      font-size: 15px
   p,
   li
     font-size: 13px
-    line-height: 150%
+    line-height: 160%
     margin: 10px 0
     @media (min-width: $tablet-content-width)
       font-size: 14px
     @media (min-width: $desktop-content-width)
       font-size: 15px
-      line-height: 155%
+      //line-height: 155%
       margin: 8px 0
   img
     width: 100%
@@ -291,33 +338,42 @@
     @media (min-width: $tablet-content-width)
       max-width: min-content
     @media (min-width: $desktop-content-width)
+      width: auto
       max-width: 850px
   ul
-    margin-left: 20px
+    margin-left: 15px
     margin-bottom: 20px
     margin-top: 15px
+    @media (min-width: $tablet-content-width)
+      margin-left: 20px
   li
     list-style-type: disc
   a:hover
     color: $orange-color
 
   .group
-    padding-top: 5px
-    padding-bottom: 20px
+    padding-bottom: 15px
+    @media (min-width: $tablet-content-width)
+      padding-top: 5px
+      padding-bottom: 20px
 
   .capitalize
-    line-height: 185%
+    line-height: 190%
     margin: 0
+    //font-size: 15px
+
     //margin-top: -5px
   .signature
     color: $mid-grey-color
-    font-size: 13px
+    font-size: 11px
     margin-bottom: 20px
     margin-top: -6px
     line-height: 120%
+    @media (min-width: $tablet-content-width)
+      font-size: 12px
+    @media (min-width: $desktop-content-width)
+      font-size: 13px
 
-#features
-  margin-bottom: 40px
 
 .product__link
   display: flex
@@ -338,6 +394,7 @@
   h4
     padding-left: 8px
     font-weight: 500
+    margin-bottom: 0
 
 a.product__link
   color: $main-font-color
@@ -345,7 +402,7 @@ a.product__link
   &:hover
     color: $orange-color
     text-decoration: underline
-  &:hover div
+  //&:hover div
     transform: scale(1.05)
 
 .product__gallery
@@ -377,15 +434,25 @@ a.product__link
   //overflow: hidden
   padding: 10px 12px 20px 12px
   margin-bottom: 50px
+  @media (min-width: $tablet-content-width)
+    justify-content: flex-start
+    //width: 108%
+    //margin-left: -4%
+    //padding: 10px 2% 20px 2%
+    min-height: 300px
   @media (min-width: $desktop-content-width)
+    width: 100%
+    margin-left: 0
+    min-height: unset
     height: 300px
     flex-wrap: nowrap
-    justify-content: unset
-    padding: 10px 30px 20px 30px
-    margin-bottom: 70px
+    justify-content: flex-start
+    align-items: center
+    padding: 10px 20px 20px 20px
+    margin-bottom: 55px
     overflow: hidden
   h4
-    font-size: 12px
+    font-size: 13px
     color: $blue-color
     font-weight: 500
     max-height: 30px
@@ -393,31 +460,33 @@ a.product__link
     letter-spacing: -0.2px
     overflow: hidden
     max-width: 300px
+    margin-top: 5px
     @media (min-width: $desktop-content-width)
       font-size: 14px
       max-height: 45px
       line-height: 120%
-      margin-top: 5px
+      //margin-top: 5px
   h5
     font-size: 12px
     max-width: 300px
 
-  //&.column
-    flex-wrap: wrap
-    padding-top: 10px
-    padding-bottom: 20px
-    padding-left: 70px
 #article
   @media (min-width: $desktop-content-width)
     padding: 15px 35px 20px 40px
 
 .gallery__nav
   position: absolute
-  z-index: 4
+  left: 0
+  z-index: 2
   width: 100%
   display: flex
-  justify-content: flex-end
+  //@media (min-width: $tablet-content-width)
+    //width: 104%
+    //margin-left: -2%
+  //justify-content: flex-end
   @media (min-width: $desktop-content-width)
+    width: 100%
+    margin-left: 0
     left: 0
   span
     display: none
@@ -429,25 +498,43 @@ a.product__link
       color: $orange-color
       padding: 10px 5px
     &:hover
-      transform: scale(1.2)
+      transform: scale(1.1)
       opacity: 1
+
+  .right-arrow
+    margin-left: auto
+
+  .left-arrow
+    margin-right: auto
+    //margin-left: -25px
 
 .gallery__img
   cursor: zoom-in
   max-width: 200px
   transition: all 0.3s linear
-  margin: 10px 20px 0 20px
-  max-height: 150px
+  //margin: 10px 20px 0 20px
+  //max-height: 150px
+  padding-top: 15px
+  z-index: 5
+  @media (min-width: $tablet-content-width)
+    max-width: 250px
+    padding: 0 10px
+    //max-height: 200px
+    //margin: 10px 20px 0 15px
   @media (min-width: $desktop-content-width)
+    @include animation-02-linear
     max-width: unset
     width: 300px
+    //max-height: 200px
     height: unset
-    max-height: 200px
+    padding: 0
     margin: 0 15px
-  &:hover
-    transform: scale(1.03)
+    &:hover
+      transform: scale(1.02)
   img
     width: 100%
+    @media (min-width: $desktop-content-width)
+      max-height: 200px
 
 .gallery__video
   position: relative
@@ -459,38 +546,7 @@ a.product__link
     margin: 0 15px
     width: 300px
     height: 250px
-    margin-top: 10px
-
-    //margin-right: 30px
-  //&::before
-    position: absolute
-    z-index: 5
-    left: 60px
-    top: 50px
-    display: inline-block
-    content: ""
-    background: url(../../images/icon/icon-video.svg) center no-repeat
-    width: 65px
-    height: 35px
-    background-size: 60px
-    background-color: $light-grey-color
-    opacity: 0.6
-    padding: 5px
-    transition: all 0.3s linear
-    @media (min-width: $desktop-content-width)
-      left: 100px
-      top: 77px
-  //&:hover::before
-    transform: scale(1.07)
-    opacity: 1
-  //&:hover img
-      opacity: 1
-  //img
-    max-height: 140px
-    opacity: 0.7
-    transition: all 0.3s linear
-    @media (min-width: $desktop-content-width)
-      max-height: 200px
+    margin-top: 20px
 
 .gallery__article
   display: flex
@@ -499,12 +555,18 @@ a.product__link
   width: 350px
   height: unset
   cursor: pointer
-  //margin: 20px
+  @media (min-width: $tablet-content-width)
+    align-items: baseline
+    justify-content: flex-start
+    width: 200px
+    height: 200px
+    padding-top: 15px
   @media (min-width: $desktop-content-width)
     justify-content: flex-start
     position: relative
     z-index: 5
     padding: 0
+    margin-right: 10px
     //margin: 0 15px 0 15px
     //margin-top: 55px
     //margin: 0
@@ -513,7 +575,8 @@ a.product__link
     height: 200px
   a
     text-decoration: none
-    padding: 20px
+    padding: 15px 20px 25px 20px
+    max-width: 200px
 
 .download-icon
   text-align: center
@@ -554,7 +617,7 @@ a.product__link
   margin: 0 5px
   margin-bottom: 50px
   @media (min-width: $tablet-content-width)
-    padding: 40px 40px 35px 40px
+    padding: 40px 40px 30px 40px
     margin: 0 10px
     margin-bottom: 70px
   @media (min-width: $desktop-content-width)
@@ -572,8 +635,9 @@ a.product__link
       margin-right: 10px
   p
     font-size: 12px
-    line-height: 150%
+    line-height: 160%
     margin: 8px 0
+    padding: 0 5px
     @media (min-width: $tablet-content-width)
       font-size: 13px
     //@media (min-width: $desktop-content-width)
@@ -598,9 +662,11 @@ a.product__link
     margin-bottom: 4px
   h5
     font-size: 12px
+    letter-spacing: 0.5px
     font-weight: 500
-    padding-left: 1px
-    @media (min-width: $tablet-content-width)
+    margin-bottom: 4px
+    padding-left: 2px
+    //@media (min-width: $tablet-content-width)
       font-size: 13px
     &.base-program
       color: $orange-color

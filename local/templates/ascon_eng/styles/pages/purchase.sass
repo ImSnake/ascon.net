@@ -22,7 +22,7 @@
     margin-bottom: 20px
     @media (min-width: $desktop-content-width)
       margin-top: 20px
-      margin-bottom: 35px
+      margin-bottom: 25px
 
   .select-cover
     margin-bottom: 12px
@@ -72,7 +72,7 @@
     justify-content: space-between
   @media (min-width: $desktop-content-width)
     justify-content: flex-start
-    margin: 0 -38px
+    margin: 0 -20px
   a
     text-decoration: none
 
@@ -83,20 +83,20 @@
   justify-content: space-between
   max-width: 500px
   width: 100%
-  min-height: 325px
+  min-height: 280px
   text-decoration: unset
   margin-bottom: 40px
   @include animation-03-ease-out
   &:hover
-    transform: scale(1.02)
+    //transform: scale(1.01)
     @include box-shadow-hover
   @media (min-width: $tablet-content-width)
     max-width: unset
-    width: 580px
-    height: 340px
+    width: 400px
+    height: 280px
+    margin-bottom: 50px
   @media (min-width: $desktop-content-width)
-    width: 600px
-    margin: 0 38px
+    margin: 0 20px
     margin-bottom: 80px
 
 .partner__top
@@ -111,13 +111,13 @@
 
 .partner__country
   color: $orange-color
-  font-size: 15px
+  font-size: 14px
   font-weight: 800
-  letter-spacing: 0.5px
-  padding-bottom: 10px
+  letter-spacing: 1px
+  margin-top: -23px
   @media (min-width: $tablet-content-width)
-    font-size: 17px
-    padding-bottom: 0
+    font-size: 15px
+    margin-top: -15px
 
 .partner__logo
   width: 120px
@@ -137,18 +137,27 @@
 .partner__content
   padding: 0 20px
   height: 100%
+  padding-top: 7px
   @media (min-width: $tablet-content-width)
     padding: 0 30px
+    padding-top: 7px
+
+  .group
+    display: flex
+
+  .content__block
+    display: flex
+    align-items: center
 
 .partner__name
-  font-size: 22px
+  font-size: 20px
   font-weight: 600
   white-space: nowrap
   overflow: hidden
   text-overflow: ellipsis
-  margin-bottom: 18px
-  @media (min-width: $tablet-content-width)
-    font-size: 26px
+  margin-bottom: 25px
+  //@media (min-width: $tablet-content-width)
+
 
 .partner__title
   font-size: 13px
@@ -163,21 +172,33 @@
   white-space: nowrap
   overflow: hidden
   text-overflow: ellipsis
+  margin-left: 10px
+  margin-bottom: 2px
+  max-width: 160px
   @media (min-width: $tablet-content-width)
+    max-width: 210px
     font-size: 14px
     &.link
       color: $blue-color
       text-decoration: underline
 
   .multi-phone
-    &::after
+    display: block
+    line-height: 130%
+    font-size: 13px
+    //&::after
       content: " / "
-    &:last-child
+    //&:last-child
       &::after
         content: " "
 
+  .multy-mail
+    display: block
+    line-height: 120%
+
 .partner__bottom
-  height: 70px
+  @include unselectable
+  height: 65px
   display: flex
   align-items: center
   justify-content: space-between
@@ -200,21 +221,81 @@
   font-weight: 500
   line-height: 150%
   @media (min-width: $tablet-content-width)
-    font-size: 11px
+    font-size: 10px
     word-spacing: 1px
-    letter-spacing: 0.7px
+    line-height: 160%
 
 .partner__products
   span
     margin-left: 20px
     @media (min-width: $tablet-content-width)
-      margin-left: 30px
-      margin-right: 5px
+      margin-left: 25px
+      //margin-right: 5px
   span::before
     display: inline-block
-    opacity: 0.8
+    opacity: 0.85
     width: 22px
     height: 22px
     @media (min-width: $tablet-content-width)
-      width: 24px
-      height: 24px
+      width: 23px
+      height: 23px
+
+.icon-address,
+.icon-phone,
+.icon-mail,
+.icon-address-hover,
+.icon-phone-hover,
+.icon-mail-hover
+  display: block
+  width: 28px
+  height: 28px
+  cursor: pointer
+  &::before
+    display: inline-block
+    content: ""
+    width: 27px !important
+    height: 27px !important
+  &:hover
+    &::before
+      width: 28px !important
+      height: 28px !important
+
+.icon-address
+  &::before
+    background: url(../../images/icon/icon-address.svg) center no-repeat
+    //background-size: contain
+  &:hover
+    &::before
+      background: url(../../images/icon/icon-address-hover.svg) center no-repeat
+
+.icon-phone
+  margin-left: 20px
+  &::before
+    background: url(../../images/icon/icon-phone.svg) center no-repeat
+    //background-size: contain
+  &:hover
+    &::before
+      background: url(../../images/icon/icon-phone-hover.svg) center no-repeat
+
+.icon-mail
+  margin-left: 20px
+  &::before
+    background: url(../../images/icon/icon-mail.svg) center no-repeat
+    //background-size: contain
+  &:hover
+    &::before
+      background: url(../../images/icon/icon-mail-hover.svg) center no-repeat
+
+.icon-address-hover
+  &::before
+    background: url(../../images/icon/icon-address-hover.svg) center no-repeat
+
+.icon-phone-hover
+  margin-left: 20px
+  &::before
+    background: url(../../images/icon/icon-phone-hover.svg) center no-repeat
+
+.icon-mail-hover
+  margin-left: 20px
+  &::before
+    background: url(../../images/icon/icon-mail-hover.svg) center no-repeat

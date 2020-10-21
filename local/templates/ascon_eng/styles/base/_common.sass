@@ -288,8 +288,8 @@ button
     text-transform: uppercase
     font-weight: 500
     color: $dark-grey-color
-    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1)
-    border: 1px solid $light-grey-color
+    //box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1)
+    border: 2px solid $light-grey-color
     cursor: pointer
     @include animation-03-ease-out
     &:hover
@@ -305,7 +305,7 @@ button
       padding: 0 20px
       font-size: 12px
       letter-spacing: 1px
-      border: 2px solid $light-grey-color
+      border: 3px solid $light-grey-color
       &:hover
         padding: 0 16px
         letter-spacing: 2px
@@ -372,6 +372,8 @@ button
   color: $orange-color
   display: flex
   align-items: center
+  @media (min-width: $desktop-content-width)
+    margin-left: -10px
 
 .heading__arrow
   display: none
@@ -381,8 +383,10 @@ button
     height: 0
     border-top: 5px solid transparent
     border-bottom: 5px solid transparent
-    border-left: 8px solid $orange-color
-    margin-right: 8px
+    border-left: 7px solid $orange-color
+    //margin-right: 8px
+    margin-right: 4px
+    margin-left: -1px
 
 .heading__text
   font-size: 21px
@@ -539,8 +543,10 @@ button
     margin-right: 0
   li
     min-width: 79px
+    max-width: 160px
+    flex: 1
     margin-right: 1px
-    height: 24px
+    height: 28px
     //background-color: rgba(255,255,255,0.5)
     background-color: rgba(80, 80, 80, 0.85)
     cursor: pointer
@@ -561,19 +567,21 @@ button
     align-items: center
     text-decoration: none
     padding: 0 10px
-    font-size: 8px
-    letter-spacing: 1px
+    font-size: 9px
+    letter-spacing: 0.7px
+    padding-top: 0.5px
     text-transform: uppercase
     font-weight: 500
     cursor: unset
     @media (min-width: $tablet-content-width)
       padding: 0 25px
       font-size: 10px
+      letter-spacing: 1px
 
   .active
     background-color: $orange-color
     &:hover
-      cursor: unset
+      cursor: default
 
 // CALL TO ACTION **********************************************************
 .action-box

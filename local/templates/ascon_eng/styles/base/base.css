@@ -357,8 +357,7 @@ button {
   text-transform: uppercase;
   font-weight: 500;
   color: #505050;
-  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid #dfdfdf;
+  border: 2px solid #dfdfdf;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -381,7 +380,7 @@ button {
     padding: 0 20px;
     font-size: 12px;
     letter-spacing: 1px;
-    border: 2px solid #dfdfdf;
+    border: 3px solid #dfdfdf;
   }
   .product-box__btn a:hover {
     padding: 0 16px;
@@ -467,6 +466,11 @@ button {
   display: flex;
   align-items: center;
 }
+@media (min-width: 1280px) {
+  .heading-orange {
+    margin-left: -10px;
+  }
+}
 
 .heading__arrow {
   display: none;
@@ -478,8 +482,9 @@ button {
     height: 0;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-left: 8px solid #C64F15;
-    margin-right: 8px;
+    border-left: 7px solid #C64F15;
+    margin-right: 4px;
+    margin-left: -1px;
   }
 }
 
@@ -661,8 +666,10 @@ button {
 }
 .page__nav li {
   min-width: 79px;
+  max-width: 160px;
+  flex: 1;
   margin-right: 1px;
-  height: 24px;
+  height: 28px;
   background-color: rgba(80, 80, 80, 0.85);
   cursor: pointer;
   transition: all 0.2s linear;
@@ -690,8 +697,9 @@ button {
   align-items: center;
   text-decoration: none;
   padding: 0 10px;
-  font-size: 8px;
-  letter-spacing: 1px;
+  font-size: 9px;
+  letter-spacing: 0.7px;
+  padding-top: 0.5px;
   text-transform: uppercase;
   font-weight: 500;
   cursor: unset;
@@ -700,13 +708,14 @@ button {
   .page__nav a {
     padding: 0 25px;
     font-size: 10px;
+    letter-spacing: 1px;
   }
 }
 .page__nav .active {
   background-color: #C64F15;
 }
 .page__nav .active:hover {
-  cursor: unset;
+  cursor: default;
 }
 
 .action-box {
@@ -1187,7 +1196,7 @@ button {
     font-weight: normal;
     letter-spacing: 0.5px;
     margin-left: 22px;
-    padding-top: 15px;
+    padding-top: 16px;
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 5px;
@@ -1251,6 +1260,11 @@ button {
   padding-bottom: 7px;
   transition: all 0.2s ease-in-out;
 }
+@media (min-width: 600px) {
+  .menu-item a {
+    padding-top: 8px;
+  }
+}
 .menu-item a:hover {
   color: #C64F15;
   text-decoration: underline;
@@ -1304,12 +1318,18 @@ button {
 }
 @media (min-width: 600px) {
   .sub-header__left {
+    margin-top: 0;
     font-size: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .sub-header__left {
+    margin-top: 5px;
   }
 }
 .sub-header__left span {
   font-weight: bold;
-  line-height: 150%;
+  line-height: 130%;
 }
 .sub-header__left a {
   display: none;
@@ -1332,6 +1352,7 @@ button {
 @media (min-width: 1280px) {
   .sub-header__left div {
     display: block;
+    line-height: 150%;
   }
 }
 
@@ -1424,11 +1445,6 @@ button {
   margin-left: 5px;
   color: #1F3045;
   top: 1px;
-}
-@media (min-width: 600px) {
-  .sub-header__right .language__icon .down-arrow {
-    top: 2px;
-  }
 }
 .sub-header__right .language__icon .down-arrow:before {
   padding-right: 0;

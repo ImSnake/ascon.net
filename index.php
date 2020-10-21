@@ -68,10 +68,10 @@ $APPLICATION->SetTitle("ASCON Solutions");
 				</div>
 				<div class="content__text">
 					<p>
-						 Pilot-ICE — the next generation for managing and organizing your design data. The solution helps to organize effective collaborative work- also in case you are using different CAD-systems (compatible with all of them), alerts all team-members about file changes, provides easy work with versions.
-					</p>
+                        Pilot-ICE is a system for managing organizational, administrative and technical (engineering) document&nbsp;flow.
+                    </p>
 					<p>
-						 Pilot-ICE keeps your project data safe and helps you to assign and control the tasks.
+                        It represents a&nbsp;single data source which ensures sharing information by&nbsp;all participants of&nbsp;the&nbsp;investment and&nbsp;construction project. Arrange collaboration within the&nbsp;company, as&nbsp;well as&nbsp;with customers and&nbsp;contractors, with the&nbsp;ability to&nbsp;verify, discuss, and&nbsp;store data.
 					</p>
 				</div>
 				<div class="product__btn">
@@ -89,7 +89,7 @@ $APPLICATION->SetTitle("ASCON Solutions");
 			<div class="product__content">
 				<div class="content__heading">
  <span class="logo-renga"></span>
-					Renga Architecture
+					Renga
 				</div>
 				<div class="content__text">
 					<p>
@@ -100,7 +100,7 @@ $APPLICATION->SetTitle("ASCON Solutions");
 					</p>
 				</div>
 				<div class="product__btn">
- <a href="/products/renga/renga/">view</a>
+ <a href="/products/renga/">view</a>
 				</div>
 			</div>
 		</div>
@@ -112,10 +112,10 @@ $APPLICATION->SetTitle("ASCON Solutions");
 				</div>
 				<div class="content__text">
 					<p>
-						 C3D Toolkit constructs geometric models, performs geometric calculations, and creates connections between the elements of geometric models. C3D Toolkit handles geometric models made in third-party applications and exports geometry to other 3D systems.
+                        C3D Toolkit is a&nbsp;software development kit (SDK) responsible for&nbsp;constructing, editing, visualizing, and&nbsp;converting geometric models.
 					</p>
 					<p>
-						 C3D Toolkit comprises of a dynamic-link library, a demo application with complete source code, technical documentation, and additional support files for compatibility with many integrated development environments (IDE).
+                        C3D Toolkit constructs geometric models, performs geometric calculations, and&nbsp;creates connections between the&nbsp;elements of&nbsp;geometric models. C3D Toolkit handles geometric models made in&nbsp;third-party applications and exports geometry to&nbsp;other 3D&nbsp;systems.
 					</p>
 				</div>
 				<div class="product__btn">

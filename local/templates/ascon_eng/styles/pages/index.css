@@ -71,7 +71,7 @@
 }
 @media (min-width: 600px) {
   .banner__heading {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     height: 45px;
     padding-left: 5px;
@@ -81,7 +81,7 @@
 }
 @media (min-width: 1280px) {
   .banner__heading {
-    font-size: 26px;
+    font-size: 28px;
     padding-top: 5px;
     padding-left: 0;
     font-weight: bold;
@@ -171,6 +171,10 @@
   }
 }
 
+.master-slider-parent {
+  margin-top: 1px !important;
+}
+
 .ms-skin-light-3 .ms-nav-prev {
   left: 0 !important;
 }
@@ -194,7 +198,7 @@
   display: block !important;
   width: 100% !important;
   min-height: 90px !important;
-  max-width: 1180px !important;
+  max-width: 1160px !important;
   padding: 15px 10px !important;
   text-align: left !important;
   border-radius: unset !important;
@@ -209,7 +213,7 @@
 }
 @media (min-width: 1280px) {
   .ms-slider-text-box {
-    padding: 30px 50px !important;
+    padding: 30px 60px !important;
     height: 200px !important;
   }
 }
@@ -328,7 +332,7 @@
 }
 @media (min-width: 600px) {
   .product-box .product__img img {
-    width: unset;
+    width: 450px;
   }
 }
 .product-box .product__content {
@@ -353,19 +357,19 @@
 .product-box .content__heading {
   display: flex;
   align-items: center;
-  font-size: 17px;
-  letter-spacing: 0.5px;
+  font-size: 16px;
+  letter-spacing: 0.4px;
   font-weight: bold;
 }
 @media (min-width: 600px) {
   .product-box .content__heading {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
   .product-box .content__heading {
-    font-size: 21px;
+    font-size: 19px;
   }
 }
 .product-box .content__heading span {
@@ -397,7 +401,7 @@
 }
 @media (min-width: 1280px) {
   .product-box .content__text {
-    line-height: 150%;
+    line-height: 155%;
     height: 160px;
     margin-bottom: 0;
     padding-right: 10px;
@@ -428,7 +432,7 @@
 }
 @media (min-width: 1280px) {
   .product-box .product__btn {
-    min-width: 160px;
+    min-width: 150px;
     width: unset;
     height: 42px;
     margin-left: auto;
@@ -449,8 +453,7 @@
   font-weight: 500;
   color: #505050;
   text-align: center;
-  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid #dfdfdf;
+  border: 2px solid #dfdfdf;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -473,7 +476,7 @@
     padding: 0 20px;
     font-size: 12px;
     letter-spacing: 1px;
-    border: 2px solid #dfdfdf;
+    border: 3px solid #dfdfdf;
   }
   .product-box .product__btn a:hover {
     padding: 0 16px;

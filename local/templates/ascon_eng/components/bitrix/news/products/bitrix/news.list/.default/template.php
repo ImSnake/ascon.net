@@ -11,8 +11,11 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$APPLICATION->SetTitle("ASCON Solutions");
 
-//d($arResult['ITEMS']);
+//$page = $APPLICATION->GetCurPage();
+//d($arResult);
+//d($page);
 ?>
 
 <div class="catalog__header">

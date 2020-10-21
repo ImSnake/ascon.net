@@ -1,18 +1,17 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Products");
+//$APPLICATION->SetTitle("Products");
 
 use Bitrix\Main\Page\Asset;
 $additional = true;
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/catalog.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/product.css');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/products.js');
-?>
-    <div class="center container">
+?><div class="center container">
 	 <?$APPLICATION->IncludeComponent(
-	"bitrix:news", 
-	"products", 
-	array(
+	"bitrix:news",
+	"products",
+	Array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -23,6 +22,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/products.js');
 		"BROWSER_TITLE" => "NAME",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
+		"CACHE_NOTES" => "",
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CATEGORY_CODE" => "CATEGORY",
@@ -32,31 +32,11 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/products.js');
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d/m/Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "N",
 		"DETAIL_DISPLAY_TOP_PAGER" => "Y",
-		"DETAIL_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"DETAIL_FIELD_CODE" => array("",""),
 		"DETAIL_PAGER_SHOW_ALL" => "N",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "",
-		"DETAIL_PROPERTY_CODE" => array(
-			0 => "ATT_PRODUCT_PARENT_RAGE",
-			1 => "ATT_PRODUCT_HOME_LINK",
-			2 => "ATT_PRODUCT_DOWNLOAD_LINK",
-			3 => "ATT_ACTION_BAR_TEXT",
-			4 => "ATT_PRODUCT_TYPE",
-			5 => "ATT_PRODUCT_PARENT",
-			6 => "ATT_PRODUCT_PARENT_LINK",
-			7 => "ATT_DESCRIPTION",
-			8 => "ATT_FEATURES",
-			9 => "ATT_PRODUCT_PRODUSER",
-			10 => "ATT_LANGUAGES",
-			11 => "ATT_SYSTEM_REQUIREMENTS",
-			12 => "ATT_GALLERY_VIDEO",
-			13 => "ATT_PRODUCT_ADDONS",
-			14 => "ATT_RECOMENDED_PRODUCTS",
-			15 => "",
-		),
+		"DETAIL_PROPERTY_CODE" => array("ATT_PRODUCT_PARENT_RAGE","ATT_PRODUCT_HOME_LINK","ATT_PRODUCT_DOWNLOAD_LINK","ATT_ACTION_BAR_TEXT","ATT_PRODUCT_TYPE","ATT_PRODUCT_PARENT","ATT_PRODUCT_PARENT_LINK","ATT_PRODUCT_PARTS","ATT_DESCRIPTION","ATT_FEATURES","ATT_PRODUCT_PRODUSER","ATT_LANGUAGES","ATT_SYSTEM_REQUIREMENTS","ATT_GALLERY_VIDEO","ATT_PRODUCT_ADDONS","ATT_RECOMENDED_PRODUCTS",""),
 		"DETAIL_SET_CANONICAL_URL" => "Y",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "N",
@@ -65,47 +45,31 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/products.js');
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FILE_404" => "",
-		"FILTER_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FILTER_FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "arrFilter ",
-		"FILTER_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FILTER_PROPERTY_CODE" => array(0=>"",1=>"",),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "9",
 		"IBLOCK_TYPE" => "ascon_eng",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d/m/Y",
-		"LIST_FIELD_CODE" => array(
-			0 => "NAME",
-			1 => "PREVIEW_TEXT",
-			2 => "PREVIEW_PICTURE",
-			3 => "",
-		),
-		"LIST_PROPERTY_CODE" => array(
-			0 => "ATT_PRODUCT_PARENT_RAGE",
-			1 => "ATT_PRODUCT_TYPE",
-			2 => "ATT_PRODUCT_PARENT",
-			3 => "ATT_PRODUCT_PARENT_LINK",
-			4 => "",
-		),
+		"LIST_FIELD_CODE" => array("NAME","PREVIEW_TEXT","PREVIEW_PICTURE",""),
+		"LIST_PROPERTY_CODE" => array("ATT_PRODUCT_PARENT_RAGE","ATT_PRODUCT_TYPE","ATT_PRODUCT_PARENT","ATT_PRODUCT_PARENT_LINK",""),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "20",
+		"NEWS_COUNT" => "10",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "Y",
+		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => "ascon-pagination",
 		"PAGER_TITLE" => "Products",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_FOLDER" => "/products/",
 		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => Array("detail"=>"#SECTION_CODE#/#ELEMENT_CODE#/","news"=>"","section"=>"#SECTION_CODE#/"),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "N",
@@ -122,15 +86,8 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/products.js');
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
-		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "products",
-		"SEF_URL_TEMPLATES" => array(
-			"news" => "",
-			"section" => "#SECTION_CODE#/",
-			"detail" => "#SECTION_CODE#/#ELEMENT_CODE#/",
-		)
-	),
-	false
+		"USE_SHARE" => "N"
+	)
 );?>
 </div>
-<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

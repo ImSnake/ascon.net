@@ -25,7 +25,7 @@
 }
 @media (min-width: 600px) {
   .main {
-    margin-top: 40px;
+    margin-top: 45px;
     margin-bottom: 100px;
     padding: 0 10px;
   }
@@ -38,13 +38,13 @@
 }
 .main p {
   font-size: 13px;
-  line-height: 150%;
-  margin: 12px 0;
+  line-height: 160%;
+  margin: 10px 0;
 }
 @media (min-width: 600px) {
   .main p {
     font-size: 14px;
-    margin: 15px 0;
+    margin: 12px 0;
   }
 }
 @media (min-width: 1280px) {
@@ -62,12 +62,7 @@
 }
 
 .heading-orange {
-  margin-bottom: 12px;
-}
-@media (min-width: 600px) {
-  .heading-orange {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 10px;
 }
 
 .group__company {
@@ -291,6 +286,9 @@
   margin-top: 5px;
 }
 
+.question-form {
+  height: min-content;
+}
 .question-form .contacts__title {
   font-size: 14px;
 }
@@ -376,19 +374,19 @@
   }
 }
 .partnership-block h3 {
-  font-size: 18px;
+  font-size: 17px;
   margin-top: 25px;
   font-weight: 700;
 }
 @media (min-width: 600px) {
   .partnership-block h3 {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 35px;
   }
 }
 @media (min-width: 1280px) {
   .partnership-block h3 {
-    font-size: 22px;
+    font-size: 19px;
   }
 }
 .partnership-block .group {
