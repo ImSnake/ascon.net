@@ -11,17 +11,13 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-$APPLICATION->SetTitle("ASCON Solutions");
-
-//$page = $APPLICATION->GetCurPage();
-//d($arResult);
-//d($page);
 ?>
 
 <div class="catalog__header">
 
     <?foreach($arResult['SECTION']['PATH'] as $arItem):?>
-        <?if($arItem['IBLOCK_SECTION_ID'] != null):?>
+<!--        --><?/*if($arItem['IBLOCK_SECTION_ID'] != null):*/?>
+        <?if($arItem['CODE'] != null):?>
             <?$arSect["photo"] = CFile::GetPath($arItem["PICTURE"]); ?>
             <?if($arSect["photo"] != null):?>
                 <img src="<?echo $arSect["photo"]?>" alt="catalog-background">
@@ -38,7 +34,6 @@ $APPLICATION->SetTitle("ASCON Solutions");
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-    //d($arItem["PROPERTIES"]['ATT_PRODUCT_PARENT']['VALUE']);
 	?>
 
     <? $type = $arItem["DISPLAY_PROPERTIES"]['ATT_PRODUCT_TYPE']['DISPLAY_VALUE'] ?>
@@ -46,21 +41,21 @@ $APPLICATION->SetTitle("ASCON Solutions");
     <div class="product-box">
 
         <div class="product-box__img">
-            <img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"] ?>">
+            <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>">
         </div>
 
         <div class="product-box__content">
 
             <? if($type == "add-on"): ?>
-                <div class="product-box__type <?echo $type ?>"><?echo $type ?>&nbsp;pack</div>
+                <div class="product-box__type <?=$type?>"><?=$type?>&nbsp;pack</div>
             <?else:?>
-                <div class="product-box__type <?echo $type ?>"><?echo $type ?></div>
+                <div class="product-box__type <?=$type?>"><?=$type?></div>
             <?endif;?>
 
-            <div class="product-box__name"><?echo $arItem["NAME"] ?></div>
+            <div class="product-box__name"><?=$arItem["NAME"]?></div>
 
             <div class="product-box__description">
-                <p><?echo $arItem['PREVIEW_TEXT'] ?></p>
+                <p><?=$arItem['PREVIEW_TEXT']?></p>
             </div>
 
         </div>
@@ -73,20 +68,20 @@ $APPLICATION->SetTitle("ASCON Solutions");
                     <?$res = CIBlockElement::GetByID($arItem["PROPERTIES"]['ATT_PRODUCT_PARENT_LINK']['VALUE']);
                     if($ar_res = $res->GetNext())?>
 
-                    <a href="/products/<?echo strtolower($arItem["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE']) ?>/<?echo($ar_res['CODE'])?>/">
+                    <a href="/products/<?=strtolower($arItem["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE'])?>/<?=($ar_res['CODE'])?>/">
 
-                        <div class="parent__logo logo-<?echo strtolower($arItem["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE'])?>"></div>
+                        <div class="parent__logo logo-<?=strtolower($arItem["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE'])?>"></div>
 
                         <div class="parent__name">
                             <div>required</div>
-                            <div class="bold"><?echo $ar_res['NAME']?></div>
+                            <div class="bold"><?=$ar_res['NAME']?></div>
                         </div>
                     </a>
 
                 <?endif;?>
             </div>
 
-            <div class="product-box__btn"><a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">view</a></div>
+            <div class="product-box__btn"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>">view</a></div>
 
         </div>
 

@@ -11,39 +11,44 @@
   .heading-orange
     margin-top: 30px
     @media (min-width: $tablet-content-width)
-      margin-top: 40px
+      margin-top: 35px
     @media (min-width: $desktop-content-width)
-      margin-top: 50px
+      margin-top: 40px
 
 #form-partner
   form
     display: none
-    margin-top: 15px
-    margin-bottom: 20px
+    margin-top: 20px
+    margin-bottom: 45px
+    @media (min-width: $tablet-content-width)
+      max-width: 650px
+      margin-bottom: 50px
     @media (min-width: $desktop-content-width)
-      margin-top: 20px
-      margin-bottom: 25px
+      max-width: unset
+      margin-top: 15px
+      margin-bottom: 45px
 
   .select-cover
     margin-bottom: 12px
     @media (min-width: $tablet-content-width)
       display: inline-block
-      margin-bottom: 20px
+      margin-bottom: 12px
 
   select
     font-family: 'Gotham Pro', sans-serif
-    width: 130px
+    width: 90%
+    max-width: 290px
     border: 1px solid $border-grey-color
-    padding: 7px 10px 5px 10px
-    font-size: 9px
+    padding: 8px 10px 7px 10px
+    font-size: 10px
     text-transform: uppercase
     margin-right: 10px
     letter-spacing: 0.3px
     @media (min-width: $tablet-content-width)
       width: 160px
-      font-size: 10px
+      //font-size: 10px
       margin-right: 20px
-      padding: 9px 10px 7px 10px
+      padding: 9px 10px 8px 10px
     @media (min-width: $desktop-content-width)
       width: 180px
 
@@ -61,18 +66,25 @@
 
   .narrow-btn
     margin-top: 10px
-    margin-right: 10px
+    margin-right: 12px
+    height: 30px
+    font-size: 10px
     @media (min-width: $tablet-content-width)
       margin-right: 10px
+    @media (min-width: $desktop-content-width)
+      margin-right: 0
+      margin-left: 20px
 
 .partner-group
   display: flex
   flex-wrap: wrap
   @media (min-width: $tablet-content-width)
     justify-content: space-between
+    max-width: 900px
   @media (min-width: $desktop-content-width)
     justify-content: flex-start
-    margin: 0 -20px
+    max-width: unset
+    margin: 0 -15px
   a
     text-decoration: none
 
@@ -83,7 +95,7 @@
   justify-content: space-between
   max-width: 500px
   width: 100%
-  min-height: 280px
+  min-height: 250px
   text-decoration: unset
   margin-bottom: 40px
   @include animation-03-ease-out
@@ -92,12 +104,13 @@
     @include box-shadow-hover
   @media (min-width: $tablet-content-width)
     max-width: unset
+    min-height: unset
     width: 400px
-    height: 280px
+    height: 250px
     margin-bottom: 50px
   @media (min-width: $desktop-content-width)
-    margin: 0 20px
-    margin-bottom: 80px
+    margin: 0 15px
+    margin-bottom: 70px
 
 .partner__top
   display: flex
@@ -106,17 +119,17 @@
   height: 90px
   padding: 20px
   @media (min-width: $tablet-content-width)
-    height: 95px
+    height: 85px
     padding: 25px 30px
 
 .partner__country
   color: $orange-color
   font-size: 14px
-  font-weight: 800
-  letter-spacing: 1px
+  font-weight: 700
+  letter-spacing: 0.5px
   margin-top: -23px
   @media (min-width: $tablet-content-width)
-    font-size: 15px
+    //font-size: 15px
     margin-top: -15px
 
 .partner__logo
@@ -126,21 +139,22 @@
   margin-top: 10px
   @media (min-width: $tablet-content-width)
     width: 140px
-    height: 60px
+    height: 50px
+    margin-top: 0
   img
     max-width: 110px
     max-height: 40px
     @media (min-width: $tablet-content-width)
-      max-width: 130px
-      max-height: 50px
+      max-width: 115px
+      max-height: 45px
 
 .partner__content
   padding: 0 20px
   height: 100%
-  padding-top: 7px
+  //padding-top: 7px
   @media (min-width: $tablet-content-width)
     padding: 0 30px
-    padding-top: 7px
+    //padding-top: 7px
 
   .group
     display: flex
@@ -155,9 +169,10 @@
   white-space: nowrap
   overflow: hidden
   text-overflow: ellipsis
-  margin-bottom: 25px
+  margin-bottom: 23px
+  //margin-top: 5px
   //@media (min-width: $tablet-content-width)
-
+    font-size: 21px
 
 .partner__title
   font-size: 13px
@@ -174,31 +189,36 @@
   text-overflow: ellipsis
   margin-left: 10px
   margin-bottom: 2px
+  min-height: 24px
   max-width: 160px
   @media (min-width: $tablet-content-width)
     max-width: 210px
-    font-size: 14px
+    //font-size: 14px
     &.link
       color: $blue-color
       text-decoration: underline
 
+  a:hover
+    color: $orange-color
+    text-decoration: underline
+
   .multi-phone
     display: block
     line-height: 130%
-    font-size: 13px
+    //font-size: 13px
     //&::after
       content: " / "
     //&:last-child
       &::after
         content: " "
 
-  .multy-mail
+  .multi-mail
     display: block
-    line-height: 120%
+    line-height: 130%
 
 .partner__bottom
   @include unselectable
-  height: 65px
+  height: 60px
   display: flex
   align-items: center
   justify-content: space-between
@@ -213,17 +233,17 @@
   display: flex
   flex-direction: column
   justify-content: center
-  height: 65px
-  color: $mid-grey-color
+  height: 60px
+  color: $grey-color
+  opacity: 0.9
   font-size: 10px
   text-transform: uppercase
   letter-spacing: 0.5px
+  word-spacing: 1px
   font-weight: 500
   line-height: 150%
-  @media (min-width: $tablet-content-width)
-    font-size: 10px
-    word-spacing: 1px
-    line-height: 160%
+  //@media (min-width: $tablet-content-width)
+    font-size: 11px
 
 .partner__products
   span
@@ -236,7 +256,7 @@
     opacity: 0.85
     width: 22px
     height: 22px
-    @media (min-width: $tablet-content-width)
+    //@media (min-width: $tablet-content-width)
       width: 23px
       height: 23px
 
@@ -248,54 +268,54 @@
 .icon-mail-hover
   display: block
   width: 28px
-  height: 28px
+  height: 36px
   cursor: pointer
   &::before
     display: inline-block
     content: ""
     width: 27px !important
-    height: 27px !important
+    height: 36px !important
   &:hover
     &::before
       width: 28px !important
-      height: 28px !important
+      height: 36px !important
 
 .icon-address
   &::before
-    background: url(../../images/icon/icon-address.svg) center no-repeat
+    background: url(../../images/icon/icon-address.svg) no-repeat
     //background-size: contain
   &:hover
     &::before
-      background: url(../../images/icon/icon-address-hover.svg) center no-repeat
+      background: url(../../images/icon/icon-address-hover.svg) no-repeat
 
 .icon-phone
   margin-left: 20px
   &::before
-    background: url(../../images/icon/icon-phone.svg) center no-repeat
+    background: url(../../images/icon/icon-phone.svg) no-repeat
     //background-size: contain
   &:hover
     &::before
-      background: url(../../images/icon/icon-phone-hover.svg) center no-repeat
+      background: url(../../images/icon/icon-phone-hover.svg) no-repeat
 
 .icon-mail
   margin-left: 20px
   &::before
-    background: url(../../images/icon/icon-mail.svg) center no-repeat
+    background: url(../../images/icon/icon-mail.svg) no-repeat
     //background-size: contain
   &:hover
     &::before
-      background: url(../../images/icon/icon-mail-hover.svg) center no-repeat
+      background: url(../../images/icon/icon-mail-hover.svg) no-repeat
 
 .icon-address-hover
   &::before
-    background: url(../../images/icon/icon-address-hover.svg) center no-repeat
+    background: url(../../images/icon/icon-address-hover.svg) no-repeat
 
 .icon-phone-hover
   margin-left: 20px
   &::before
-    background: url(../../images/icon/icon-phone-hover.svg) center no-repeat
+    background: url(../../images/icon/icon-phone-hover.svg) no-repeat
 
 .icon-mail-hover
   margin-left: 20px
   &::before
-    background: url(../../images/icon/icon-mail-hover.svg) center no-repeat
+    background: url(../../images/icon/icon-mail-hover.svg) no-repeat

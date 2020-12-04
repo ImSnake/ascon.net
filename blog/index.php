@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Blog");
+$APPLICATION->SetTitle("Blog & Publications");
 
 use Bitrix\Main\Page\Asset;
 $additional = true;
@@ -81,7 +81,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/blog.js');
 			1 => "",
 		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "7",
+		"IBLOCK_ID" => "57",
 		"IBLOCK_TYPE" => "ascon_eng",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d-m-Y",

@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Partnership");
+$APPLICATION->SetTitle("ASCON Partnership");
 
 use Bitrix\Main\Page\Asset;
 $additional = true;
@@ -18,10 +18,10 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/company.js');
             </div>
 
             <ul class="page__nav">
-                <li class="active"><a href="#partnership">Partnership</a></li>
+                <li class="active"><a href="#partnership">Partner<span>ship</span></a></li>
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#conditions">Conditions</a></li>
-                <li><a href="#how2start">how to start</a></li>
+                <li><a href="#how2start"><span>how to </span>start</a></li>
             </ul>
 
             <img class="page__bkg" src="/local/templates/ascon_eng/images/banner/partnership.png" alt="bkg-partnership">
@@ -37,44 +37,54 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/company.js');
 
             <div class="partnership-block">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id est laborum.</p>
+                <p>ASCON Partners' program gets together high-class value-added resellers, leading software and hardware
+                    producers, as well as service companies, professional developers and consultants in order to bring
+                    our customers full-functioning, powerful, software- and hardware- compatible high-class solutions at
+                    reasonable price.
+                </p>
 
-                <h3>ASCON product rage</h3>
+                <h3>Goals and objectives of the Partner Program</h3>
+
+                <p>As a partner-oriented company, our main goal is to provide all of our partners with effective sales
+                    and marketing tools in order to aid successful cooperation. We have some objectives to achieve this goal:</p>
+                <ul>
+                    <li>help partners to differentiate from the competition and identify their company on the market;</li>
+                    <li>support partners with reward programs;</li>
+                    <li>give additional benefits for business development with ASCON;</li>
+                    <li>enhance partners’ technical and sales knowledge.</li>
+                </ul>
+
+                <h3>ASCON product range</h3>
 
                 <div class="group stretch-elem">
 
-                    <a href="#" class="product-block">
-                        <img src="/local/templates/ascon_eng/images/logo/kompas-logo-full.svg" alt="kompas-3d">
+                    <a href="/products/kompas/" class="product-block">
+                        <img class="kompas-img" src="/local/templates/ascon_eng/images/logo/kompas-logo-full.svg" alt="kompas-3d">
                     </a>
 
-                    <a href="#" class="product-block">
-                        <img src="/local/templates/ascon_eng/images/logo/renga-logo-full.svg" alt="renga">
+                    <a href="/products/renga/" class="product-block">
+                        <img class="renga-img" src="/local/templates/ascon_eng/images/logo/renga-logo-full.svg" alt="renga">
                     </a>
 
-                    <a href="#" class="product-block">
-                        <img src="/local/templates/ascon_eng/images/logo/pilot-logo-full.svg" alt="pilot-ice">
+                    <a href="/products/pilot/" class="product-block">
+                        <img class="pilot-img" src="/local/templates/ascon_eng/images/logo/pilot-logo-full.svg" alt="pilot-ice">
                     </a>
 
                 </div>
 
                 <h3>Partner сategories</h3>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p class="last-part">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud.</p>
+                <p>
+                    There are two levels to match the needs, dynamics and capabilities of our partners. Your performance
+                    and engagement with ASCON will determine your rewards and support.
+                </p>
+                <p class="last-part">
+                    As a Partner you begin with the starter level — RESELLER.
+                    RESELLERS can access ASCON basic benefits and communications.
+                    Meeting all of the requirements for the next stage enables partners to apply for the enhanced status
+                    and enjoy the associated range of extra opportunities.
+                    For more information on the requirements of ASCON Partnership Program, see the tables below.
+                </p>
 
                 <div class="group">
 
@@ -122,13 +132,6 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/company.js');
             </div>
 
             <div class="partnership-block">
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id est laborum.</p>
 
                 <h3>Partner status opportunities & advantages</h3>
 
@@ -197,10 +200,9 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/company.js');
                 </div>
 
                 <h3>Free Training & Education</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim id est laborum.</p>
+                <p>
+                    ASCON pays special attention to professional qualification and employees maturity of the Partner.
+                    Regularly we arrange training seminars on ASCON software solutions, sales, marketing and business development for ASCON Partners. </p>
 
 
                 <div class="table">
@@ -240,9 +242,14 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/company.js');
 
             <div class="partnership-block">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in repre</p>
+                <p>
+                    The Partner Status to be defined according to Partner experience in the CAD/CAM/PLM market, sales
+                    volume of ASCON solutions, shared marketing activities and other requirements are determined, see the tables below.
+                </p>
+                <p>
+                    Later Partner's Status can be changed, based upon meeting the sales plan, marketing activities
+                    and partner's competence in ASCON solutions.
+                </p>
 
                 <h3>General requirements for all partners</h3>
 
@@ -367,7 +374,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/pages/company.js');
                         <img src="/local/templates/ascon_eng/images/icon/icon-email.svg" alt="email">
                         <h3>Step 1</h3>
                         <p>Fill out application for a partnership and wait for the answer within 3 days.</p>
-                        <div class="btn-orange"><a href="#">SEND A REQUEST</a></div>
+                        <div class="btn-orange"><a href="/contacts/#question-form">SEND A REQUEST</a></div>
 
                     </div>
 

@@ -186,7 +186,7 @@
 
                     <ul>
                         <li class="current"><a href="/">english</a></li>
-                        <li><a href="/turk/">Türk</a></li>
+<!--                        <li><a href="/turk/">Türk</a></li>-->
                         <li><a href="https://ascon.ru/">русский</a></li>
                     </ul>
                     

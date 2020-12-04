@@ -1,6 +1,6 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
-<footer>
 
+<footer>
     <div class="container">
 
         <div class="footer__left">
@@ -16,29 +16,37 @@
             </div>
 
             <div class="footer__sm-icon">
-                <div class="sm-icon"><a href="#"><i class="icon-linkedin"></i></a></div>
-                <div class="sm-icon"><a href="https://www.facebook.com/ascon.net/" target="_blank"><i
-                                class="icon-facebook"></i></a></div>
-                <div class="sm-icon"><a href="#"><i class="icon-youtube-play"></i></a></div>
+                <div class="sm-icon"><a href="https://www.linkedin.com/company/ascon_2/" target="_blank">
+                        <i class="icon-linkedin"></i></a>
+                </div>
+
+                <div class="sm-icon"><a href="https://www.facebook.com/ascon.net/" target="_blank">
+                        <i class="icon-facebook"></i></a>
+                </div>
+
+                <div class="sm-icon"><a href="https://youtube.com/channel/UCT9-kVZ86voJmjZLhydrJZg" target="_blank">
+                        <i class="icon-youtube-play"></i></a>
+                </div>
             </div>
 
         </div>
 
         <div class="footer__right">
-            
+
             <div class="footer_column">
                 <div class="footer__heading">ASCON</div>
                 <ul>
                     <li><a href="/company/">About</a></li>
                     <li><a href="/contacts/">Contacts</a></li>
                     <li><a href="/partnership/">Partnership</a></li>
+                    <li><a href="/privacy-policy/">Privacy policy</a></li>
                 </ul>
             </div>
             <div class="footer_column">
-                <div class="footer__heading">PRODUCTS</div>
+                <div class="footer__heading">BRANDS</div>
                 <ul>
                     <li><a href="https://kompas.ru/" target="_blank">KOMPAS</a></li>
-                    <li><a href="https://pilotems.com/en/" target="_blank">Pilot-ICE</a></li>
+                    <li><a href="https://pilotems.com/en/" target="_blank">Pilot</a></li>
                     <li><a href="https://rengabim.com/en/" target="_blank">Renga</a></li>
                     <li><a href="https://c3dlabs.com/en/" target="_blank">C3D Labs</a></li>
                 </ul>
@@ -48,61 +56,64 @@
                 <ul>
                     <li><a href="/blog/">Blog</a></li>
                     <li><a href="/events/">Events</a></li>
-                    <!--                <li><a href="#">Item</a></li>
-                                        <li><a href="#">Item</a></li>-->
                 </ul>
             </div>
         </div>
     </div>
-    <!--form template-->
-    <div id='try-now-form' class="body-disable hide-element">
-        <div class="container">
-            <div class="popup-window">
-                <span class="close-elem"></span>
-                <h3>TEST DRIVE ASCON PRODUCTS</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, corporis dicta eligendi eum fugiat,
-                    labore
-                    neque, odio pariatur quisquam quo soluta sunt tenetur ullam. Commodi ipsa odit quaerat quia
-                    tempora.</p>
+</footer>
+
+<div id='try-now-form' class="body-disable hide-element">
+
+    <div class="container">
+
+        <div class="popup-window">
+
+            <span class="close-elem"></span>
+
+            <h3>TEST DRIVE ASCON PRODUCTS</h3>
+
+            <div class="try-now-form">
+
                 <form action="#">
 
-                    <h4>Which product would you like to try?</h4>
-                    <div><input id="1" type="checkbox"><label for="1">KOMPAS</label></div>
-                    <div><input id="2" type="checkbox"><label for="2">Pilot-ICE</label></div>
-                    <div><input id="3" type="checkbox"><label for="3">renga</label></div>
-                    <div><input id="4" type="checkbox"><label for="4">c3d-labs</label></div>
+                    <div class="question-title">Which product would you like to try?&nbsp;<span class="orange bold">*</span></div>
 
-                    <h4>Purpose for using</h4>
-                    <div>
-                        <select>
-                            <option value="" selected disabled>select</option>
-                            <option value="1">work</option>
-                            <option value="2">home</option>
-                            <option value="3">business</option>
+                    <div class="question-field">
+                        <select name="" id="" required>
+                            <option value="" selected disabled></option>
+                            <option value="">KOMPAS-3D</option>
+                            <option value="">Pilot-ICE</option>
+                            <option value="">Renga</option>
                         </select>
                     </div>
 
-                    <h4>Select your country</h4>
-                    <div>
-                        <select>
-                            <option value="" selected disabled>select</option>
-                            <option value="1">German</option>
-                            <option value="2">Spain</option>
-                            <option value="3">Sweden</option>
+                    <div class="question-title">Purpose for using&nbsp;<span class="orange bold">*</span></div>
+                    <div class="question-field">
+                        <select name="" id="" required>
+                            <option value="" selected disabled></option>
+                            <option value="1">business</option>
+                            <option value="2">personal usage</option>
                         </select>
                     </div>
 
-                    <h4>Email to get download link</h4>
-                    <div><input type="email" placeholder="user@domen.com"></div>
+                    <div class="question-title">Email to get download link&nbsp;<span class="orange bold">*</span></div>
 
-                    <div class="btn-orange"><a href="#">download&nbsp;free&nbsp;trial</a></div>
+                    <div class="question-field">
+                        <input type="email" required>
+                    </div>
+
+                    <div class="question-checkbox">
+                        <input id="try-now-policy" type="checkbox" required>
+                        <label for="try-now-policy" class="question-title">&nbsp;I&nbsp;accept <a href="/privacy-policy/">Privacy policy</a></label>
+                    </div>
+
+                    <button type="submit" class="btn-orange"><span>SEND TRIAL REQUEST</span></button>
 
                 </form>
             </div>
         </div>
     </div>
-
-</footer>
+</div>
 
 </body>
 </html>

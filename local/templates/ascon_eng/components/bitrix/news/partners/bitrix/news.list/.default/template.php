@@ -12,9 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-//d($arResult);
 ?>
-
 
 <div class="partner-group">
 
@@ -49,7 +47,8 @@ $this->setFrameMode(true);
                         <div class="content__block">
                             <div class="icon-address"></div>
                             <div class="partner__text link hide-element">
-                                <?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_WEBSITE"]["DISPLAY_VALUE"]?>
+<!--                                --><?/*=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_WEBSITE"]["DISPLAY_VALUE"]*/?>
+                                <a href="http://<?=$arItem["PROPERTIES"]["ATT_PARTNER_WEBSITE"]["VALUE"]?>" target="_blank"><?=$arItem["PROPERTIES"]["ATT_PARTNER_WEBSITE"]["VALUE"]?></a>
                             </div>
                         </div>
 
@@ -58,7 +57,7 @@ $this->setFrameMode(true);
                             <div class="partner__text hide-element">
                                 <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"])): ?>
                                     <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"] as $elem): ?>
-                                        <a class="multi-phone" href="tel:<?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"]?>"><?=$elem?></a>
+                                        <a class="multi-phone" href="tel:<?=$elem?>"><?=$elem?></a>
                                     <? endforeach; ?>
                                 <? else: ?>
                                     <a href="tel:<?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"]?>"><?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_PHONE"]["DISPLAY_VALUE"]?></a>
@@ -71,7 +70,7 @@ $this->setFrameMode(true);
                             <div class="partner__text hide-element">
                                 <? if (is_array($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_EMAIL"]["DISPLAY_VALUE"])): ?>
                                     <? foreach ($arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_EMAIL"]["DISPLAY_VALUE"] as $elem): ?>
-                                        <a class="protect multi-mail" href="mailto:<?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_EMAIL"]["DISPLAY_VALUE"]?>"><?=$elem?></a>
+                                        <a class="protect multi-mail" href="mailto:<?=$elem?>"><?=$elem?></a>
                                     <? endforeach; ?>
                                 <? else: ?>
                                     <a class="protect" href="mailto:<?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_EMAIL"]["DISPLAY_VALUE"]?>"><?=$arItem["DISPLAY_PROPERTIES"]["ATT_PARTNER_EMAIL"]["DISPLAY_VALUE"]?></a>

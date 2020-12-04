@@ -42,15 +42,17 @@ $expired = array(); //Массив для просроченных событи�
     $finish = $date[DD] . "/" . $date[MM] . "/" . $date[YYYY];
 
     $result = $DB->CompareDates($date_today, $finish); // сравнить текущую дату и дату окончания мероприятия
-    if($result != 1):?>
+    ?>
+
+    <?if($result != 1):?>
 
     <a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
 
         <div class="event-box" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 
             <div class="event__head">
-                <span class="event-category"><?echo $arItem["DISPLAY_PROPERTIES"]["ATT_EVENT_CATEGORY"]["DISPLAY_VALUE"]?></span>
-                <span class="event-type"><?echo $arItem["DISPLAY_PROPERTIES"]["ATT_EVENT_TYPE"]["DISPLAY_VALUE"]?></span>
+                <span class="event-category"><?=$arItem["DISPLAY_PROPERTIES"]["ATT_EVENT_CATEGORY"]["DISPLAY_VALUE"]?></span>
+                <span class="event-type"><?=$arItem["DISPLAY_PROPERTIES"]["ATT_EVENT_TYPE"]["DISPLAY_VALUE"]?></span>
             </div>
 
             <div class="event-date">
@@ -72,8 +74,8 @@ $expired = array(); //Массив для просроченных событи�
             </div>
 
             <div class="event-name">
-                <h2><?echo $arItem["NAME"]?></h2>
-                <?echo $arItem["PREVIEW_TEXT"];?>
+                <h2><?= $arItem["NAME"]?></h2>
+                <?=$arItem["PREVIEW_TEXT"]?>
             </div>
 
             <div class="event-logo">
@@ -88,7 +90,8 @@ $expired = array(); //Массив для просроченных событи�
         </div>
     </a>
 
-    <?else: array_push($expired, $arItem)?>
+    <?else:array_push($expired, $arItem)?>
+    <?/*else: array_push($expired, $arItem)*/?>
 
     <?endif?>
 

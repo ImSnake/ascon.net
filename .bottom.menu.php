@@ -21,6 +21,13 @@ $aMenuLinks = Array(
 		Array(), 
 		"" 
 	),
+    Array(
+        "Privacy policy",
+        "/privacy-policy/",
+        Array(),
+        Array(),
+        ""
+    ),
 	Array(
 		"Events", 
 		"/events/", 

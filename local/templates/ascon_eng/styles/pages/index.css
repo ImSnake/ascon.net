@@ -278,12 +278,16 @@
 }
 @media (min-width: 600px) {
   .product-box {
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
     max-width: unset;
     margin-top: 30px;
     margin-bottom: 80px;
-    box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.1);
-    padding: 50px 35px 30px 35px;
-    background-color: #f8f8f8;
+    padding: 50px 40px 35px 40px;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: #fafafa;
   }
 }
 @media (min-width: 1280px) {
@@ -293,18 +297,20 @@
     padding: 0;
     height: 300px;
     flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 20px;
     margin-bottom: 110px;
   }
 }
 @media (min-width: 1280px) {
   .product-box.left {
-    box-shadow: 2px 1px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 0 4px 1px rgba(0, 0, 0, 0.1);
   }
 }
 @media (min-width: 1280px) {
   .product-box.right {
-    box-shadow: -2px 1px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 0 4px 1px rgba(0, 0, 0, 0.1);
   }
   .product-box.right .product__content {
     padding-left: 55px;
@@ -324,7 +330,7 @@
     order: unset;
     max-width: unset;
     width: 450px;
-    height: 299px;
+    height: 300px;
   }
 }
 .product-box .product__img img {
@@ -351,59 +357,54 @@
 @media (min-width: 1280px) {
   .product-box .product__content {
     order: unset;
-    padding: 40px 40px 25px 45px;
+    padding: 45px 40px 25px 45px;
   }
 }
 .product-box .content__heading {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  letter-spacing: 0.4px;
+  font-size: 18px;
   font-weight: bold;
+  height: 35px;
 }
 @media (min-width: 600px) {
   .product-box .content__heading {
-    font-size: 18px;
-    font-weight: 600;
-  }
-}
-@media (min-width: 1280px) {
-  .product-box .content__heading {
-    font-size: 19px;
+    height: unset;
+    letter-spacing: unset;
+    font-size: 21px;
   }
 }
 .product-box .content__heading span {
   line-height: 100%;
 }
 .product-box .content__heading span::before {
-  margin-right: 10px;
-  height: 28px;
-  width: 28px;
+  margin-right: 8px;
+  height: 30px;
+  width: 30px;
   opacity: 0.95;
 }
 @media (min-width: 600px) {
   .product-box .content__heading span::before {
-    margin-right: 13px;
+    margin-right: 12px;
   }
 }
 .product-box .content__text {
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 13px;
-  line-height: 160%;
 }
 @media (min-width: 600px) {
   .product-box .content__text {
-    margin-top: 5px;
+    padding-left: 2px;
     margin-bottom: 10px;
     font-size: 14px;
-    line-height: 160%;
   }
 }
 @media (min-width: 1280px) {
   .product-box .content__text {
-    line-height: 155%;
+    font-size: 13px;
     height: 160px;
     margin-bottom: 0;
+    padding-left: 0;
     padding-right: 10px;
     padding-bottom: 15px;
     overflow: hidden;
@@ -411,14 +412,14 @@
 }
 .product-box .content__text p {
   margin: 8px 0 0 0;
+  line-height: 160%;
 }
 .product-box .product__btn {
   position: absolute;
-  top: -2px;
+  top: 0;
   right: 0;
-  width: 100px;
-  height: 32px;
-  background-color: #ffffff;
+  width: 110px;
+  height: 34px;
 }
 @media (min-width: 600px) {
   .product-box .product__btn {
@@ -426,7 +427,7 @@
     top: 0;
     width: 140px;
     height: 40px;
-    margin-top: 30px;
+    margin-top: 20px;
     align-self: flex-end;
   }
 }
@@ -448,12 +449,13 @@
   padding: 0 10px;
   font-size: 10px;
   letter-spacing: 1px;
-  opacity: 0.8;
+  padding-top: 1px;
   text-transform: uppercase;
   font-weight: 500;
-  color: #505050;
+  color: #6f6e6e;
+  background-color: #ffffff;
   text-align: center;
-  border: 2px solid #dfdfdf;
+  border: 3px solid #f1f1f1;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -466,7 +468,6 @@
   padding: 0 6px;
   letter-spacing: 1.5px;
   font-weight: 600;
-  background-color: #ffffff;
   box-shadow: unset;
   border: 3px solid #C64F15;
   opacity: 1;
@@ -476,10 +477,9 @@
     padding: 0 20px;
     font-size: 12px;
     letter-spacing: 1px;
-    border: 3px solid #dfdfdf;
   }
   .product-box .product__btn a:hover {
-    padding: 0 16px;
+    padding: 0 18px;
     letter-spacing: 2px;
   }
 }

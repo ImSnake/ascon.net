@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Contacts");
+$APPLICATION->SetTitle("ASCON Contacts");
 
 use Bitrix\Main\Page\Asset;
 
@@ -31,55 +31,64 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
 
             <div class="heading-orange">
                 <div class="heading__arrow"></div>
-                <div class="heading__text">Contacts</div>
+                <div class="heading__text">JSC ASCON</div>
             </div>
 
-            <div class="contacts-box">
-                <h3>LLC «ASCON - Design systems»</h3>
-
-                <div class="contacts__title">email</div>
-                <div class="contacts__text">contact@ascon.net</div>
-
-                <div class="contacts__title">phone</div>
-                <div class="contacts__text">+7 (812) 703-3934</div>
-
-                <div class="contacts__title">address</div>
-                <div class="contacts__text">
-                    <div>15 Odoevskogo st.</div>
-                    <div>199155, Saint Petersburg</div>
-                    <div>Russian Federation</div>
-                </div>
-
+            <!--   <div class="contacts__title">email</div>-->
+            <div class="contacts__text">
+                <span class="icon-mail"></span>
+                <span>contact@ascon.net</span>
             </div>
 
+            <!--   <div class="contacts__title">phone</div>-->
+            <div class="contacts__text">
+                <span class="icon-phone"></span>
+                <span>+7 (812) 703-3934</span>
+            </div>
 
-            <div class="heading-orange">
+            <!--<div class="contacts__title">address</div>-->
+            <div class="contacts__text">
+                <span class="icon-address"></span>
+                <span>Russian Federation, 199155, Saint Petersburg, Odoevskogo st.&nbsp;5A</span>
+            </div>
+
+            <div id="question-form" class="heading-orange">
                 <div class="heading__arrow"></div>
                 <div class="heading__text">ASK A QUESTION</div>
             </div>
 
             <div class="question-form">
                 <form action="">
-                    <div class="contacts__title">Send us a message and we will contact you</div>
+                    <!--                    <div class="contacts__title">Send us a message and we will contact you</div>-->
 
                     <div class="question-title">Subject&nbsp;<span class="orange bold">*</span></div>
                     <div class="question-field">
-                        <select name="form-subject" id="form-subject">
+                        <select name="form-subject" id="form-subject" required>
                             <option value="" selected disabled></option>
-                            <option value="kompas">KOMPAS</option>
-                            <option value="pilot">Pilot-Ice</option>
-                            <option value="renga">Renga</option>
-                            <option value="c3dlabs">C3D Labs</option>
+                            <option value="">Purchase</option>
+                            <option value="">Become a partner</option>
                             <option value="other">Other question</option>
                         </select>
                     </div>
 
-                    <div class="question-title">Full name</div>
+                    <!--                    <div class="question-title">Subject&nbsp;<span class="orange bold">*</span></div>
+                                        <div class="question-field">
+                                            <select name="form-subject" id="form-subject">
+                                                <option value="" selected disabled></option>
+                                                <option value="kompas">KOMPAS</option>
+                                                <option value="pilot">Pilot-Ice</option>
+                                                <option value="renga">Renga</option>
+                                                <option value="c3dlabs">C3D Labs</option>
+                                                <option value="other">Other question</option>
+                                            </select>
+                                        </div>-->
+
+                    <div class="question-title">Name</div>
                     <div class="question-field">
                         <input type="text">
                     </div>
 
-                    <div class="question-title">Company</div>
+                    <div class="question-title">Country</div>
                     <div class="question-field">
                         <input type="text">
                     </div>
@@ -89,10 +98,6 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
                         <input type="url">
                     </div>
 
-                    <div class="question-title">Phone</div>
-                    <div class="question-field">
-                        <input type="tel">
-                    </div>
 
                     <div class="question-title">Email&nbsp;<span class="orange bold">*</span></div>
                     <div class="question-field">
@@ -101,14 +106,20 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/styles/pages/company.css');
 
                     <div class="question-title">Your question&nbsp;<span class="orange bold">*</span></div>
                     <div class="question-field">
-                        <textarea></textarea>
+                        <textarea required></textarea>
                     </div>
 
-                    <button type="submit" class="btn-blue"><span>SEND</span></button>
+                    <div class="question-checkbox">
+                        <input id="question__policy" type="checkbox" required>
+                        <label for="question__policy" class="question-title">&nbsp;I&nbsp;accept <a
+                                    href="/privacy-policy/">Privacy policy</a></label>
+                    </div>
+
+                    <button type="submit" class="btn-orange"><span>send the message</span></button>
                 </form>
             </div>
         </div>
-
+        </div>
     </div>
 
 

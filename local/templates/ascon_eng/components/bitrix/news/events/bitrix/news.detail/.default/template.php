@@ -31,13 +31,15 @@ $this->setFrameMode(true);
             <div>
                 <span class="terms__title">start</span>
                 <span class="terms_date">
-                    <?echo FormatDate('j F Y, H:i', MakeTimeStamp($arResult["DISPLAY_PROPERTIES"]["ATT_EVENT_START"]["DISPLAY_VALUE"]))?>
+                    <?echo FormatDate('j F Y', MakeTimeStamp($arResult["DISPLAY_PROPERTIES"]["ATT_EVENT_START"]["DISPLAY_VALUE"]))?>
+<!--                    --><?/*echo FormatDate('j F Y, H:i', MakeTimeStamp($arResult["DISPLAY_PROPERTIES"]["ATT_EVENT_START"]["DISPLAY_VALUE"]))*/?>
                 </span>
             </div>
             <div>
                 <span class="terms__title">finish</span>
                 <span class="terms_date">
-                    <?echo FormatDate('j F Y, H:i', MakeTimeStamp($arResult["DISPLAY_PROPERTIES"]["ATT_EVENT_FINISH"]["DISPLAY_VALUE"]))?>
+                    <?echo FormatDate('j F Y', MakeTimeStamp($arResult["DISPLAY_PROPERTIES"]["ATT_EVENT_FINISH"]["DISPLAY_VALUE"]))?>
+<!--                    --><?/*echo FormatDate('j F Y, H:i', MakeTimeStamp($arResult["DISPLAY_PROPERTIES"]["ATT_EVENT_FINISH"]["DISPLAY_VALUE"]))*/?>
                 </span>
             </div>
         </div>
@@ -48,10 +50,10 @@ $this->setFrameMode(true);
 
     </div>
 
-    <div class="action-box">
+<!--    <div class="action-box">
         <h4>VISIT EVENT</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt molestiae ullam vero. Aliquid asperiorese.</p>
         <div class="btn-blue"><a href="#">REGISTRATION</a></div>
-    </div>
+    </div>-->
 
 </div>

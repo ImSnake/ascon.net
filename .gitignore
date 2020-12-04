@@ -10,13 +10,11 @@
 .idea/vcs.xml
 .idea/watcherTasks.xml
 .idea/webServers.xml
-!/local/templates/ascon_eng/images/icon/old/
-!/local/templates/ascon_eng/images/banner/temp/
-!/local/templates/ascon_eng/js/_old/
-!/local/templates/ascon_eng/styles/_old/
 !/_temp/
 !/bitrix/
-!/upload/
 /bitrix/backup/
 /bitrix/routing_index.php
 /bitrix/site_checker_dd5ff55932d2fba0681b09a44c84ed26.log
+!/local/templates/ascon_turkey/
+/local/templates/ascon_eng/images/
+/upload/

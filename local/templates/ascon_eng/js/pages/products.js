@@ -64,7 +64,6 @@ const product = {
         } else {
             qty = 2;
         }
-        console.log(qty);
         this.imageGalleryCheck(qty);
         this.imageGallerySet(qty);
     },
@@ -97,7 +96,7 @@ const product = {
     },
 
     imageGallerySet(qty){
-        // показать стрелку вправо, если картинок более 4-х и сохранить в переменную 5-ю картинку
+        // показать стрелку вправо, если картинок более заданного окном количества и сохранить первое скрытое изображение
         if(this.imgCount > qty){
 
             this.navRight.css('display', 'block');
@@ -110,25 +109,19 @@ const product = {
                 product.galleryLeftNav();
             });
 
-            //window.on('resize', function (){
-            //    product.galleryInint();
-            //});
         } else {
             this.navRight.css('display', 'none');
             this.navLeft.css('display', 'none');
         }
-
-        console.log(this.imgFirst);
-        console.log(this.imgLast);
-        console.log(this.imgCount);
+/*
+        $(window).on('resize', function (){
+            product.galleryInint();
+        });*/
     },
 
     galleryRightNav(){
-        console.log('right-click');
-
         this.imgFirst.addClass('hide-element');
         this.imgFirst = this.imgFirst.next('.gallery__img');
-
         this.imgLast = this.imgLast.next('.gallery__img');
         this.imgLast.removeClass('hide-element');
 
@@ -139,13 +132,11 @@ const product = {
     },
 
     galleryLeftNav(){
-        console.log('left-click');
-
         this.imgLast.addClass('hide-element');
         this.imgLast = this.imgLast.prev('.gallery__img');
-
         this.imgFirst = this.imgFirst.prev('.gallery__img');
         this.imgFirst.removeClass('hide-element');
+
         if (parseInt(this.imgFirst.attr('data-image-count')) === 1) {
             this.navLeft.css('display', 'none');
         }

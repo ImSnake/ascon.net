@@ -28,15 +28,14 @@ color: #C64F15;
 .text-editor h4 {
   font-size: 14px;
    font-weight: bold;
-   color: #0000ff;
    margin: 16px 0;
 }
 
 .text-editor .quote {
   font-size: 13px;
-  color: #0000ff;
+  color: #999999;
    line-height: 160%;
-   border-left: 1px solid #0000ff;
+   border-left: 1px solid #999999;
    margin-left: 5px;
    padding-left: 15px;
    margin-bottom: 16px;

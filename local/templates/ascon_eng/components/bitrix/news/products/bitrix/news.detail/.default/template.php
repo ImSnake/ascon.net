@@ -53,24 +53,24 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
 
     <div class="product__header">
         <?if($arResult["DETAIL_PICTURE"] != null):?>
-            <img class="product__bkg" src="<?echo $arResult["DETAIL_PICTURE"]["SRC"] ?>"
-             alt="<?echo $brand ?>_top-background"
-             title="<?echo $brand ?>_top-background">
+            <img class="product__bkg" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
+             alt="<?=$brand?>_top-background"
+             title="<?=$brand?>_top-background">
         <?endif;?>
 
         <div class="product__breadcrumbs">
 
             <a href="/products/">Products<span class="right-arrow"></a>
 
-            <a href="<?echo $arResult['SECTION_URL'] ?>"><?echo $brand?></a>
+            <a href="<?=$arResult['SECTION_URL']?>"><?=$brand?></a>
 
         </div>
 
         <div class="product__name">
 
-            <div class="logo-<?echo $logo?>"></div>
+            <div class="logo-<?=$logo?>"></div>
 
-            <h1><?echo $arResult["NAME"]?></h1>
+            <h1><?=$arResult["NAME"]?></h1>
 
         </div>
 
@@ -104,7 +104,7 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                         <div class="heading__arrow"></div>
                         <div class="heading__text">description</div>
                     </div>
-                    <?echo $arResult['DISPLAY_PROPERTIES']['ATT_DESCRIPTION']['DISPLAY_VALUE'] ?>
+                    <?=$arResult['DISPLAY_PROPERTIES']['ATT_DESCRIPTION']['DISPLAY_VALUE']?>
                 </div>
 
                 <?if($arResult['PROPERTIES']['ATT_FEATURES']['VALUE']):?>
@@ -113,7 +113,7 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                         <div class="heading__arrow"></div>
                         <div class="heading__text">Key features and benefits</div>
                     </div>
-                    <?echo $arResult['DISPLAY_PROPERTIES']['ATT_FEATURES']['DISPLAY_VALUE'] ?>
+                    <?=$arResult['DISPLAY_PROPERTIES']['ATT_FEATURES']['DISPLAY_VALUE']?>
                 </div>
                 <?endif;?>
 
@@ -148,12 +148,12 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                         <?$res = CIBlockElement::GetByID($arResult["PROPERTIES"]['ATT_PRODUCT_PARENT_LINK']['VALUE']);
                         if($ar_res = $res->GetNext())?>
 
-                            <div class="group">
+                         <div class="group">
                             <h3>Required</h3>
-                            <a class="product__link" href="/products/<?echo strtolower($arResult["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE']) ?>/<?echo($ar_res['CODE'])?>/">
-                        <div class="logo-<?echo strtolower($arResult["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE'])?>"></div>
-                        <h4><?echo $ar_res['NAME']?></h4>
-                        </a>
+                            <a class="product__link" href="/products/<?=strtolower($arResult["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE'])?>/<?=($ar_res['CODE'])?>/">
+                                <div class="logo-<?=strtolower($arResult["DISPLAY_PROPERTIES"]['ATT_PRODUCT_PARENT']['DISPLAY_VALUE'])?>"></div>
+                                <h4><?=$ar_res['NAME']?></h4>
+                            </a>
                         </div>
                     <?endif;?>
 
@@ -162,27 +162,27 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                         <p class="capitalize">
                         <?if(is_array($arResult["DISPLAY_PROPERTIES"]["ATT_LANGUAGES"]["DISPLAY_VALUE"])):?>
                             <?foreach($arResult["DISPLAY_PROPERTIES"]["ATT_LANGUAGES"]["DISPLAY_VALUE"] as $elem):?>
-                               <?echo $elem ?><br>
+                               <?=$elem?><br>
                             <?endforeach;?>
                         <?else:?>
-                            <?echo $arResult["DISPLAY_PROPERTIES"]["ATT_LANGUAGES"]["DISPLAY_VALUE"]?>
+                            <?=$arResult["DISPLAY_PROPERTIES"]["ATT_LANGUAGES"]["DISPLAY_VALUE"]?>
                         <?endif;?>
                         </p>
                     </div>
 
                     <div class="group">
                         <h3>System Requirements</h3>
-                        <?echo $arResult['DISPLAY_PROPERTIES']['ATT_SYSTEM_REQUIREMENTS']['DISPLAY_VALUE'] ?>
+                        <?=$arResult['DISPLAY_PROPERTIES']['ATT_SYSTEM_REQUIREMENTS']['DISPLAY_VALUE']?>
                     </div>
 
                     <div class="group">
                         <h3>Producer</h3>
                         <?if(implode('', $prodLink) != ''):?>
-                            <a href="<?echo implode('', $prodLink)?>" target="_blank">
-                                <h4> <?echo $arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_PRODUSER']['DISPLAY_VALUE'] ?></h4>
+                            <a href="<?=implode('', $prodLink)?>" target="_blank">
+                                <h4> <?=$arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_PRODUSER']['DISPLAY_VALUE']?></h4>
                             </a>
                         <?else:?>
-                            <h4><?echo $arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_PRODUSER']['DISPLAY_VALUE'] ?></h4>
+                            <h4><?=$arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_PRODUSER']['DISPLAY_VALUE']?></h4>
                         <?endif?>
                     </div>
 
@@ -196,15 +196,15 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
             <div class="action-box">
 
                 <?if($arResult['PROPERTIES']['ATT_ACTION_BAR_TEXT']['VALUE']):?>
-                    <?echo $arResult['DISPLAY_PROPERTIES']['ATT_ACTION_BAR_TEXT']['DISPLAY_VALUE'] ?>
+                    <?=$arResult['DISPLAY_PROPERTIES']['ATT_ACTION_BAR_TEXT']['DISPLAY_VALUE']?>
                 <?endif;?>
 
                 <?if($arResult['PROPERTIES']['ATT_PRODUCT_HOME_LINK']['VALUE']):?>
-                    <div class="btn-blue"><a href="<?echo $arResult['PROPERTIES']['ATT_PRODUCT_HOME_LINK']['VALUE']?>" target="_blank">Learn more</a></div>
+                    <div class="btn-blue"><a href="<?=$arResult['PROPERTIES']['ATT_PRODUCT_HOME_LINK']['VALUE']?>" target="_blank">Learn more</a></div>
                 <?endif;?>
 
-                <?if($arResult['DISPLAY_PROPERTIES']['ATT_PRODUCT_DOWNLOAD_LINK']['DISPLAY_VALUE']):?>
-                    <div class="btn-orange"><a href="#">Download</a></div>
+                <?if($arResult['PROPERTIES']['ATT_PRODUCT_DOWNLOAD_LINK']['VALUE']):?>
+                    <div class="btn-orange"><a href="<?=$arResult['PROPERTIES']['ATT_PRODUCT_DOWNLOAD_LINK']['VALUE']?>" target="_blank">Download</a></div>
                 <?endif;?>
 
             </div>
@@ -235,7 +235,7 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                             <?foreach($arResult["PROPERTIES"]['ATT_GALLERY_IMAGE']['VALUE'] as $img):?>
 
                                 <div class="gallery__img hide-element">
-                                    <img src="<?echo CFile::GetPath($img)?>" alt="<?echo $arResult['NAME']?>" title="<?echo $arResult['NAME']?>">
+                                    <img src="<?=CFile::GetPath($img)?>" alt="<?=$arResult['NAME']?>" title="<?=$arResult['NAME']?>">
                                 </div>
 
                             <?endforeach;?>
@@ -254,15 +254,15 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                                 <?foreach($arResult["DISPLAY_PROPERTIES"]['ATT_GALLERY_VIDEO']['DISPLAY_VALUE'] as $video):?>
                                     <div class="gallery__video">
                                         <?echo $video ?>
-                                        <h4><?echo $arResult['DISPLAY_PROPERTIES']['ATT_GALLERY_VIDEO']['VALUE'][$arrCount]['title']?></h4>
+                                        <h4><?=$arResult['DISPLAY_PROPERTIES']['ATT_GALLERY_VIDEO']['VALUE'][$arrCount]['title']?></h4>
                                     </div>
                                 <? $arrCount += 1 ?>
                                 <?endforeach;?>
 
                             <?else:?>
                                 <div class="gallery__video">
-                                    <?echo $arResult["DISPLAY_PROPERTIES"]['ATT_GALLERY_VIDEO']['DISPLAY_VALUE']?>
-                                    <h4><?echo $arResult['DISPLAY_PROPERTIES']['ATT_GALLERY_VIDEO']['VALUE'][0]['title']?></h4>
+                                    <?=$arResult["DISPLAY_PROPERTIES"]['ATT_GALLERY_VIDEO']['DISPLAY_VALUE']?>
+                                    <h4><?=$arResult['DISPLAY_PROPERTIES']['ATT_GALLERY_VIDEO']['VALUE'][0]['title']?></h4>
                                 </div>
                             <?endif;?>
 
@@ -280,10 +280,10 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                             <? $title = CFile::MakeFileArray($doc); ?>
 
                                 <div class="gallery__article">
-                                    <a href="<?echo CFile::GetPath($doc)?>" download>
+                                    <a href="<?=CFile::GetPath($doc)?>" download>
                                         <div class="download-icon">
                                             <h5>download</h5>
-                                            <h4><?echo $title['description']?></h4>
+                                            <h4><?=$title['description']?></h4>
                                         </div>
                                     </a>
                                 </div>
@@ -321,19 +321,19 @@ foreach($arResult['SECTION']['PATH'] as $arItem) {
                         <div class="add-on__box">
 
                             <div class="group">
-                                <span class="logo-<?echo $alBrand?>"></span>
+                                <span class="logo-<?=$alBrand?>"></span>
                                 <div>
-                                    <h5 class="<?echo $elType?>"><?echo $elType?></h5>
-                                    <h4><?echo $el['NAME']?></h4>
+                                    <h5 class="<?=$elType?>"><?=$elType?></h5>
+                                    <h4><?=$el['NAME']?></h4>
                                 </div>
                             </div>
 
                             <div>
-                                <?echo $el['PREVIEW_TEXT']?>
+                                <?=$el['PREVIEW_TEXT']?>
                             </div>
 
                             <div class="product-box__btn">
-                                <a href="/products/<?echo $alBrand?>/<?echo $el['CODE']?>/">view</a>
+                                <a href="/products/<?=$alBrand?>/<?=$el['CODE']?>/">view</a>
                             </div>
 
                         </div>

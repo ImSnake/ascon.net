@@ -2,13 +2,13 @@
 
 .header__bkg
   position: relative
-  background-color: $dark-grey-color
+  background-color: $deep-grey-color
 
 // MAIN-HEADER ******************************************
 .header__content
   @include unselectable
   position: relative
-  background-color: $dark-grey-color
+  background-color: $deep-grey-color
   display: flex
   align-items: center
   justify-content: space-between
@@ -58,7 +58,7 @@
     top: 5px
 
 .header__menu
-  background-color: $dark-grey-color
+  background-color: $deep-grey-color
   display: none
   flex-direction: column
   position: absolute
@@ -123,7 +123,7 @@
     align-items: baseline
     left: 0
     width: 100%
-    background-color: $dark-grey-color
+    background-color: $deep-grey-color
     color: #ffffff
     font-weight: normal
     padding-top: 35px
@@ -299,7 +299,8 @@
     justify-content: unset
     margin-left: 3%
   @media (min-width: $desktop-content-width)
-    margin-right: 25px
+    //margin-right: 25px
+    margin-right: 10px
 
   .btn-orange
     margin: 10px 0

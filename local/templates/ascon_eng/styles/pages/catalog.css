@@ -3,7 +3,7 @@
 /*====================*/
 .catalog__header {
   position: relative;
-  background-color: #505050;
+  background-color: #254360;
   z-index: 0;
   margin-left: -5px;
   margin-right: -5px;
@@ -121,24 +121,30 @@
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
   padding: 0;
   max-width: 500px;
 }
 @media (min-width: 600px) {
   .product-box {
-    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
     max-width: unset;
-    padding: 50px 35px 30px 35px;
-    background-color: #f8f8f8;
+    margin-left: 1%;
+    margin-right: 1%;
     margin-top: 0;
+    background-color: #fafafa;
+    padding: 50px 40px 35px 40px;
   }
 }
 @media (min-width: 1280px) {
   .product-box {
+    border: 1px solid #f1f1f1;
     padding: 0;
+    margin: 0 0 70px 0;
+    border-bottom: none;
+    border-right: none;
     background-color: #ffffff;
     position: relative;
   }
@@ -158,6 +164,7 @@
     display: block;
     position: absolute;
     background-color: #eeeeee;
+    border-right: 1px solid #f1f1f1;
     z-index: 2;
     width: 450px;
     height: 300px;
@@ -180,20 +187,27 @@
 }
 
 .product-box__type {
-  font-size: 11px;
+  font-size: 9.5px;
+  letter-spacing: 0.4px;
   font-weight: 500;
   text-transform: lowercase;
-  margin-bottom: 4px;
-  letter-spacing: 0.5px;
-  padding-left: 1px;
+  margin-bottom: 6px;
+  display: inline-block;
+  padding: 3px 6px 3px 6px;
+  border-radius: 2px;
+  margin-left: -1px;
+  min-width: 50px;
+  text-align: center;
 }
 @media (min-width: 600px) {
   .product-box__type {
-    font-size: 13px;
+    margin-bottom: 7px;
   }
 }
 @media (min-width: 1280px) {
   .product-box__type {
+    min-width: unset;
+    margin-left: 0;
     position: absolute;
     z-index: 3;
     left: 270px;
@@ -202,81 +216,73 @@
     padding: 13px 10px 13px 15px;
     width: 180px;
     height: 40px;
-    text-align: center;
     font-weight: 500;
     letter-spacing: 1.5px;
     word-spacing: 3px;
+    border-radius: 0;
   }
 }
 .product-box__type.base-program {
-  color: #C64F15;
+  color: #ffffff;
+  background-color: #C64F15;
+  opacity: 0.85;
 }
 @media (min-width: 1280px) {
   .product-box__type.base-program {
-    color: #ffffff;
-    background-color: #C64F15;
+    opacity: 0.99;
   }
 }
 .product-box__type.toolkit, .product-box__type.mobile-app {
-  color: #3265A0;
+  color: #ffffff;
+  background-color: #164C81;
+  opacity: 0.94;
 }
 @media (min-width: 1280px) {
   .product-box__type.toolkit, .product-box__type.mobile-app {
-    color: #ffffff;
-    background-color: #3265A0;
     opacity: 0.99;
   }
 }
 .product-box__type.add-on {
-  color: #6f6e6e;
+  color: #ffffff;
+  background-color: #254360;
+  opacity: 0.9;
 }
 @media (min-width: 1280px) {
   .product-box__type.add-on {
-    color: #ffffff;
-    background-color: #505050;
     opacity: 0.98;
   }
 }
 
 .product-box__name {
   font-size: 18px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 @media (min-width: 600px) {
   .product-box__name {
     font-size: 21px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-bottom: 5px;
-  }
-}
-@media (min-width: 1280px) {
-  .product-box__name {
+    letter-spacing: unset;
     margin-bottom: 0;
-    font-size: 22px;
   }
 }
 
 .product-box__description {
   font-size: 13px;
-  line-height: 150%;
 }
 @media (min-width: 600px) {
   .product-box__description {
     margin-top: 12px;
     font-size: 14px;
-    line-height: 160%;
   }
 }
 @media (min-width: 1280px) {
   .product-box__description {
-    line-height: 150%;
+    font-size: 13px;
   }
 }
 .product-box__description p {
   margin: 8px 0;
+  line-height: 160%;
 }
 
 .product-box__bottom {
@@ -286,11 +292,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 @media (min-width: 600px) {
   .product-box__bottom {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 }
 @media (min-width: 1280px) {
@@ -328,15 +334,15 @@
 }
 @media (min-width: 1280px) {
   .product-box__parent a {
-    padding-top: 5px;
+    padding-top: 8px;
   }
 }
 
 .parent__logo {
   height: 26px;
   line-height: 130%;
-  margin-right: 8px;
-  opacity: 0.88;
+  margin-right: 7px;
+  opacity: 0.95;
 }
 @media (min-width: 600px) {
   .parent__logo {
@@ -345,8 +351,8 @@
   }
 }
 .parent__logo::before {
-  height: 26px;
-  width: 26px;
+  height: 30px;
+  width: 30px;
 }
 @media (min-width: 600px) {
   .parent__logo::before {
@@ -358,10 +364,79 @@
 .parent__name {
   font-size: 11px;
   letter-spacing: 0.3px;
-  margin-top: 1px;
+  margin-top: 4px;
+  color: #254360;
+  line-height: 120%;
+}
+@media (min-width: 1280px) {
+  .parent__name {
+    margin-top: 2px;
+  }
 }
 .parent__name .bold {
   letter-spacing: unset;
-  margin-top: 2px;
   font-size: 12px;
+}
+
+.product-box__btn {
+  width: 120px;
+  height: 36px;
+}
+@media (min-width: 600px) {
+  .product-box__btn {
+    width: 140px;
+    height: 40px;
+    align-self: flex-end;
+  }
+}
+@media (min-width: 1280px) {
+  .product-box__btn {
+    min-width: 150px;
+    width: unset;
+    height: 42px;
+    margin-left: auto;
+    margin-top: 0;
+  }
+}
+.product-box__btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  padding: 0 10px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #6f6e6e;
+  background-color: #ffffff;
+  text-align: center;
+  border: 3px solid #f1f1f1;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.product-box__btn a:hover {
+  color: #C64F15;
+  padding: 0 6px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  box-shadow: unset;
+  border: 3px solid #C64F15;
+  opacity: 1;
+}
+@media (min-width: 600px) {
+  .product-box__btn a {
+    padding: 0 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .product-box__btn a:hover {
+    padding: 0 18px;
+    letter-spacing: 2px;
+  }
 }

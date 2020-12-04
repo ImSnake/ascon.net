@@ -17,12 +17,12 @@
     overflow: hidden
 
 .main
-  margin-top: 30px
-  margin-bottom: 60px
+  margin-top: 35px
+  margin-bottom: 65px
   padding: 0 5px
   @media (min-width: $tablet-content-width)
     margin-top: 45px
-    margin-bottom: 100px
+    //margin-bottom: 100px
     padding: 0 10px
   @media (min-width: $desktop-content-width)
     margin-top: 50px
@@ -34,6 +34,7 @@
     margin: 10px 0
     @media (min-width: $tablet-content-width)
       font-size: 14px
+      line-height: 170%
       margin: 12px 0
     @media (min-width: $desktop-content-width)
       font-size: 15px
@@ -44,35 +45,37 @@
 
 .heading-orange
   margin-bottom: 10px
-  //@media (min-width: $tablet-content-width)
-    margin-bottom: 20px
+
+#partnership
+  margin-bottom: 20px
 
 .group__company
   margin-top: 40px
   margin-bottom: 40px
+  max-width: 1100px
   @media (min-width: $tablet-content-width)
     margin-top: 55px
     margin-bottom: 50px
     display: flex
     flex-wrap: wrap
-    justify-content: space-between
+    justify-content: space-evenly
 
 .company__box
-  @include box-shadow
-  border: 1px solid $border-grey-color
+  @include animation-02-linear
+  @include box-shadow-border
+  background-color: $slight-grey-color
   position: relative
   display: flex
   flex-direction: column
   justify-content: center
   min-width: 300px
   min-height: 110px
-  background-color: #ffffff
-  margin-bottom: 40px
+  margin-bottom: 50px
   margin-left: 10px
   margin-right: 10px
   @media (min-width: $tablet-content-width)
     flex: 1
-    width: 300px
+    max-width: 320px
     min-height: 150px
     margin-bottom: 60px
     margin-right: 45px
@@ -82,19 +85,17 @@
     z-index: 1
     top: -10px
     left: -10px
-    width: 55px
+    width: 54px
 
   div
-    margin-left: 70px
+    margin-left: 65px
 
 .company__num
-  font-size: 45px
-  font-weight: 700
+  opacity: 0.9
+  font-size: 32px
+  font-weight: 800
   padding-top: 10px
-  @media (min-width: $tablet-content-width)
-    font-size: 50px
-  @media (min-width: $desktop-content-width)
-    font-size: 53px
+
   span
     font-size: 45px
     font-weight: 500
@@ -102,22 +103,24 @@
     line-height: 55px
 
 .company__text
-  color: $grey-color
+  opacity: 0.95
   font-size: 13px
   font-weight: 400
-  line-height: 120%
+  line-height: 130%
   margin-top: 5px
-  padding-right: 50px
-  padding-bottom: 20px
-  @media (min-width: $tablet-content-width)
-    font-size: 14px
+  padding-right: 40px
+  padding-bottom: 15px
 
 .company__scheme
-  margin-top: 60px
-  margin-bottom: 200px
+  margin-top: 40px
+  margin-bottom: 90px
+  text-align: center
   img
     width: 100%
     max-width: 600px
+    margin-bottom: 30px
+  p
+    text-align: left
 
 .group__customer
   display: flex
@@ -126,21 +129,35 @@
   margin-top: 30px
   margin-bottom: 100px
   @media (min-width: $tablet-content-width)
+    justify-content: space-around
+  @media (min-width: $desktop-content-width)
     justify-content: space-between
-
   a
     text-decoration: none
     margin-bottom: 30px
 
 .customer-box
-  @include box-shadow
+  @include box-slide-shadow
+  @include animation-02-linear
+  border: 1px solid $border-slight-grey-color
   width: 300px
   height: 150px
-  background-color: #ffffff
+  background-color: $bkg-slight-grey
   display: flex
   flex-direction: column
   justify-content: space-between
   align-items: center
+  &:hover
+    @include box-shadow-hover
+    transform: scale(1.03)
+  @media (min-width: $tablet-content-width)
+    //flex: 1
+    width: 270px
+    //min-height: 150px
+    //margin-bottom: 60px
+    //margin-right: 45px
+  @media (min-width: $desktop-content-width)
+    width: 300px
 
   .customer-logo
     width: 100%
@@ -158,6 +175,7 @@
   .customer-text
     width: 100%
     height: 60px
+    color: $dark-grey-color
     margin-top: 5px
     padding: 0 25px
     padding-bottom: 15px
@@ -174,21 +192,21 @@
 
   h5
     font-size: 10px
-    color: $grey-color
+    //color: $grey-color
+    letter-spacing: 0.3px
     margin-top: 3px
 
   h6
     font-size: 10px
     letter-spacing: 0.5px
     text-transform: uppercase
-    color: $grey-color
-    margin-top: 2px
+    //color: $grey-color
+    margin-top: 3px
 
 // P A G E   C O N T A C T S ********************************************************
 
 .contacts-box
-  //padding: 0 8px
-  margin-bottom: 50px
+  margin-bottom: 60px
   font-size: 13px
   @media (min-width: $tablet-content-width)
     font-size: 14px
@@ -197,46 +215,78 @@
     font-size: 15px
     margin-bottom: 100px
   h3
-    font-size: 18px
-    font-weight: 700
+    font-size: 15px
+    font-weight: 600
     margin-top: 20px
-    margin-bottom: 20px
+    margin-bottom: 15px
     @media (min-width: $tablet-content-width)
-      font-size: 20px
-      margin-top: 25px
-      margin-bottom: 25px
+      font-size: 16px
+      //margin-top: 26px
+      //margin-bottom: 20px
     @media (min-width: $desktop-content-width)
-      font-size: 22px
+      font-size: 17px
 
 .contacts__title
   font-weight: 500
 
 .contacts__text
-  margin-top: 5px
-  margin-bottom: 20px
+  display: flex
+  align-items: center
+  font-size: 13px
+  margin-top: 15px
+  margin-bottom: 15px
+  line-height: 130%
   @media (min-width: $tablet-content-width)
-    margin-bottom: 30px
-  div
-    margin-top: 5px
+    font-size: 14px
+    margin-top: 18px
+    margin-bottom: 18px
+  @media (min-width: $desktop-content-width)
+    font-size: 15px
+
+.icon-address,
+.icon-phone,
+.icon-mail
+  display: block
+  width: 30px
+  height: 30px
+  cursor: pointer
+  margin-right: 13px
+  &::before
+    display: inline-block
+    content: ""
+    width: 29px !important
+    height: 29px !important
+    background-size: contain
+
+.icon-address
+  &::before
+    background: url(../../images/icon/icon-address.svg) center no-repeat
+
+.icon-phone
+  &::before
+    background: url(../../images/icon/icon-phone.svg) center no-repeat
+
+.icon-mail
+  &::before
+    background: url(../../images/icon/icon-mail.svg) center no-repeat
+
+#question-form
+  margin-top: 65px
 
 .question-form
   height: min-content
-  //padding: 0 8px
 
-  .contacts__title
-    font-size: 14px
-    @media (min-width: $tablet-content-width)
-      font-size: 15px
-    @media (min-width: $desktop-content-width)
-      font-size: 16px
-
-  .btn-blue
+  .btn-orange
     display: block
-    margin: 0 auto
-    margin-top: 30px
-    @media (min-width: $tablet-content-width)
-      margin: 0
-      margin-top: 50px
+    margin-top: 35px
+
+  .question-checkbox
+    margin-top: 10px
+    padding: 0 2px
+    @media (min-width: $desktop-content-width)
+      margin-top: 20px
+    label
+      line-height: 26px
 
 .question-title
   font-size: 13px
@@ -244,29 +294,30 @@
   margin-bottom: 5px
   color: $grey-color
   padding-left: 2px
-  @media (min-width: $tablet-content-width)
-    font-size: 14px
-  @media (min-width: $desktop-content-width)
+  .orange
     font-size: 15px
 
 .question-field
   max-width: 600px
   width: 100%
   min-height: 40px
-  border: 1px solid $border-grey-color
+  border: 1px solid $border-slight-grey-color
 
   select,
   input,
   textarea
-    font-family: 'Gotham Pro', sans-serif
     font-weight: 400
-    font-size: 14px
     width: 100%
     max-width: 600px
     height: 100%
     min-height: 40px
     border: none
     padding: 10px 5px
+    font-size: 13px
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+    @media (min-width: $desktop-content-width)
+      font-size: 15px
 
   input
     padding: 10px
@@ -276,25 +327,39 @@
     min-height: 150px
     line-height: 130%
 
-
-// P A G E  P A R T N E R S H I P ********************************************************
+// P A G E   P A R T N E R S H I P ********************************************************
 
 .partnership-block
   margin-bottom: 60px
   @media (min-width: $tablet-content-width)
     margin-bottom: 80px
-  @media (min-width: $desktop-content-width)
+  //@media (min-width: $desktop-content-width)
     margin-bottom: 100px
 
   h3
-    font-size: 17px
+    font-size: 15px
     margin-top: 25px
     font-weight: 700
     @media (min-width: $tablet-content-width)
-      font-size: 18px
-      margin-top: 35px
+      font-size: 16px
+      margin-top: 30px
     @media (min-width: $desktop-content-width)
-      font-size: 19px
+      font-size: 17px
+  ul
+    margin-left: 10px
+    padding-left: 5px
+    margin-top: 10px
+    margin-bottom: 20px
+  li
+    list-style-type: disc
+    font-size: 13px
+    line-height: 180%
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+      line-height: 190%
+    @media (min-width: $desktop-content-width)
+      font-size: 15px
+      line-height: 200%
 
   .group
     display: flex
@@ -302,42 +367,55 @@
     margin-top: 20px
     margin-bottom: 25px
     @media (min-width: $tablet-content-width)
-      margin-bottom: 35px
+      margin-bottom: 30px
     @media (min-width: $desktop-content-width)
       margin-bottom: 60px
     &.stretch-elem
-      @media (min-width: $desktop-content-width)
+      max-width: 600px
+      @media (min-width: $tablet-content-width)
+        max-width: unset
+        justify-content: flex-start
         margin-bottom: 70px
 
   .product-block
     display: flex
     justify-content: center
     align-items: center
-    width: 380px
+    width: 300px
     height: 100px
-    border: 1px solid $border-grey-color
-    background-color: #FFFFFF
+    background-color: $slight-grey-color
     margin-bottom: 25px
     @include unselectable
     @include animation-02-linear
+    @include box-slide-shadow
     &:hover
       cursor: pointer
-      transform: scale(1.03)
+      transform: scale(1.02)
+      @include box-shadow-hover
+    @media (min-width: $tablet-content-width)
+      //width: 350px
+      margin-right: 40px
     @media (min-width: $desktop-content-width)
       margin-bottom: 0
+      margin-right: 50px
+
+    .kompas-img
+      width: 170px
+    .renga-img
+      width: 130px
+    .pilot-img
+      margin-top: 5px
+      width: 145px
 
   .status-block
     display: flex
     align-items: center
-    width: 340px
+    width: 300px
     height: 110px
-    border: 1px solid $border-grey-color
+    border: 0.5px solid $border-slight-grey-color
+    background-color: $bkg-slight-grey
     padding-bottom: 10px
     @include unselectable
-    @include animation-02-linear
-    &:hover
-      cursor: pointer
-      transform: scale(1.03)
     &:first-child
       margin-bottom: 25px
       @media (min-width: $tablet-content-width)
@@ -349,21 +427,21 @@
     margin-left: 35px
     margin-right: 20px
     margin-top: 10px
+    img
+      width: 40px
 
   .cover-box_title
     margin-top: 8px
-    font-size: 17px
+    font-size: 15px
     font-weight: 700
     text-transform: uppercase
-    //@media (min-width: $tablet-content-width)
-      font-size: 20px
+    color: $deep-grey-color
 
   .cover-box_text
     margin-top: 5px
     font-size: 13px
-    color: $mid-grey-color
-    @media (min-width: $tablet-content-width)
-      font-size: 14px
+    color: $deep-grey-color
+    opacity: 0.9
 
   .cover-box_logo
     width: 30px
@@ -377,6 +455,7 @@
     margin-top: 15px
     margin-bottom: 40px
     border: 1px solid $slight-grey-color
+    @include box-shadow-border
     @media (min-width: $tablet-content-width)
       margin-top: 20px
       margin-bottom: 60px
@@ -387,7 +466,7 @@
     display: flex
     align-items: center
     min-height: 60px
-    background-color: $border-grey-color
+    background-color: $slight-grey-color
     text-transform: uppercase
     font-weight: 700
     .table_option
@@ -416,51 +495,44 @@
     height: 100%
     display: flex
     align-items: center
-    font-size: 13px
-    padding: 10px
+    font-size: 12px
+    padding: 5px 10px
+    line-height: 130%
     overflow: hidden
     text-overflow: ellipsis
     @media (min-width: $tablet-content-width)
       flex: 4
-      font-size: 14px
+      font-size: 13px
       padding: 15px 20px
     @media (min-width: $desktop-content-width)
-      flex: 5
-      font-size: 15px
+      flex: 6
       padding: 15px 30px
 
   .table_value
     flex: 1
     height: 100%
-    //display: flex
-    //align-items: center
-    //justify-content: center
     font-size: 12px
-    //border-left: 1px solid $slight-grey-color
-    padding: 10px
+    padding: 5px
     overflow: hidden
     text-overflow: ellipsis
     text-align: center
     @media (min-width: $tablet-content-width)
       font-size: 13px
       padding: 15px 20px
-    @media (min-width: $desktop-content-width)
-      font-size: 14px
 
   .step-block
     display: block
     width: 380px
     height: 350px
-    border: 1px solid $light-grey-color
-    background-color: #ffffff
+    border: 0.5px solid $border-slight-grey-color
+    background-color: $bkg-slight-grey
     text-align: center
     padding: 35px 30px 45px 30px
     margin-bottom: 30px
-    @include animation-02-linear
-    &:hover
-      cursor: pointer
-      transform: scale(1.03)
+    @include unselectable
+    @include box-shadow-border
     @media (min-width: $tablet-content-width)
+      margin-right: 40px
       padding: 30px 35px 45px 35px
       margin-top: 15px
       margin-bottom: 50px
@@ -471,12 +543,90 @@
 
     .btn-orange
       margin: 0 auto
-      margin-top: 30px
+      margin-top: 40px
       height: 36px
       a
-        font-size: 14px
+        font-size: 12px
 
 // P A G E   S U P P O R T ********************************************************
+
 .support__group
   margin-bottom: 60px
+  //li
+
+// P A G E   P O L I C Y ********************************************************
+
+.policy-block
+  margin-top: 15px
+  margin-bottom: 40px
+  @media (min-width: $tablet-content-width)
+    margin-top: 20px
+    margin-bottom: 45px
+  @media (min-width: $desktop-content-width)
+    margin-bottom: 50px
+  h3
+    font-size: 15px
+    margin-top: 25px
+    font-weight: 700
+    text-transform: uppercase
+    @media (min-width: $tablet-content-width)
+      font-size: 16px
+      margin-top: 35px
+    @media (min-width: $desktop-content-width)
+      font-size: 17px
+  h4
+    color: $blue-color
+    font-weight: 600
+    margin-top: 25px
+    font-size: 13px
+    margin-bottom: -3px
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+    @media (min-width: $desktop-content-width)
+      font-size: 15px
+  p
+    margin: 8px 0 12px 0
+
+  ul, ol
+    margin-left: 10px
+    padding-left: 5px
+    margin-top: 10px
+    margin-bottom: 20px
+
+  ul li
+    list-style-type: disc
+    padding-left: 3px
+
+  ol li
+    list-style-type: lower-latin
+
   li
+    font-size: 13px
+    line-height: 170%
+    margin: 10px 0
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+      line-height: 175%
+      margin: 12px 0
+    @media (min-width: $desktop-content-width)
+      font-size: 15px
+      line-height: 180%
+  a
+    color: $blue-color
+    text-decoration: underline
+    &:hover
+      color: $orange-color
+
+.policy__contacts
+  color: $dark-grey-color
+  margin-top: 30px
+  p
+    font-weight: 500
+    margin: 0
+    //margin-bottom: -3px
+    font-size: 13px
+    @media (min-width: $tablet-content-width)
+      font-size: 14px
+    @media (min-width: $desktop-content-width)
+      font-size: 15px
+

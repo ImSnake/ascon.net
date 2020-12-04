@@ -8,35 +8,54 @@ $min-site-width: 320px
 
 /* COLORS =====================================*/
 
-$main-font-color: #1F3045
+//$main-font-color: #1F3045
+$main-font-color: #1f3045
 
 $orange-color: #C64F15
 
-$blue-color: #3265A0
+$blue-color: #164C81
 
-$dark-grey-color: #505050
+$dark-grey-color: #254360
+
+
+$deep-grey-color: #505050
 
 $grey-color: #6f6e6e
 
 $mid-grey-color: #999999
 
-$border-grey-color: #eeeeee
-
 $light-grey-color: #dfdfdf
 
 $slight-grey-color: #f8f8f8
 
+$bkg-slight-grey: #fafafa
+
+
+$border-grey-color: #eeeeee
+
+$border-slight-grey-color: #f1f1f1
+
 /*====================*/
 
 @mixin box-shadow
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1)
-  -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1)
-  -moz-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1)
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1)
+  -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1)
+  -moz-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1)
+
+@mixin box-shadow-border
+  box-shadow: 0 0 2px 0.5px rgba(0, 0, 0, 0.08)
+  -webkit-box-shadow: 0 0 2px 0.5px rgba(0, 0, 0, 0.08)
+  -moz-box-shadow: 0 0 2px 0.5px rgba(0, 0, 0, 0.08)
+
+@mixin box-slide-shadow
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.05)
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.05)
+  -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.05)
 
 @mixin box-shadow-hover
-  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.08)
-  -webkit-box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.08)
-  -moz-box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.08)
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.06)
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.06)
+  -moz-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.06)
 
 @mixin unselectable
   -moz-user-select: none //Mozilla Firefox

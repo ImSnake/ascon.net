@@ -72,22 +72,19 @@
     margin: 20px 25px
 
   h1
-    font-size: 20px
+    font-size: 21px
     letter-spacing: 1px
-    font-weight: 900
+    font-weight: 800
     margin-left: 10px
     margin-bottom: 5px
     line-height: 125%
     text-transform: uppercase
     @media (min-width: $tablet-content-width)
-      font-size: 24px
+      font-size: 26px
       letter-spacing: 2px
-      font-weight: 900
       margin-left: 15px
     @media (min-width: $desktop-content-width)
-      font-size: 32px
-      letter-spacing: 2.5px
-      font-weight: 900
+      font-size: 28px
       margin-left: 25px
 
   .logo-kompas,
@@ -136,7 +133,7 @@
   display: none
   @media (min-width: $tablet-content-width)
     display: flex
-    z-index: 1
+    z-index: 6
     overflow: hidden
     color: #ffffff
     position: sticky
@@ -151,11 +148,8 @@
 
   li
     flex: 1
-    //width: 23%
-    //max-width: 200px
     margin-right: 1px
     height: 100%
-    //background-color: rgba(255, 255, 255, 0.5)
     background-color: rgba(80, 80, 80, 0.95)
     cursor: pointer
     transition: all 0.3s linear
@@ -204,18 +198,10 @@
     cursor: zoom-in
 
 .product__content
-  //width: 100%
-  //height: 100%
   @media (min-width: $desktop-content-width)
     display: flex
-    //height: unset
 
 .action-box
-  //margin-left: -10px
-  @media (min-width: $tablet-content-width)
-    //margin-left: -20px
-  @media (min-width: $desktop-content-width)
-
   .btn-orange,
   .btn-blue
     display: inline-block
@@ -240,14 +226,13 @@
     margin-bottom: 12px
   @media (min-width: $desktop-content-width)
     margin-left: -10px
-    //margin-bottom: 20px
 
   .heading__text
     font-size: 19px
     @media (min-width: $tablet-content-width)
       font-size: 21px
     @media (min-width: $desktop-content-width)
-      font-size: 25px
+      font-size: 23px
 
   .heading__arrow
     border-left: 7px solid $orange-color
@@ -273,11 +258,12 @@
 
   .contains
     h3
+      margin-top: 16px
       margin-bottom: 16px
     a.product__link
       margin-right: 30px
-      margin-bottom: 12px
-      margin-top: 10px
+      margin-bottom: 15px
+      margin-top: 0
       max-width: 200px
 
   .subgroup
@@ -293,16 +279,17 @@
   @media (min-width: $desktop-content-width)
     max-width: 870px
     margin-bottom: 80px
-    padding: 0 10px
+    padding: 0 5px
+
   h3
     font-size: 16px
-    font-weight: bold
+    font-weight: 600
     margin-bottom: 10px
     @media (min-width: $tablet-content-width)
-      font-size: 18px
+      font-size: 17px
       margin-bottom: 12px
     @media (min-width: $desktop-content-width)
-      font-size: 19px
+      font-size: 18px
       margin-bottom: 10px
   h4
     font-size: 13px
@@ -310,8 +297,7 @@
     margin-bottom: 5px
     @media (min-width: $tablet-content-width)
       font-size: 14px
-    //@media (min-width: $desktop-content-width)
-      font-size: 15px
+
   h6
     font-size: 13px
     font-weight: 500
@@ -330,7 +316,6 @@
       font-size: 14px
     @media (min-width: $desktop-content-width)
       font-size: 15px
-      //line-height: 155%
       margin: 8px 0
   img
     width: 100%
@@ -341,9 +326,10 @@
       width: auto
       max-width: 850px
   ul
-    margin-left: 15px
+    margin-left: 10px
     margin-bottom: 20px
     margin-top: 15px
+    padding-left: 5px
     @media (min-width: $tablet-content-width)
       margin-left: 20px
   li
@@ -360,31 +346,24 @@
   .capitalize
     line-height: 190%
     margin: 0
-    //font-size: 15px
 
-    //margin-top: -5px
   .signature
     color: $mid-grey-color
     font-size: 11px
     margin-bottom: 20px
     margin-top: -6px
-    line-height: 120%
+    line-height: 150%
     @media (min-width: $tablet-content-width)
       font-size: 12px
     @media (min-width: $desktop-content-width)
       font-size: 13px
-
 
 .product__link
   display: flex
   align-items: center
   text-decoration: none
   width: max-content
-  //font-size: 12px
-  //@media (min-width: $tablet-content-width)
-    //font-size: 13px
-  //@media (min-width: $desktop-content-width)
-    //font-size: 14px
+
   div
     &::before
       width: 32px
@@ -402,24 +381,21 @@ a.product__link
   &:hover
     color: $orange-color
     text-decoration: underline
-  //&:hover div
-    transform: scale(1.05)
 
 .product__gallery
   margin-bottom: 70px
-  padding: 0 10px
   @media (min-width: $tablet-content-width)
     margin-bottom: 100px
+  @media (min-width: $desktop-content-width)
+    padding: 0 5px
   h3
     font-size: 16px
     font-weight: bold
     margin-bottom: 15px
     @media (min-width: $tablet-content-width)
-      font-size: 18px
+      font-size: 17px
     @media (min-width: $desktop-content-width)
-      font-size: 19px
-  //.group
-    margin-bottom: 50px
+      font-size: 18px
 
 .gallery__content
   @include box-shadow
@@ -431,14 +407,10 @@ a.product__link
   flex-wrap: wrap
   justify-content: space-around
   align-items: center
-  //overflow: hidden
   padding: 10px 12px 20px 12px
   margin-bottom: 50px
   @media (min-width: $tablet-content-width)
     justify-content: flex-start
-    //width: 108%
-    //margin-left: -4%
-    //padding: 10px 2% 20px 2%
     min-height: 300px
   @media (min-width: $desktop-content-width)
     width: 100%
@@ -465,7 +437,6 @@ a.product__link
       font-size: 14px
       max-height: 45px
       line-height: 120%
-      //margin-top: 5px
   h5
     font-size: 12px
     max-width: 300px
@@ -480,10 +451,6 @@ a.product__link
   z-index: 2
   width: 100%
   display: flex
-  //@media (min-width: $tablet-content-width)
-    //width: 104%
-    //margin-left: -2%
-  //justify-content: flex-end
   @media (min-width: $desktop-content-width)
     width: 100%
     margin-left: 0
@@ -506,26 +473,20 @@ a.product__link
 
   .left-arrow
     margin-right: auto
-    //margin-left: -25px
 
 .gallery__img
   cursor: zoom-in
   max-width: 200px
   transition: all 0.3s linear
-  //margin: 10px 20px 0 20px
-  //max-height: 150px
   padding-top: 15px
   z-index: 5
   @media (min-width: $tablet-content-width)
     max-width: 250px
     padding: 0 10px
-    //max-height: 200px
-    //margin: 10px 20px 0 15px
   @media (min-width: $desktop-content-width)
     @include animation-02-linear
     max-width: unset
     width: 300px
-    //max-height: 200px
     height: unset
     padding: 0
     margin: 0 15px
@@ -538,8 +499,6 @@ a.product__link
 
 .gallery__video
   position: relative
-  //width: 280px
-  //overflow: hidden
   margin: 20px
   cursor: pointer
   @media (min-width: $desktop-content-width)
@@ -567,9 +526,6 @@ a.product__link
     z-index: 5
     padding: 0
     margin-right: 10px
-    //margin: 0 15px 0 15px
-    //margin-top: 55px
-    //margin: 0
     align-items: baseline
     width: 220px
     height: 200px
@@ -607,23 +563,23 @@ a.product__link
     justify-content: space-between
 
 #add-on
-  padding: 0 10px
   margin-bottom: 100px
+  @media (min-width: $desktop-content-width)
+    padding: 0 5px
 
 .add-on__box
   @include box-shadow
-  background-color: $slight-grey-color
-  padding: 35px 30px 30px 35px
-  margin: 0 5px
+  background-color: $bkg-slight-grey
+  padding: 30px 30px 30px 30px
+  //margin: 0
   margin-bottom: 50px
   @media (min-width: $tablet-content-width)
-    padding: 40px 40px 30px 40px
-    margin: 0 10px
+    padding: 40px 40px 40px 40px
+    //margin: 0 10px
     margin-bottom: 70px
   @media (min-width: $desktop-content-width)
     display: flex
     flex-direction: column
-    //justify-content: space-between
     width: 600px
     margin: 0
     margin-bottom: 60px
@@ -631,8 +587,10 @@ a.product__link
     &::before
       width: 35px
       height: 35px
-      opacity: 0.9
-      margin-right: 10px
+      opacity: 0.95
+      margin-right: 7px
+      margin-left: 4px
+      margin-bottom: 2px
   p
     font-size: 12px
     line-height: 160%
@@ -640,41 +598,31 @@ a.product__link
     padding: 0 5px
     @media (min-width: $tablet-content-width)
       font-size: 13px
-    //@media (min-width: $desktop-content-width)
-      font-size: 14px
+      padding: 0 3px
     &:last-child
       margin-bottom: 25px
   h4
     font-weight: bold
-    font-size: 18px
-    margin-top: 3px
-    margin-bottom: 2px
+    font-size: 16px
     letter-spacing: 0.5px
-    white-space: nowrap
-    overflow: hidden
-    text-overflow: ellipsis
     line-height: 100%
     @media (min-width: $tablet-content-width)
       font-size: 20px
-      margin-bottom: 3px
-  //@media (min-width: $desktop-content-width)
-    font-size: 22px
-    margin-bottom: 4px
   h5
-    font-size: 12px
-    letter-spacing: 0.5px
+    display: none
+    font-size: 9.5px
+    letter-spacing: 0.4px
     font-weight: 500
-    margin-bottom: 4px
-    padding-left: 2px
-    //@media (min-width: $tablet-content-width)
-      font-size: 13px
-    &.base-program
-      color: $orange-color
-    &.toolkit,
-    &.mobile-app
-      color: $blue-color
+    margin-bottom: 3px
+    border-radius: 2px
+    color: #ffffff
+    width: 55px
+    padding: 2.5px 6px 2.5px 6px
+    text-align: center
+
     &.add-on
-      color: $grey-color
+      opacity: 0.95
+      background-color: $grey-color
     
   .group
     display: flex
